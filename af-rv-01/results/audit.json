@@ -1,0 +1,132 @@
+[
+  {
+    "construction": "dollar",
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "dollar",
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "dollar",
+    "stress_multiplier": 1.5,
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "dollar",
+    "stress_multiplier": 1.5,
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "volatility",
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "volatility",
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "volatility",
+    "stress_multiplier": 1.5,
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "volatility",
+    "stress_multiplier": 1.5,
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "rolling_beta",
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "rolling_beta",
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "rolling_beta",
+    "stress_multiplier": 1.5,
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "rolling_beta",
+    "stress_multiplier": 1.5,
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "C1_ETH",
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "C1_ETH",
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "C1_ETH",
+    "stress_multiplier": 1.5,
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "C1_ETH",
+    "stress_multiplier": 1.5,
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "C2_fixed_beta",
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "C2_fixed_beta",
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  },
+  {
+    "construction": "C2_fixed_beta",
+    "stress_multiplier": 1.5,
+    "fraction": 0.5,
+    "closed_trades": 5,
+    "exact_match": true
+  },
+  {
+    "construction": "C2_fixed_beta",
+    "stress_multiplier": 1.5,
+    "fraction": 0.75,
+    "closed_trades": 14,
+    "exact_match": true
+  }
+]

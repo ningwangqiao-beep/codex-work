@@ -1,0 +1,687 @@
+{
+  "experiment": "AF-RV-01",
+  "data_validation": {
+    "status": "PASS",
+    "bars_per_leg": 8016,
+    "settlements_per_leg": 1002,
+    "aligned_hourly_grid": true,
+    "funding_timestamp_jitter_records": [
+      536,
+      536
+    ],
+    "funding_max_jitter_ms": [
+      26,
+      26
+    ]
+  },
+  "audit": [
+    {
+      "construction": "dollar",
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "dollar",
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "dollar",
+      "stress_multiplier": 1.5,
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "dollar",
+      "stress_multiplier": 1.5,
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "volatility",
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "volatility",
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "volatility",
+      "stress_multiplier": 1.5,
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "volatility",
+      "stress_multiplier": 1.5,
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "rolling_beta",
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "rolling_beta",
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "rolling_beta",
+      "stress_multiplier": 1.5,
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "rolling_beta",
+      "stress_multiplier": 1.5,
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "C1_ETH",
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "C1_ETH",
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "C1_ETH",
+      "stress_multiplier": 1.5,
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "C1_ETH",
+      "stress_multiplier": 1.5,
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "C2_fixed_beta",
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "C2_fixed_beta",
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    },
+    {
+      "construction": "C2_fixed_beta",
+      "stress_multiplier": 1.5,
+      "fraction": 0.5,
+      "closed_trades": 5,
+      "exact_match": true
+    },
+    {
+      "construction": "C2_fixed_beta",
+      "stress_multiplier": 1.5,
+      "fraction": 0.75,
+      "closed_trades": 14,
+      "exact_match": true
+    }
+  ],
+  "descriptive": {
+    "beta_min": 0.07409165479743367,
+    "beta_max": 2.0222626733279343,
+    "beta_mean": 1.2521437194077318,
+    "beta_fixed": 1.1620649637662641,
+    "half_life_hours": 30775.036739051484,
+    "half_life_ols_delta_s_on_lag_s_slope": -2.2523033406500776e-05,
+    "first_valid_z_utc": "2025-12-30 22:00:00+00:00"
+  },
+  "results": {
+    "dollar": {
+      "IS": {
+        "net_return_pct": -1.7813439898216488,
+        "max_drawdown_pct": 3.3578191947427505,
+        "profit_factor": 0.512165002419875,
+        "closed_trades": 14,
+        "win_rate_pct": 35.714285714285715,
+        "total_fees": 13.700046730651973,
+        "funding_eth": -0.4933568512935463,
+        "funding_btc": 0.5792994014439551,
+        "average_holding_hours": 48.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 0,
+          "timeout": 14,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 982.1865601017835,
+        "closed_net_pnl": -17.813439898216437
+      },
+      "OOS": {
+        "net_return_pct": -1.3395533296920892,
+        "max_drawdown_pct": 4.220865141788066,
+        "profit_factor": 0.41758703645607437,
+        "closed_trades": 11,
+        "win_rate_pct": 18.181818181818183,
+        "total_fees": 10.860277768766252,
+        "funding_eth": 0.31169660236910585,
+        "funding_btc": -0.20192402790815753,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 982.1865601017835,
+        "end_equity": 969.0296473321519,
+        "closed_net_pnl": -13.156912769631829
+      },
+      "ALL": {
+        "net_return_pct": -3.09703526678482,
+        "max_drawdown_pct": 4.559280777751129,
+        "profit_factor": 0.4760170290160313,
+        "closed_trades": 25,
+        "win_rate_pct": 28.000000000000004,
+        "total_fees": 24.560324499418225,
+        "funding_eth": -0.18166024892444047,
+        "funding_btc": 0.37737537353579753,
+        "average_holding_hours": 37.88,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 19,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 969.0296473321519,
+        "closed_net_pnl": -30.970352667848264
+      },
+      "stress_OOS": {
+        "net_return_pct": -2.1031579119892063,
+        "max_drawdown_pct": 4.893494054446412,
+        "profit_factor": 0.2795585224801894,
+        "closed_trades": 11,
+        "win_rate_pct": 18.181818181818183,
+        "total_fees": 16.075851776842025,
+        "funding_eth": 0.30623212244973164,
+        "funding_btc": -0.19753562141210745,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 972.6572330136839,
+        "end_equity": 952.2007154610213,
+        "closed_net_pnl": -20.45651755266274
+      },
+      "bootstrap": {
+        "monthly_net_pnl": [
+          0.0,
+          -2.2301862409993722,
+          -6.280957384452326,
+          -4.6457691441801305
+        ],
+        "ci95_usdt": [
+          -21.853453057264915,
+          -4.4603724819987445
+        ],
+        "replicates": 2000,
+        "seed": 42
+      },
+      "six_rules": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "sample_minimum": false,
+      "verdict": "不通过"
+    },
+    "volatility": {
+      "IS": {
+        "net_return_pct": 1.6132915102439638,
+        "max_drawdown_pct": 2.0774679202817836,
+        "profit_factor": 1.4853935367545983,
+        "closed_trades": 14,
+        "win_rate_pct": 50.0,
+        "total_fees": 14.081715058304116,
+        "funding_eth": -0.4425881405701028,
+        "funding_btc": 0.6908475138766733,
+        "average_holding_hours": 48.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 0,
+          "timeout": 14,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 1016.1329151024397,
+        "closed_net_pnl": 16.132915102438652
+      },
+      "OOS": {
+        "net_return_pct": -0.468412778180316,
+        "max_drawdown_pct": 3.6392544780454505,
+        "profit_factor": 0.7633086210743845,
+        "closed_trades": 11,
+        "win_rate_pct": 36.36363636363637,
+        "total_fees": 11.176155537030608,
+        "funding_eth": 0.2589544675800215,
+        "funding_btc": -0.2595061543563144,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 1016.1329151024397,
+        "end_equity": 1011.3732186848038,
+        "closed_net_pnl": -4.759696417636114
+      },
+      "ALL": {
+        "net_return_pct": 1.1373218684803676,
+        "max_drawdown_pct": 3.6392544780454505,
+        "profit_factor": 1.2131969475505966,
+        "closed_trades": 25,
+        "win_rate_pct": 44.0,
+        "total_fees": 25.257870595334726,
+        "funding_eth": -0.18363367299008135,
+        "funding_btc": 0.4313413595203589,
+        "average_holding_hours": 37.88,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 19,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 1011.3732186848038,
+        "closed_net_pnl": 11.373218684802536
+      },
+      "stress_OOS": {
+        "net_return_pct": -1.2380712391091953,
+        "max_drawdown_pct": 4.315807319487364,
+        "profit_factor": 0.49680224148121543,
+        "closed_trades": 11,
+        "win_rate_pct": 27.27272727272727,
+        "total_fees": 16.543721104669647,
+        "funding_eth": 0.25436790742131205,
+        "funding_btc": -0.25403402353959503,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 1006.2949695188504,
+        "end_equity": 993.8363209206349,
+        "closed_net_pnl": -12.458648598215369
+      },
+      "bootstrap": {
+        "monthly_net_pnl": [
+          0.0,
+          -7.592261894627234,
+          -8.112449161471229,
+          10.945014638462348
+        ],
+        "ci95_usdt": [
+          -31.40942211219693,
+          25.24278202075981
+        ],
+        "replicates": 2000,
+        "seed": 42
+      },
+      "six_rules": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "sample_minimum": false,
+      "verdict": "不通过"
+    },
+    "rolling_beta": {
+      "IS": {
+        "net_return_pct": 6.482027590513217,
+        "max_drawdown_pct": 2.1490764221983705,
+        "profit_factor": 3.4534608239895386,
+        "closed_trades": 14,
+        "win_rate_pct": 64.28571428571429,
+        "total_fees": 14.232315017695715,
+        "funding_eth": -0.23211007139673953,
+        "funding_btc": 0.8478895890065359,
+        "average_holding_hours": 48.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 0,
+          "timeout": 14,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 1064.8202759051321,
+        "closed_net_pnl": 64.82027590513115
+      },
+      "OOS": {
+        "net_return_pct": -2.6027489825898864,
+        "max_drawdown_pct": 4.617478998725777,
+        "profit_factor": 0.17841535033605052,
+        "closed_trades": 11,
+        "win_rate_pct": 27.27272727272727,
+        "total_fees": 11.703051350825568,
+        "funding_eth": 0.4145959314035933,
+        "funding_btc": -0.07562436081385285,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 1064.8202759051321,
+        "end_equity": 1037.1056770076004,
+        "closed_net_pnl": -27.714598897530756
+      },
+      "ALL": {
+        "net_return_pct": 3.710567700760037,
+        "max_drawdown_pct": 4.617478998725777,
+        "profit_factor": 1.616854587454521,
+        "closed_trades": 25,
+        "win_rate_pct": 48.0,
+        "total_fees": 25.935366368521283,
+        "funding_eth": 0.1824858600068538,
+        "funding_btc": 0.772265228192683,
+        "average_holding_hours": 37.88,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 19,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 1037.1056770076004,
+        "closed_net_pnl": 37.105677007600406
+      },
+      "stress_OOS": {
+        "net_return_pct": -3.357585931224283,
+        "max_drawdown_pct": 5.287820094184026,
+        "profit_factor": 0.09554402682292298,
+        "closed_trades": 11,
+        "win_rate_pct": 27.27272727272727,
+        "total_fees": 17.3245069324013,
+        "funding_eth": 0.40765448562763223,
+        "funding_btc": -0.07276403111845502,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 1054.5437421222332,
+        "end_equity": 1019.136529798131,
+        "closed_net_pnl": -35.40721232410342
+      },
+      "bootstrap": {
+        "monthly_net_pnl": [
+          0.0,
+          -7.268508863077113,
+          -8.942303855224626,
+          -11.503786179229019
+        ],
+        "ci95_usdt": [
+          -41.77986740076417,
+          -8.942303855224626
+        ],
+        "replicates": 2000,
+        "seed": 42
+      },
+      "six_rules": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "sample_minimum": false,
+      "verdict": "不通过"
+    },
+    "C1_ETH": {
+      "IS": {
+        "net_return_pct": -19.136982916181577,
+        "max_drawdown_pct": 28.698590391788592,
+        "profit_factor": 0.43041130881096923,
+        "closed_trades": 14,
+        "win_rate_pct": 42.857142857142854,
+        "total_fees": 11.70083166608674,
+        "funding_eth": -0.7884951212780218,
+        "funding_btc": 0.0,
+        "average_holding_hours": 48.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 0,
+          "timeout": 14,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 808.6301708381842,
+        "closed_net_pnl": -191.36982916181614
+      },
+      "OOS": {
+        "net_return_pct": -5.883274496520907,
+        "max_drawdown_pct": 14.556375116511767,
+        "profit_factor": 0.6566109180636941,
+        "closed_trades": 11,
+        "win_rate_pct": 36.36363636363637,
+        "total_fees": 9.311737382472062,
+        "funding_eth": 0.5369695121228547,
+        "funding_btc": 0.0,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 808.6301708381842,
+        "end_equity": 761.0562382260879,
+        "closed_net_pnl": -47.57393261209613
+      },
+      "ALL": {
+        "net_return_pct": -23.89437617739121,
+        "max_drawdown_pct": 28.698590391788592,
+        "profit_factor": 0.4964530740643383,
+        "closed_trades": 25,
+        "win_rate_pct": 40.0,
+        "total_fees": 21.012569048558802,
+        "funding_eth": -0.25152560915516703,
+        "funding_btc": 0.0,
+        "average_holding_hours": 37.88,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 19,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 761.0562382260879,
+        "closed_net_pnl": -238.9437617739123
+      },
+      "stress_OOS": {
+        "net_return_pct": -6.615633300360346,
+        "max_drawdown_pct": 14.861885884258164,
+        "profit_factor": 0.6231468373383788,
+        "closed_trades": 11,
+        "win_rate_pct": 36.36363636363637,
+        "total_fees": 13.781894966092905,
+        "funding_eth": 0.5275410166452886,
+        "funding_btc": 0.0,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 800.675821403493,
+        "end_equity": 747.7060451347899,
+        "closed_net_pnl": -52.96977626870334
+      },
+      "bootstrap": {
+        "monthly_net_pnl": [
+          0.0,
+          31.171743776977465,
+          1.1657484202478567,
+          -79.91142480932145
+        ],
+        "ci95_usdt": [
+          -238.56852600771646,
+          93.5152313309324
+        ],
+        "replicates": 2000,
+        "seed": 42
+      }
+    },
+    "C2_fixed_beta": {
+      "IS": {
+        "net_return_pct": -0.49004550320966844,
+        "max_drawdown_pct": 2.163004645516431,
+        "profit_factor": 0.8198411479885965,
+        "closed_trades": 14,
+        "win_rate_pct": 42.857142857142854,
+        "total_fees": 13.850852285697096,
+        "funding_eth": -0.46345514797335996,
+        "funding_btc": 0.6282179051847592,
+        "average_holding_hours": 48.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 0,
+          "timeout": 14,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 995.0995449679033,
+        "closed_net_pnl": -4.900455032097078
+      },
+      "OOS": {
+        "net_return_pct": -1.0333603285794801,
+        "max_drawdown_pct": 3.9736279354354975,
+        "profit_factor": 0.48513422118467325,
+        "closed_trades": 11,
+        "win_rate_pct": 27.27272727272727,
+        "total_fees": 10.968204568831018,
+        "funding_eth": 0.2910441670129447,
+        "funding_btc": -0.21923756185591295,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 995.0995449679033,
+        "end_equity": 984.81658104033,
+        "closed_net_pnl": -10.282963927573785
+      },
+      "ALL": {
+        "net_return_pct": -1.5183418959670014,
+        "max_drawdown_pct": 3.9736279354354975,
+        "profit_factor": 0.6781323938292957,
+        "closed_trades": 25,
+        "win_rate_pct": 36.0,
+        "total_fees": 24.819056854528114,
+        "funding_eth": -0.17241098096041524,
+        "funding_btc": 0.4089803433288462,
+        "average_holding_hours": 37.88,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 19,
+          "end_of_data": 0
+        },
+        "start_equity": 1000.0,
+        "end_equity": 984.81658104033,
+        "closed_net_pnl": -15.183418959670863
+      },
+      "stress_OOS": {
+        "net_return_pct": -1.799085059996508,
+        "max_drawdown_pct": 4.647954648346619,
+        "profit_factor": 0.30718071454482176,
+        "closed_trades": 11,
+        "win_rate_pct": 18.181818181818183,
+        "total_fees": 16.235729456498287,
+        "funding_eth": 0.28594143304807434,
+        "funding_btc": -0.21447257766686498,
+        "average_holding_hours": 25.0,
+        "exit_reasons": {
+          "take_profit": 0,
+          "stop_loss": 6,
+          "timeout": 5,
+          "end_of_data": 0
+        },
+        "start_equity": 985.4529199394807,
+        "end_equity": 967.7237836835501,
+        "closed_net_pnl": -17.729136255930698
+      },
+      "bootstrap": {
+        "monthly_net_pnl": [
+          0.0,
+          -5.426973182020852,
+          -6.939117850800318,
+          2.0831271052473856
+        ],
+        "ci95_usdt": [
+          -24.73218206564234,
+          4.166254210494771
+        ],
+        "replicates": 2000,
+        "seed": 42
+      }
+    }
+  },
+  "conclusion": "NOT_SUPPORTED",
+  "hashes": {
+    "AF-RV-01_PREREG.md": "477e53fa0ce2b8bc123ccd89e5c73f2eba3a95137ef5265755f4de0fcddaddde",
+    "run_af_rv_01.py": "02a55ef2647c03e0766706ae6b57e5859fbdb32b8eaa4f72c2453631531f8cb9",
+    "test_af_rv_01.py": "73d9e8102407060c9313841f42a6b493d6b9a265a8e4739fd105c1d68debcb99",
+    "engine.py": "54d1533210e6963566613c955cf85bdafaee577155e73ec45da5d2a40131cc32",
+    "build_report.py": "bd8e482748ff3cfb70f37887329132bb6c5b9f49c62935e241f0b0e46fe6125b",
+    "btcusdt_um_funding.csv": "d9b36b5e32d1c105127a77a71172bd2de9e5ab2a00336ee2ea434eb13f1dc40d",
+    "btcusdt_um_1h.csv": "ae1b44dfa3757355da2deb1ec192fedf873c13ed39cc7d93a757b947bb6b5db9",
+    "ethusdt_um_funding.csv": "4c7d4e72c6224459f449cc9d5e48fc2d1f684a545d40cf4802ca494e973e62a0",
+    "ethusdt_um_1h.csv": "553afe9a0066579d33222cbf6941b9787ae8fac4661a7104a81f1164dcb62a89"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}
