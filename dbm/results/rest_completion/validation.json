@@ -1,0 +1,69 @@
+{
+  "valid": false,
+  "baseline": "bbc0dcdf110283e9a0a7844a29c761b7b153d2b0",
+  "expected_bars": 87840,
+  "available_bars": 87425,
+  "archive_bars": 86400,
+  "rest_bars": 1025,
+  "missing_count": 415,
+  "first_missing_utc": "2026-10-31T17:05:00Z",
+  "last_missing_utc": "2026-10-31T23:59:00Z",
+  "errors": [],
+  "duplicate_count": 0,
+  "available_timestamps_strictly_continuous": true,
+  "seam_bars": [
+    [
+      1793404740,
+      2245.35,
+      2245.58,
+      2245.35,
+      2245.54
+    ],
+    [
+      1793404800,
+      2245.54,
+      2245.96,
+      2244.99,
+      2245.67
+    ]
+  ],
+  "seam_continuous": true,
+  "archive_errors": [],
+  "archive_integrity_ok": true,
+  "requests": [
+    {
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1793577600000&limit=1000",
+      "http_status": 200,
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "first_open_utc": null,
+      "last_open_utc": null
+    },
+    {
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1793637600000&limit=440",
+      "http_status": 200,
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "first_open_utc": null,
+      "last_open_utc": null
+    },
+    {
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1793404800000&limit=1000",
+      "http_status": 200,
+      "rows": 1000,
+      "sha256": "6cd08b80627eb1488b22a19a81524f1e9c2d1580681efdd020d23d3cb8603ed9",
+      "first_open_utc": "2026-10-31T00:00:00Z",
+      "last_open_utc": "2026-10-31T16:39:00Z"
+    },
+    {
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1793464800000&limit=440",
+      "http_status": 200,
+      "rows": 25,
+      "sha256": "35b1c31ffa203db0d08836fce7e7f95a969cc6afdb5f8075a52e96eb19777190",
+      "first_open_utc": "2026-10-31T16:40:00Z",
+      "last_open_utc": "2026-10-31T17:04:00Z"
+    }
+  ],
+  "simulation_run": false,
+  "note": "REST last row may still be an open candle; incomplete full-day coverage fails the gate regardless. No simulation run."
+}

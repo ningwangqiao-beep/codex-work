@@ -1,0 +1,238 @@
+{
+  "valid": false,
+  "expected_bars": 87840,
+  "available_bars": 86400,
+  "missing_count": 1440,
+  "errors": [],
+  "downloads": [
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-09.zip",
+      "status": 200,
+      "bytes": 1988611,
+      "sha256": "827b46043bdc877d542edf8ff178dc0411cfa166a56fa73f2f850ad06c951b50",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10.zip",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-01.zip",
+      "status": 200,
+      "bytes": 66998,
+      "sha256": "4be093b530c52b8251a28303a6c1b1a4301e03d9cbc9fbb8541638cedeedc30f",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-02.zip",
+      "status": 200,
+      "bytes": 67836,
+      "sha256": "0c238de5f409a3c7bc1ebce4ce3ead198de48beefcf7f1182e2e7f84e49c38e2",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-03.zip",
+      "status": 200,
+      "bytes": 61826,
+      "sha256": "dd2ced68d868f48a30c143d92a928031ea15c755be5491e18c3d58a1269ace3a",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-04.zip",
+      "status": 200,
+      "bytes": 62008,
+      "sha256": "11f9432152726de71f1d5c3df691e22d7ecc7021e7673fa53ca9b992e2177c6d",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-05.zip",
+      "status": 200,
+      "bytes": 66140,
+      "sha256": "a3d6d6a659c45abe4d47a7f77c7ba6f376733293497c7bc74d8f5fd93e5536a6",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-06.zip",
+      "status": 200,
+      "bytes": 65089,
+      "sha256": "b544ccb87940df93fc44028bc03fc7f519695aafd73ccd632f9ebf3c9ae746e7",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-07.zip",
+      "status": 200,
+      "bytes": 67267,
+      "sha256": "c884bb7c8863e8a1133ff319cdcc90194ede131230c743f0202f93a5725566c2",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-08.zip",
+      "status": 200,
+      "bytes": 68114,
+      "sha256": "4ffa208342f7622fdd8e97f85d01946731cf33c2fca2f7ffef8a0eaf0140bf23",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-09.zip",
+      "status": 200,
+      "bytes": 65760,
+      "sha256": "22f7214b6966cbd862abe9190856990cf68d43ccc9b47737e3642057d37c6c9e",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-10.zip",
+      "status": 200,
+      "bytes": 62521,
+      "sha256": "6a9a416f557b7110272136d02694b68ab54e3d22217a7f494150796fe956a46b",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-11.zip",
+      "status": 200,
+      "bytes": 64262,
+      "sha256": "40ea1e204a0a29a4f9f57fceb78492d7c51110e256fe26afa0e38baae63b3324",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-12.zip",
+      "status": 200,
+      "bytes": 66971,
+      "sha256": "0fc81d3eb0d47c01e76b5e4fad08ed853837028ce7eb0737bf91c24e182cbe75",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-13.zip",
+      "status": 200,
+      "bytes": 67033,
+      "sha256": "569a7c366bc2dac6da09a92e8eb421513fb9dddbfe7028b4bb75b5d6a2d15a5a",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-14.zip",
+      "status": 200,
+      "bytes": 67439,
+      "sha256": "2bd380eb3094a86d73ae2630034aae6c5f2dd7ef1c3181e778b8bc65679b6b9c",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-15.zip",
+      "status": 200,
+      "bytes": 68438,
+      "sha256": "694b315484907ef950e3e17a18eb4a8b493858914a3b5e0b63157bf94369b741",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-16.zip",
+      "status": 200,
+      "bytes": 67355,
+      "sha256": "61589b4040b22b7d47d08c9c086e3db846055c1e151aea3ca30b685d0236122b",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-17.zip",
+      "status": 200,
+      "bytes": 64244,
+      "sha256": "b1184758026dd264a0bf8ccf4b0f53a7c6e73cbecf17526ee0b2225b92dcd307",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-18.zip",
+      "status": 200,
+      "bytes": 65735,
+      "sha256": "9a7e98fe7a88a7a4432e7e27f63c793b93a7975ab94bb24f47b5bdfcea42d5ba",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-19.zip",
+      "status": 200,
+      "bytes": 66413,
+      "sha256": "9cbf6c2c81ba412000e767e10dcfefae725a524f052ac4179a619c22e3cb7d7d",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-20.zip",
+      "status": 200,
+      "bytes": 66984,
+      "sha256": "c469cf2ce2e2a328edc703e78c9f37311959bdff4658ac45e742c287a965b92c",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-21.zip",
+      "status": 200,
+      "bytes": 67346,
+      "sha256": "848345d9457b171dc25945076d8a700ca816ee3d99c3fd735c1f9597934e983d",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-22.zip",
+      "status": 200,
+      "bytes": 67076,
+      "sha256": "57762e967c1999ef60f31caf08f4c7feedaabfa036088c75728167a80971a761",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-23.zip",
+      "status": 200,
+      "bytes": 66372,
+      "sha256": "186c165636e6593420e4d677f29b4ed068b3ccf43a6d699c9d724b46cb0fe4ef",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-24.zip",
+      "status": 200,
+      "bytes": 64932,
+      "sha256": "b05e0c4b8acd8cb6edd21b3cb6c571db8b277ebe7832c336646e386988b02aaa",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-25.zip",
+      "status": 200,
+      "bytes": 64320,
+      "sha256": "84fa72c5fc7debfc35f76911351059833726382d390248ecda46227fff1b3e03",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-26.zip",
+      "status": 200,
+      "bytes": 67048,
+      "sha256": "071ba59cf303994a2943cd89e8d275c52797e4d81b56b0e5a2e94eb69037365a",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-27.zip",
+      "status": 200,
+      "bytes": 65892,
+      "sha256": "3e3547187139c7d099a9666b26fc3f9bdf07551155cc59a9ac1b4910c9d462aa",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-28.zip",
+      "status": 200,
+      "bytes": 65757,
+      "sha256": "fe0299e12b0c4ab0fbcac0ef52590ce7a121a38475f553f4ffbb353a5dc782fe",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-29.zip",
+      "status": 200,
+      "bytes": 67867,
+      "sha256": "37f70659ecf354087a5921e64aac9e7f8d463d4c34566abe36d6b11d294ac4ca",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-30.zip",
+      "status": 200,
+      "bytes": 68747,
+      "sha256": "255072054b6a423497e1399bed24d583fb44103931439c4bd6a1cdebb6eb5ef2",
+      "checksum_ok": true
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-10-31.zip",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "first_available": "2026-09-01T00:00:00Z",
+  "last_available": "2026-10-30T23:59:00Z"
+}
