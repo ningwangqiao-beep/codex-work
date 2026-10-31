@@ -22,7 +22,9 @@ START = int(dt.datetime(2026, 5, 1, tzinfo=dt.timezone.utc).timestamp())
 END = int(dt.datetime(2026, 10, 31, 17, 5, tzinfo=dt.timezone.utc).timestamp())
 
 def save(name, rows):
-    bt.writecsv(OUT / name, rows, list(rows[0]))
+    with (OUT / name).open('w', newline='') as f:
+        writer=csv.DictWriter(f,list(rows[0]),lineterminator='\n')
+        writer.writeheader();writer.writerows(rows)
 
 def load():
     report = dict(valid=False, baseline=BASELINE, expected_bars=264545,
