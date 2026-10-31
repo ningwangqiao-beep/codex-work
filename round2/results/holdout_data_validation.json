@@ -1,0 +1,11 @@
+{
+  "window": "W0",
+  "start_utc": "2023-11-01",
+  "end_exclusive_utc": "2024-05-01",
+  "expected": 262080,
+  "actual": 262080,
+  "missing": 0,
+  "duplicates": 0,
+  "outside": 0,
+  "sha256_csv": "238f7fa41533f95edf82aa04b738bbace74669d901485d4894bfdfd2d87d3cdb"
+}

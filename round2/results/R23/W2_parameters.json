@@ -1,0 +1,12 @@
+{
+  "g": 0.04,
+  "mult": 1.5,
+  "tp": 0.02,
+  "depth": 5,
+  "base": 200.0,
+  "cap": 4.0,
+  "compound": 1,
+  "dd": 1.0,
+  "reset": 1,
+  "stopnext": 0
+}

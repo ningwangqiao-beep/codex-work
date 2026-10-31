@@ -1,3 +1,5 @@
+> Current canonical execution and latest results: [round2/REPORT.md](round2/REPORT.md). The parent engine/results below are the historical first-round study; its audit anchors have been invalidated.
+
 # ETHUSDT 1m synthetic hedged-basket study
 
 Read `REPORT.md` for the full Chinese report and `results/all_results.csv` for all results.

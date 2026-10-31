@@ -1,0 +1,11 @@
+{
+  "first_access_utc": "2026-10-31T13:37:46.156531+00:00",
+  "pre_holdout_commit": "87eecc976c93853262f33c811f5139060cdacd40",
+  "selection_sha256": "c62b0a89ffdeae803b13db8e91546377bea348d3e90af7a1af64ed2bf57dfb99",
+  "candidate": "R21",
+  "tested_only": [
+    "R21",
+    "C04"
+  ],
+  "criterion": "fail if return<0 or close max drawdown>=60%"
+}

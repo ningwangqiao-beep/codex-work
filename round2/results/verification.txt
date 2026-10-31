@@ -1,0 +1,1 @@
+PASS: all 86 runs, final-source replay, fee and basket ledgers, TP target/open fills, addition clipping, TP frequency, close drawdown, dual baskets, R11=C04, pre-holdout selection lock and identical holdout parameters.
