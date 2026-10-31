@@ -1,0 +1,116 @@
+{
+  "valid": true,
+  "phase2_commit": "d0bbcb38ff62557a0289377b57c892f5a0d0f472",
+  "expected_bars": 260640,
+  "window_start_utc": "2025-11-01T00:00:00Z",
+  "window_end_exclusive_utc": "2026-05-01T00:00:00Z",
+  "archives": [
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-11.zip",
+      "status": 200,
+      "bytes": 2074392,
+      "sha256": "30b80de8cbbd68edf2b2bf76154f60e6edb0f8365e08e6d5afc63657e26e0f7c",
+      "checksum_ok": true,
+      "rows": 43200,
+      "first_open_utc": "2025-11-01T00:00:00Z",
+      "last_open_utc": "2025-11-30T23:59:00Z"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2025-12.zip",
+      "status": 200,
+      "bytes": 2079108,
+      "sha256": "57b653e4ff3558fae8d2e6da616c40e6cfad4002f131584f82ae7a80bd228293",
+      "checksum_ok": true,
+      "rows": 44640,
+      "first_open_utc": "2025-12-01T00:00:00Z",
+      "last_open_utc": "2025-12-31T23:59:00Z"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip",
+      "status": 200,
+      "bytes": 2068379,
+      "sha256": "cadd060ab73bd03fee94708b78738144da76d007fc2170d8ad2cec678de7a654",
+      "checksum_ok": true,
+      "rows": 44640,
+      "first_open_utc": "2026-01-01T00:00:00Z",
+      "last_open_utc": "2026-01-31T23:59:00Z"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-02.zip",
+      "status": 200,
+      "bytes": 1918913,
+      "sha256": "1ddb64d08739a40b7f66a37bccf5ca5fec58339c7f01e83311086116f41b445f",
+      "checksum_ok": true,
+      "rows": 40320,
+      "first_open_utc": "2026-02-01T00:00:00Z",
+      "last_open_utc": "2026-02-28T23:59:00Z"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-03.zip",
+      "status": 200,
+      "bytes": 2086704,
+      "sha256": "5747c9f1f76be7afbf9513d50ea65ff6e979fa9684c75a775b6974e64c751844",
+      "checksum_ok": true,
+      "rows": 44640,
+      "first_open_utc": "2026-03-01T00:00:00Z",
+      "last_open_utc": "2026-03-31T23:59:00Z"
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-04.zip",
+      "status": 200,
+      "bytes": 1980853,
+      "sha256": "8a2f0a2907764827ca3c52416bd9357c5d6213f3816fadbd0515bf504ea75ffd",
+      "checksum_ok": true,
+      "rows": 43200,
+      "first_open_utc": "2026-04-01T00:00:00Z",
+      "last_open_utc": "2026-04-30T23:59:00Z"
+    }
+  ],
+  "available_bars": 260640,
+  "duplicate_count": 0,
+  "missing_count": 0,
+  "ohlc_valid": true,
+  "seams": [
+    {
+      "previous_open_utc": "2025-11-30T23:59:00Z",
+      "next_open_utc": "2025-12-01T00:00:00Z",
+      "previous_close": 2991.26,
+      "next_open": 2991.25,
+      "price_gap": -0.010000000000218279,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2025-12-31T23:59:00Z",
+      "next_open_utc": "2026-01-01T00:00:00Z",
+      "previous_close": 2971.64,
+      "next_open": 2971.65,
+      "price_gap": 0.010000000000218279,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-01-31T23:59:00Z",
+      "next_open_utc": "2026-02-01T00:00:00Z",
+      "previous_close": 2451.95,
+      "next_open": 2451.96,
+      "price_gap": 0.010000000000218279,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-02-28T23:59:00Z",
+      "next_open_utc": "2026-03-01T00:00:00Z",
+      "previous_close": 1964.51,
+      "next_open": 1964.51,
+      "price_gap": 0.0,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-03-31T23:59:00Z",
+      "next_open_utc": "2026-04-01T00:00:00Z",
+      "previous_close": 2105.43,
+      "next_open": 2105.43,
+      "price_gap": 0.0,
+      "continuous": true
+    }
+  ],
+  "input_sha256": "fbb9bbdb4f8c4f0311480b6295190325988940d1b37f29a63eecc3688e32a2a8"
+}
