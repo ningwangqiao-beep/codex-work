@@ -1,0 +1,38 @@
+[
+  {
+    "window": "W1",
+    "start_utc": "2024-11-01",
+    "end_exclusive_utc": "2025-05-01",
+    "expected": 260640,
+    "actual": 260640,
+    "duplicates": 0,
+    "missing": 0,
+    "outside": 0,
+    "gaps": [],
+    "sha256": "615c3dd6cf20d91bab87469cb0c44c923aabc366259965cc3fe5b93834125c7d"
+  },
+  {
+    "window": "W2",
+    "start_utc": "2025-05-01",
+    "end_exclusive_utc": "2025-11-01",
+    "expected": 264960,
+    "actual": 264960,
+    "duplicates": 0,
+    "missing": 0,
+    "outside": 0,
+    "gaps": [],
+    "sha256": "0bccb8c3d0d5aaa9ce4f62f720db3ca4e2f40c16a40a030d77f66ab899e455ba"
+  },
+  {
+    "window": "W3",
+    "start_utc": "2026-05-01",
+    "end_exclusive_utc": "2026-10-31",
+    "expected": 263520,
+    "actual": 263520,
+    "duplicates": 0,
+    "missing": 0,
+    "outside": 0,
+    "gaps": [],
+    "sha256": "1f6121437d1ee549020868c823cb59f71b2fcf658f5af12b66edf290504b6863"
+  }
+]

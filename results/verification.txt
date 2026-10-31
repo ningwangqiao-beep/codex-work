@@ -1,0 +1,14 @@
+PASS: 102 candidate-window runs; ledger, basket fees, drawdown, TP limit, favorable-fill bounds, and optimized dual baskets.
+candidate window  trades  favorable_outside_extreme  outside_range
+ Anchor_a     W2    1761                          1              2
+ Anchor_a     W3    1737                          3              7
+ Anchor_b     W1    7632                         10             30
+ Anchor_b     W2    6331                         30             68
+ Anchor_b     W3    3453                          8             20
+......
+----------------------------------------------------------------------
+Ran 6 tests in 6.721s
+
+OK
+PASS: final-source replay of all 102 candidate-window results.
+PASS: compressed canonical CSV hashes and all OHLC/volume bounds.

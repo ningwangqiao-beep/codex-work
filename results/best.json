@@ -1,0 +1,16 @@
+{
+  "candidate": "C04",
+  "parameters": {
+    "g": 0.03,
+    "mult": 1.5,
+    "depth": 5,
+    "tp": 0.02,
+    "base": 200,
+    "cap": 4,
+    "compound": 1,
+    "dd": 1.0,
+    "reset": 1,
+    "stopnext": 0
+  },
+  "criterion": "maximize minimum of W1/W2/W3 return; ties lower worst drawdown; all in-sample"
+}

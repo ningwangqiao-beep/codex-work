@@ -1,0 +1,873 @@
+{
+  "summary": [
+    {
+      "candidate": "A_a",
+      "window": "W1",
+      "trades": 1281,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "A_a",
+      "window": "W2",
+      "trades": 1747,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "A_a",
+      "window": "W3",
+      "trades": 1756,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "A_b",
+      "window": "W1",
+      "trades": 7493,
+      "favorable_outside_extreme": 0,
+      "outside_range": 9
+    },
+    {
+      "candidate": "A_b",
+      "window": "W2",
+      "trades": 5875,
+      "favorable_outside_extreme": 0,
+      "outside_range": 3
+    },
+    {
+      "candidate": "A_b",
+      "window": "W3",
+      "trades": 2719,
+      "favorable_outside_extreme": 0,
+      "outside_range": 3
+    },
+    {
+      "candidate": "Anchor_a",
+      "window": "W1",
+      "trades": 1281,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "Anchor_a",
+      "window": "W2",
+      "trades": 1761,
+      "favorable_outside_extreme": 1,
+      "outside_range": 2
+    },
+    {
+      "candidate": "Anchor_a",
+      "window": "W3",
+      "trades": 1737,
+      "favorable_outside_extreme": 3,
+      "outside_range": 7
+    },
+    {
+      "candidate": "Anchor_b",
+      "window": "W1",
+      "trades": 7632,
+      "favorable_outside_extreme": 10,
+      "outside_range": 30
+    },
+    {
+      "candidate": "Anchor_b",
+      "window": "W2",
+      "trades": 6331,
+      "favorable_outside_extreme": 30,
+      "outside_range": 68
+    },
+    {
+      "candidate": "Anchor_b",
+      "window": "W3",
+      "trades": 3453,
+      "favorable_outside_extreme": 8,
+      "outside_range": 20
+    },
+    {
+      "candidate": "C01",
+      "window": "W1",
+      "trades": 15120,
+      "favorable_outside_extreme": 0,
+      "outside_range": 33
+    },
+    {
+      "candidate": "C01",
+      "window": "W2",
+      "trades": 13485,
+      "favorable_outside_extreme": 0,
+      "outside_range": 18
+    },
+    {
+      "candidate": "C01",
+      "window": "W3",
+      "trades": 9450,
+      "favorable_outside_extreme": 0,
+      "outside_range": 23
+    },
+    {
+      "candidate": "C02",
+      "window": "W1",
+      "trades": 5718,
+      "favorable_outside_extreme": 0,
+      "outside_range": 7
+    },
+    {
+      "candidate": "C02",
+      "window": "W2",
+      "trades": 5654,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C02",
+      "window": "W3",
+      "trades": 2505,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C03",
+      "window": "W1",
+      "trades": 2009,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C03",
+      "window": "W2",
+      "trades": 1618,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C03",
+      "window": "W3",
+      "trades": 719,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C04",
+      "window": "W1",
+      "trades": 1061,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C04",
+      "window": "W2",
+      "trades": 869,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C04",
+      "window": "W3",
+      "trades": 446,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C05",
+      "window": "W1",
+      "trades": 2240,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C05",
+      "window": "W2",
+      "trades": 1829,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C05",
+      "window": "W3",
+      "trades": 985,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C06",
+      "window": "W1",
+      "trades": 1148,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C06",
+      "window": "W2",
+      "trades": 913,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C06",
+      "window": "W3",
+      "trades": 464,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C07",
+      "window": "W1",
+      "trades": 504,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C07",
+      "window": "W2",
+      "trades": 410,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C07",
+      "window": "W3",
+      "trades": 199,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C08",
+      "window": "W1",
+      "trades": 5886,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C08",
+      "window": "W2",
+      "trades": 4595,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C08",
+      "window": "W3",
+      "trades": 2085,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C09",
+      "window": "W1",
+      "trades": 1709,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C09",
+      "window": "W2",
+      "trades": 1367,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C09",
+      "window": "W3",
+      "trades": 543,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C10",
+      "window": "W1",
+      "trades": 764,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C10",
+      "window": "W2",
+      "trades": 591,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C10",
+      "window": "W3",
+      "trades": 272,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C11",
+      "window": "W1",
+      "trades": 5684,
+      "favorable_outside_extreme": 0,
+      "outside_range": 6
+    },
+    {
+      "candidate": "C11",
+      "window": "W2",
+      "trades": 5694,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C11",
+      "window": "W3",
+      "trades": 2493,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C12",
+      "window": "W1",
+      "trades": 2049,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C12",
+      "window": "W2",
+      "trades": 1634,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C12",
+      "window": "W3",
+      "trades": 719,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C13",
+      "window": "W1",
+      "trades": 1030,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C13",
+      "window": "W2",
+      "trades": 880,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C13",
+      "window": "W3",
+      "trades": 458,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C14",
+      "window": "W1",
+      "trades": 2318,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C14",
+      "window": "W2",
+      "trades": 1806,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C14",
+      "window": "W3",
+      "trades": 953,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C15",
+      "window": "W1",
+      "trades": 1132,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C15",
+      "window": "W2",
+      "trades": 936,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C15",
+      "window": "W3",
+      "trades": 486,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C16",
+      "window": "W1",
+      "trades": 521,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C16",
+      "window": "W2",
+      "trades": 407,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C16",
+      "window": "W3",
+      "trades": 196,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C17",
+      "window": "W1",
+      "trades": 551,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C17",
+      "window": "W2",
+      "trades": 948,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C17",
+      "window": "W3",
+      "trades": 485,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C18",
+      "window": "W1",
+      "trades": 33,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C18",
+      "window": "W2",
+      "trades": 36,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C18",
+      "window": "W3",
+      "trades": 40,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C19",
+      "window": "W1",
+      "trades": 4153,
+      "favorable_outside_extreme": 0,
+      "outside_range": 9
+    },
+    {
+      "candidate": "C19",
+      "window": "W2",
+      "trades": 3091,
+      "favorable_outside_extreme": 0,
+      "outside_range": 8
+    },
+    {
+      "candidate": "C19",
+      "window": "W3",
+      "trades": 1600,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C20",
+      "window": "W1",
+      "trades": 1172,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C20",
+      "window": "W2",
+      "trades": 951,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C20",
+      "window": "W3",
+      "trades": 440,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C21",
+      "window": "W1",
+      "trades": 4150,
+      "favorable_outside_extreme": 0,
+      "outside_range": 7
+    },
+    {
+      "candidate": "C21",
+      "window": "W2",
+      "trades": 3106,
+      "favorable_outside_extreme": 0,
+      "outside_range": 9
+    },
+    {
+      "candidate": "C21",
+      "window": "W3",
+      "trades": 1600,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C22",
+      "window": "W1",
+      "trades": 1172,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C22",
+      "window": "W2",
+      "trades": 947,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C22",
+      "window": "W3",
+      "trades": 441,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C23",
+      "window": "W1",
+      "trades": 4142,
+      "favorable_outside_extreme": 0,
+      "outside_range": 9
+    },
+    {
+      "candidate": "C23",
+      "window": "W2",
+      "trades": 3082,
+      "favorable_outside_extreme": 0,
+      "outside_range": 7
+    },
+    {
+      "candidate": "C23",
+      "window": "W3",
+      "trades": 1601,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C24",
+      "window": "W1",
+      "trades": 1196,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C24",
+      "window": "W2",
+      "trades": 944,
+      "favorable_outside_extreme": 0,
+      "outside_range": 2
+    },
+    {
+      "candidate": "C24",
+      "window": "W3",
+      "trades": 440,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C25",
+      "window": "W1",
+      "trades": 3820,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C25",
+      "window": "W2",
+      "trades": 3651,
+      "favorable_outside_extreme": 0,
+      "outside_range": 5
+    },
+    {
+      "candidate": "C25",
+      "window": "W3",
+      "trades": 3432,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C26",
+      "window": "W1",
+      "trades": 1967,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C26",
+      "window": "W2",
+      "trades": 1735,
+      "favorable_outside_extreme": 0,
+      "outside_range": 4
+    },
+    {
+      "candidate": "C26",
+      "window": "W3",
+      "trades": 1369,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C27",
+      "window": "W1",
+      "trades": 854,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C27",
+      "window": "W2",
+      "trades": 1367,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C27",
+      "window": "W3",
+      "trades": 1315,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C28",
+      "window": "W1",
+      "trades": 1285,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C28",
+      "window": "W2",
+      "trades": 951,
+      "favorable_outside_extreme": 0,
+      "outside_range": 4
+    },
+    {
+      "candidate": "C28",
+      "window": "W3",
+      "trades": 487,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C29",
+      "window": "W1",
+      "trades": 1287,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C29",
+      "window": "W2",
+      "trades": 951,
+      "favorable_outside_extreme": 0,
+      "outside_range": 4
+    },
+    {
+      "candidate": "C29",
+      "window": "W3",
+      "trades": 500,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C30",
+      "window": "W1",
+      "trades": 243,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    },
+    {
+      "candidate": "C30",
+      "window": "W2",
+      "trades": 127,
+      "favorable_outside_extreme": 0,
+      "outside_range": 0
+    },
+    {
+      "candidate": "C30",
+      "window": "W3",
+      "trades": 391,
+      "favorable_outside_extreme": 0,
+      "outside_range": 1
+    }
+  ],
+  "examples": [
+    {
+      "time_utc": "2025-05-18 20:01:00+00:00",
+      "bar": 25681.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2380.547448367329,
+      "qty": 0.0840142884516617,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 296.0,
+      "candidate": "Anchor_a",
+      "window": "W2",
+      "bar_low": 2334.65,
+      "bar_high": 2369.21
+    },
+    {
+      "time_utc": "2026-05-17 23:41:00+00:00",
+      "bar": 24461.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2146.6169585452,
+      "qty": 0.0931698593006288,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 60.0,
+      "candidate": "Anchor_a",
+      "window": "W3",
+      "bar_low": 2094.4,
+      "bar_high": 2145.81
+    },
+    {
+      "time_utc": "2026-05-17 23:42:00+00:00",
+      "bar": 24462.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2129.444022876838,
+      "qty": 0.0939212291336984,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 61.0,
+      "candidate": "Anchor_a",
+      "window": "W3",
+      "bar_low": 2091.48,
+      "bar_high": 2122.46
+    },
+    {
+      "time_utc": "2025-01-29 19:41:00+00:00",
+      "bar": 129341.0,
+      "side": 1.0,
+      "kind": 0.0,
+      "price": 3134.8032290485085,
+      "qty": 0.0637998577220762,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 1155.0,
+      "candidate": "Anchor_b",
+      "window": "W1",
+      "bar_low": 3136.61,
+      "bar_high": 3153.22
+    },
+    {
+      "time_utc": "2025-02-02 22:41:00+00:00",
+      "bar": 135281.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2825.4827151612035,
+      "qty": 0.070784365066834,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 1216.0,
+      "candidate": "Anchor_b",
+      "window": "W1",
+      "bar_low": 2750.71,
+      "bar_high": 2813.9
+    },
+    {
+      "time_utc": "2025-05-18 20:01:00+00:00",
+      "bar": 25681.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2380.547448367329,
+      "qty": 0.0840142884516617,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 296.0,
+      "candidate": "Anchor_b",
+      "window": "W2",
+      "bar_low": 2334.65,
+      "bar_high": 2369.21
+    },
+    {
+      "time_utc": "2025-06-21 21:25:00+00:00",
+      "bar": 74725.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2359.9533405261545,
+      "qty": 0.0847474382503722,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 699.0,
+      "candidate": "Anchor_b",
+      "window": "W2",
+      "bar_low": 2301.01,
+      "bar_high": 2346.54
+    },
+    {
+      "time_utc": "2026-05-17 23:41:00+00:00",
+      "bar": 24461.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2146.6169585452,
+      "qty": 0.0931698593006288,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 60.0,
+      "candidate": "Anchor_b",
+      "window": "W3",
+      "bar_low": 2094.4,
+      "bar_high": 2145.81
+    },
+    {
+      "time_utc": "2026-05-17 23:42:00+00:00",
+      "bar": 24462.0,
+      "side": -1.0,
+      "kind": 0.0,
+      "price": 2129.444022876838,
+      "qty": 0.0939212291336984,
+      "notional": 200.0,
+      "fee": 0.1399999999999999,
+      "gross": 0.0,
+      "basket_net": -0.1399999999999999,
+      "basket_id": 61.0,
+      "candidate": "Anchor_b",
+      "window": "W3",
+      "bar_low": 2091.48,
+      "bar_high": 2122.46
+    }
+  ]
+}
