@@ -1,0 +1,38 @@
+{
+  "ledger_checks": [
+    {
+      "run": "W1_V2-bi",
+      "fill_count": 7412,
+      "basket_count": 2297,
+      "cycle_count": 48,
+      "daily_count": 184,
+      "ledger_replay": true
+    },
+    {
+      "run": "W1_G10-bi",
+      "fill_count": 8879,
+      "basket_count": 2905,
+      "cycle_count": 33,
+      "daily_count": 184,
+      "ledger_replay": true
+    },
+    {
+      "run": "W2_V2-bi",
+      "fill_count": 13932,
+      "basket_count": 4320,
+      "cycle_count": 101,
+      "daily_count": 181,
+      "ledger_replay": true
+    },
+    {
+      "run": "W2_G10-bi",
+      "fill_count": 16553,
+      "basket_count": 5425,
+      "cycle_count": 68,
+      "daily_count": 181,
+      "ledger_replay": true
+    }
+  ],
+  "execution_fixtures": true,
+  "single_direction_runs": 0
+}

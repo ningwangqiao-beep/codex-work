@@ -1,0 +1,16 @@
+[
+  {
+    "window": "W1",
+    "source_commit": "d0bbcb38ff62557a0289377b57c892f5a0d0f472",
+    "bars": 264545,
+    "sha256": "260c2d1d9d56a8d4ba54e9f986afc8613d3645f8f7949fa5ea075cce55658149",
+    "valid": true
+  },
+  {
+    "window": "W2",
+    "source_commit": "a1aeba7862ff504ae03d48d32bc4210c4c092a6d",
+    "bars": 260640,
+    "sha256": "fbb9bbdb4f8c4f0311480b6295190325988940d1b37f29a63eecc3688e32a2a8",
+    "valid": true
+  }
+]
