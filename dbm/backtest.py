@@ -128,7 +128,7 @@ def simulate(name, bars, out):
         peak=max(peak,equity); mdd=max(mdd,1-equity/peak)
         if equity<low: low=equity; low_time=iso(t+60)
         if qty: exposure(c,t+60)
-        if (t+60)%86400==0:
+        if (t+60)%86400==0 or t == bars[-1][0]:
             daily.append({'date_utc':iso(t)[:10],'close_time_utc':iso(t+60),'equity':equity,'cash':cash,'quantity':qty,'close_price':c,'fees_cumulative':fees,'status':'BUSTED' if busted else 'ACTIVE'})
     if basket is not None:
         basket.update(close_time_utc='',close_price='',close_reason='OPEN_AT_END',pnl_net=equity-basket['starting_equity'],fees=fees-basket['starting_fees'],add_count=adds,buys_json=json.dumps(basket.pop('buys')))

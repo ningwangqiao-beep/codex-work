@@ -1,3 +1,7 @@
+# Current authorized run
+
+Completed 87,425-bar run: **2026-09-01T00:00:00Z through 2026-10-31T17:04:00Z**, last close evaluated at 17:05 UTC. See [report](results/window_87425/REPORT.md). Reproduce using `python dbm/run_audited_window.py`; verify using `python dbm/verify_audited_window.py`. Strategy rules and parameters below remain frozen. The following earlier full-day data gate report is historical.
+
 # Frozen DBM backtest — blocked by missing source data
 
 The requested window is 2026-09-01 00:00 through 2026-10-31 23:59 UTC (87,840 minutes).

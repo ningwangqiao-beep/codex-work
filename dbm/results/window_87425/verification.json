@@ -1,0 +1,29 @@
+[
+  {
+    "variant": "V0",
+    "baseline_summary_exact_match": true,
+    "daily_rows": 61,
+    "fill_count": 725,
+    "ledger_reconciles": true,
+    "fees_reconcile": true,
+    "basket_pnl_reconciles": true
+  },
+  {
+    "variant": "V1",
+    "baseline_summary_exact_match": true,
+    "daily_rows": 61,
+    "fill_count": 549,
+    "ledger_reconciles": true,
+    "fees_reconcile": true,
+    "basket_pnl_reconciles": true
+  },
+  {
+    "variant": "V2",
+    "baseline_summary_exact_match": true,
+    "daily_rows": 61,
+    "fill_count": 272,
+    "ledger_reconciles": true,
+    "fees_reconcile": true,
+    "basket_pnl_reconciles": true
+  }
+]
