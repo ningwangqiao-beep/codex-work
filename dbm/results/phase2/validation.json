@@ -1,0 +1,89 @@
+{
+  "valid": true,
+  "baseline": "cc63799b55f04b58493760a9e24283a6a23cabd3",
+  "expected_bars": 264545,
+  "window_start_utc": "2026-05-01T00:00:00Z",
+  "window_end_exclusive_utc": "2026-10-31T17:05:00Z",
+  "archives": [
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-05.zip",
+      "status": 200,
+      "bytes": 2023074,
+      "sha256": "bc0e625d18c0fa5378cecd0119aa20721b8830c24c3a55094f4c4c966ff8f710",
+      "checksum_ok": true,
+      "rows": 44640
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-06.zip",
+      "status": 200,
+      "bytes": 1996139,
+      "sha256": "770fdf44aac01dbe136e5b37a10501e57069af4048e76fbb3a3a2de2e9662934",
+      "checksum_ok": true,
+      "rows": 43200
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-07.zip",
+      "status": 200,
+      "bytes": 2027161,
+      "sha256": "1ad273218d6c33fd62515198276f00c0656ae002c0d1d9ab10cca0f5d0f7adc2",
+      "checksum_ok": true,
+      "rows": 44640
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-08.zip",
+      "status": 200,
+      "bytes": 2005311,
+      "sha256": "f2f2fe8da85467fb8ec8185e07f16f3af9f4ebcb266633ba494e76ac73c40c0c",
+      "checksum_ok": true,
+      "rows": 44640
+    }
+  ],
+  "reused_input_sha256": "b245c25cf1b08b2632220bc4a298216600483f4eef297fdc9619b84eb05e9857",
+  "available_bars": 264545,
+  "duplicate_count": 0,
+  "missing_count": 0,
+  "ohlc_valid": true,
+  "seams": [
+    {
+      "previous_open_utc": "2026-05-31T23:59:00Z",
+      "next_open_utc": "2026-06-01T00:00:00Z",
+      "previous_close": 2007.01,
+      "next_open": 2007.02,
+      "gap": 0.009999999999990905,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-06-30T23:59:00Z",
+      "next_open_utc": "2026-07-01T00:00:00Z",
+      "previous_close": 1572.01,
+      "next_open": 1572.0,
+      "gap": -0.009999999999990905,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-07-31T23:59:00Z",
+      "next_open_utc": "2026-08-01T00:00:00Z",
+      "previous_close": 1862.6,
+      "next_open": 1862.6,
+      "gap": 0.0,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-08-31T23:59:00Z",
+      "next_open_utc": "2026-09-01T00:00:00Z",
+      "previous_close": 2467.65,
+      "next_open": 2467.64,
+      "gap": -0.010000000000218279,
+      "continuous": true
+    },
+    {
+      "previous_open_utc": "2026-09-30T23:59:00Z",
+      "next_open_utc": "2026-10-01T00:00:00Z",
+      "previous_close": 2686.01,
+      "next_open": 2686.01,
+      "gap": 0.0,
+      "continuous": true
+    }
+  ],
+  "input_sha256": "f925398bb22a0972ab3236a1eea4bbec26ac3010f98a49795ae3ecd94654f837"
+}

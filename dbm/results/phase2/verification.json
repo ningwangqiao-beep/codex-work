@@ -1,0 +1,8 @@
+{
+  "valid": true,
+  "baseline": "cc63799b55f04b58493760a9e24283a6a23cabd3",
+  "baseline_cycles_replayed": 35,
+  "exact_frozen_fills_compared": 8485,
+  "fee_and_settlement_ledger": true,
+  "daily_external_flow_reconciliation": true
+}
