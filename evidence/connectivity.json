@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://fapi.binance.com/fapi/v1/ping",
+    "status": null,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fetched_at": "2026-10-31T15:17:47.596011+00:00"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=15m&limit=3",
+    "status": null,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fetched_at": "2026-10-31T15:17:47.599959+00:00"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=ETHUSDT",
+    "status": null,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fetched_at": "2026-10-31T15:17:47.603280+00:00"
+  },
+  {
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=ETHUSDT",
+    "status": null,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fetched_at": "2026-10-31T15:17:47.608075+00:00"
+  },
+  {
+    "url": "https://testnet.binancefuture.com/fapi/v1/ping",
+    "status": null,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "fetched_at": "2026-10-31T15:17:47.611304+00:00"
+  }
+]

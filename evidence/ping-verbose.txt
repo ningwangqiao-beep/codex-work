@@ -1,0 +1,23 @@
+* Uses proxy env variable no_proxy == 'localhost,127.0.0.1,::1'
+* Uses proxy env variable https_proxy == 'http://proxy:8080'
+* Host proxy:8080 was resolved.
+* IPv6: (none)
+* IPv4: 172.31.3.141
+*   Trying 172.31.3.141:8080...
+* CONNECT tunnel: HTTP/1.1 negotiated
+* allocate connect buffer
+* Establish HTTP proxy tunnel to fapi.binance.com:443
+> CONNECT fapi.binance.com:443 HTTP/1.1
+> Host: fapi.binance.com:443
+> User-Agent: curl/8.14.1
+> Proxy-Connection: Keep-Alive
+> 
+< HTTP/1.1 403 Forbidden
+< content-length: 16
+< content-type: text/plain
+< date: Sat, 31 Oct 2026 15:17:52 GMT
+< server: envoy
+< connection: close
+< 
+* CONNECT tunnel failed, response 403
+* closing connection #0
