@@ -1,0 +1,35 @@
+{
+  "seconds": 15.631973699993978,
+  "simulation_only": true,
+  "not_for_tuning": true,
+  "seed_groups": 100,
+  "executed_games": 1200,
+  "means": {
+    "heuristic": 0.445,
+    "old_reading_risk": -0.8525,
+    "trained_policy_value": -0.4675
+  },
+  "comparisons": {
+    "old_reading_risk": {
+      "mean_difference": -1.2975,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -1.63,
+        -0.9725
+      ]
+    },
+    "trained_policy_value": {
+      "mean_difference": -0.9125,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -1.225,
+        -0.625
+      ]
+    }
+  },
+  "flags": [
+    "OLD_MODEL_NEW_CONCEALED_KONG_AND_ACTION_DISTRIBUTION_SHIFT",
+    "PAIRED_INITIAL_DEAL_NOT_IDENTICAL_FUTURE_TRAJECTORY",
+    "SMALL_SAMPLE_NO_STRENGTH_CLAIM"
+  ],
+  "checkpoint_sha256": "39d45e4d744f2edcc443ec52a59bffdc3408a5f587b9883144b046842b762e56",
+  "old_checkpoint_sha256": "0f60b0ceeb9cfd2ce14d381e5d584102eb341968551956b95ff546115b695549"
+}

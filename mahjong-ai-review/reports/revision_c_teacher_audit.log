@@ -1,0 +1,54 @@
+{
+  "old_imitation": {
+    "n": 2939,
+    "exact": 823,
+    "equivalent": 978,
+    "top3": 1701,
+    "top5": 2294,
+    "utility_regret_sum": 5195,
+    "max_utility_regret": 7,
+    "teacher_tie_states": 1272,
+    "exact_fail_but_equivalent": 155,
+    "exact_fail_and_suboptimal": 1961,
+    "exact_rate": 0.28002722014290576,
+    "equivalent_rate": 0.3327662470227969,
+    "top3_rate": 0.5787682885335148,
+    "top5_rate": 0.7805375978223885,
+    "mean_teacher_utility_regret": 1.7676080299421573
+  },
+  "candidate_raw": {
+    "n": 2939,
+    "exact": 2675,
+    "equivalent": 2939,
+    "top3": 2926,
+    "top5": 2939,
+    "utility_regret_sum": 0,
+    "max_utility_regret": 0,
+    "teacher_tie_states": 1272,
+    "exact_fail_but_equivalent": 264,
+    "exact_fail_and_suboptimal": 0,
+    "exact_rate": 0.9101735284110242,
+    "equivalent_rate": 1.0,
+    "top3_rate": 0.9955767267778156,
+    "top5_rate": 1.0,
+    "mean_teacher_utility_regret": 0.0
+  },
+  "candidate_rounded": {
+    "n": 2939,
+    "exact": 2939,
+    "equivalent": 2939,
+    "top3": 2939,
+    "top5": 2939,
+    "utility_regret_sum": 0,
+    "max_utility_regret": 0,
+    "teacher_tie_states": 1272,
+    "exact_fail_but_equivalent": 0,
+    "exact_fail_and_suboptimal": 0,
+    "exact_rate": 1.0,
+    "equivalent_rate": 1.0,
+    "top3_rate": 1.0,
+    "top5_rate": 1.0,
+    "mean_teacher_utility_regret": 0.0
+  }
+}
+seconds 26.715896300003806

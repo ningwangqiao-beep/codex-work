@@ -1,0 +1,106 @@
+{
+  "config": {
+    "train_seed": 2100000,
+    "validation_seed": 2200000,
+    "games": 80,
+    "val_games": 30,
+    "seed": 42,
+    "feature_names": [
+      "post_pairs",
+      "post_links",
+      "post_triples",
+      "post_sequences",
+      "candidate_own_count",
+      "candidate_public_count",
+      "candidate_rank",
+      "post_max_suit",
+      "post_singletons",
+      "post_missing_count",
+      "candidate_remaining_unseen",
+      "bias"
+    ]
+  },
+  "binding": "c4753c81c54d50243ab10002fa33b06a394109d21bf0853e7203fb504f4f16b5",
+  "train": {
+    "utility_mse": 3.1404204279970267e-12,
+    "groups": {
+      "all": {
+        "n": 4786,
+        "raw_correct": 4584,
+        "utility_optimal": 4786,
+        "rounded_tie_correct": 4786,
+        "raw_correct_rate": 0.9577935645633097,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      },
+      "missing_forced": {
+        "n": 2483,
+        "raw_correct": 2450,
+        "utility_optimal": 2483,
+        "rounded_tie_correct": 2483,
+        "raw_correct_rate": 0.9867096254530809,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      },
+      "free_discard": {
+        "n": 2303,
+        "raw_correct": 2134,
+        "utility_optimal": 2303,
+        "rounded_tie_correct": 2303,
+        "raw_correct_rate": 0.9266174554928355,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      }
+    },
+    "free_raw_agreement_game_bootstrap_95ci": [
+      0.9141104294478528,
+      0.9375
+    ]
+  },
+  "validation": {
+    "utility_mse": 2.890919020302139e-12,
+    "groups": {
+      "all": {
+        "n": 1809,
+        "raw_correct": 1731,
+        "utility_optimal": 1809,
+        "rounded_tie_correct": 1809,
+        "raw_correct_rate": 0.956882255389718,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      },
+      "missing_forced": {
+        "n": 923,
+        "raw_correct": 914,
+        "utility_optimal": 923,
+        "rounded_tie_correct": 923,
+        "raw_correct_rate": 0.9902491874322861,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      },
+      "free_discard": {
+        "n": 886,
+        "raw_correct": 817,
+        "utility_optimal": 886,
+        "rounded_tie_correct": 886,
+        "raw_correct_rate": 0.9221218961625283,
+        "utility_optimal_rate": 1.0,
+        "rounded_tie_correct_rate": 1.0
+      }
+    },
+    "free_raw_agreement_game_bootstrap_95ci": [
+      0.8975225225225225,
+      0.9438470728793309
+    ]
+  },
+  "best_epoch": 18,
+  "seconds": 9.226481500001682,
+  "teacher": "deterministic own-hand 3*pairs+links",
+  "analytic_teacher_upper_bound": 1.0,
+  "scope": "new_game_train_validation_teacher_state_distribution_only",
+  "limitations": [
+    "teacher distillation, not playing-strength improvement",
+    "analytic teacher utility explicitly supplied as supervised target",
+    "ties reported separately; no final test used"
+  ]
+}

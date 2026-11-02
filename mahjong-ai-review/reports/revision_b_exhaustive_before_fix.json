@@ -1,0 +1,74 @@
+{
+  "status": "failed",
+  "command": "py -3.13 scripts/revision_b_exhaustive.py",
+  "cases_by_group": {
+    "open4_len1": 27,
+    "open4_len2": 378,
+    "open3_len4": 35,
+    "open3_len5": 52
+  },
+  "histogram": {
+    "open3_len4_s0": 29,
+    "open3_len4_s1": 6,
+    "open3_len5_s-1": 16,
+    "open3_len5_s0": 36,
+    "open4_len1_s0": 27,
+    "open4_len2_s-1": 27,
+    "open4_len2_s0": 351
+  },
+  "standard_cases": 492,
+  "three_plus_cases": 0,
+  "seven_pair_cases": 30,
+  "failures": [
+    {
+      "hand": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opened": 3,
+      "production": 0,
+      "direct": 1,
+      "suit_dp": 1
+    },
+    {
+      "hand": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opened": 3,
+      "production": 0,
+      "direct": 1,
+      "suit_dp": 1
+    },
+    {
+      "hand": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "opened": 3,
+      "production": 0,
+      "direct": 1,
+      "suit_dp": 1
+    },
+    {
+      "hand": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "opened": 3,
+      "production": 0,
+      "direct": 1,
+      "suit_dp": 1
+    }
+  ],
+  "seconds": 3.1287831000008737,
+  "scope": "exhaustive specified finite domains only; full27 open4, four-type open3; no distance truncation"
+}

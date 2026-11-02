@@ -1,0 +1,38 @@
+{
+  "tenpai": {
+    "baseline": {
+      "n": 32044,
+      "positive": 507,
+      "roc_auc": 0.5147799849510193,
+      "average_precision": 0.016357697546482086,
+      "brier": 0.015570987947285175,
+      "log_loss": 0.08127814531326294,
+      "ece": 0.00017083436250686646
+    }
+  },
+  "conditional_wait": {
+    "baseline": {
+      "n": 13689,
+      "positive": 736,
+      "roc_auc": 0.5432594418525696,
+      "average_precision": 0.05952206999063492,
+      "brier": 0.050855450332164764,
+      "log_loss": 0.20926149189472198,
+      "ece": 0.0005113892257213593
+    }
+  },
+  "deal_in": {
+    "baseline": {
+      "n": 57410,
+      "positive": 164,
+      "roc_auc": 0.54071044921875,
+      "average_precision": 0.0032599742989987135,
+      "brier": 0.0028484323993325233,
+      "log_loss": 0.019580284133553505,
+      "ece": 0.00018938351422548294
+    }
+  },
+  "expected_loss_mae": 0.01645694486796856,
+  "scope": "configured_simulator_only",
+  "temperature": 1.0262348651885986
+}

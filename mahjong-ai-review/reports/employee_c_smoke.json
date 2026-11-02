@@ -1,0 +1,7 @@
+{
+  "synthetic_interface_test_only": true,
+  "batch_size": 128,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "finite_gradients": true,
+  "formal_training_run": false
+}

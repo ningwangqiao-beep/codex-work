@@ -1,0 +1,10 @@
+{
+  "checks": 300,
+  "seed": 233,
+  "sampling": "14 physical tiles from two suits, four copies each",
+  "winning_positive": 1,
+  "mismatches": [],
+  "seconds": 2.3459537999951863,
+  "independence_limit": "win-only Boolean check against core; not proof of shanten levels, 13-tile states, open melds, or missing-suit debt",
+  "historical_replay": "reconstruction of earlier inline command, source now persisted; current shanten version may differ"
+}

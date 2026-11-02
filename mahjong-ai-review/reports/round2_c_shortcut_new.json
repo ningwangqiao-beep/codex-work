@@ -1,0 +1,52 @@
+{
+  "scope": "validation_only_cpu_diagnostic",
+  "dataset_version": "round2",
+  "states": 21506,
+  "scores": "normalized public tile count (not trained prediction)",
+  "correlations_columns": [
+    "public_count",
+    "wall_feature",
+    "history_turn_feature"
+  ],
+  "correlations": [
+    [
+      1.0,
+      -0.9763892768335498,
+      0.9905219382813969
+    ],
+    [
+      -0.9763892768335498,
+      0.9999999999999998,
+      -0.9963083817134966
+    ],
+    [
+      0.9905219382813969,
+      -0.9963083817134964,
+      0.9999999999999998
+    ]
+  ],
+  "count_score_auc": 0.7750882506370544,
+  "phase": {
+    "0": {
+      "states": 6703,
+      "active_targets": 20048,
+      "tenpai_rate": 0.007631684187799692,
+      "public_count_score_auc": 0.7861964702606201,
+      "mean_public_tile_count": 9.296732806206176
+    },
+    "1": {
+      "states": 7526,
+      "active_targets": 21896,
+      "tenpai_rate": 0.05124223604798317,
+      "public_count_score_auc": 0.661634087562561,
+      "mean_public_tile_count": 32.58304544246612
+    },
+    "2": {
+      "states": 7277,
+      "active_targets": 19080,
+      "tenpai_rate": 0.11750523746013641,
+      "public_count_score_auc": 0.6477000713348389,
+      "mean_public_tile_count": 58.164765700151165
+    }
+  }
+}

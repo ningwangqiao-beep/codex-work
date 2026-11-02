@@ -1,0 +1,93 @@
+{
+  "scope": "validation_only_game_split",
+  "dataset_version": "round2",
+  "fit_games": 195,
+  "eval_games": 165,
+  "tasks": {
+    "tenpai": {
+      "parameters": {
+        "slope": 1.042968988418579,
+        "intercept": -0.2612549066543579
+      },
+      "fit_positive": 1898,
+      "fit_n": 33026,
+      "before": {
+        "n": 27998,
+        "positive": 1619,
+        "roc_auc": 0.7786185145378113,
+        "average_precision": 0.1878104954957962,
+        "brier": 0.05157013237476349,
+        "log_loss": 0.19516734778881073,
+        "ece": 0.020816276875848416
+      },
+      "after": {
+        "n": 27998,
+        "positive": 1619,
+        "roc_auc": 0.778618574142456,
+        "average_precision": 0.1878105103969574,
+        "brier": 0.050714053213596344,
+        "log_loss": 0.1917366236448288,
+        "ece": 0.004494985205383273
+      },
+      "accepted": true,
+      "selection_rule": "validation_eval_half_brier_and_logloss_nonworse_at_least_one_better"
+    },
+    "wait": {
+      "parameters": {
+        "slope": 0.6419644951820374,
+        "intercept": -1.0898325443267822
+      },
+      "fit_positive": 3076,
+      "fit_n": 51246,
+      "before": {
+        "n": 43713,
+        "positive": 2698,
+        "roc_auc": 0.6580621004104614,
+        "average_precision": 0.1050686314702034,
+        "brier": 0.05739115923643112,
+        "log_loss": 0.22452668845653534,
+        "ece": 0.01255745850630774
+      },
+      "after": {
+        "n": 43713,
+        "positive": 2698,
+        "roc_auc": 0.6580621004104614,
+        "average_precision": 0.10506860911846161,
+        "brier": 0.056895360350608826,
+        "log_loss": 0.2228889763355255,
+        "ece": 0.0019573017216316657
+      },
+      "accepted": true,
+      "selection_rule": "validation_eval_half_brier_and_logloss_nonworse_at_least_one_better"
+    },
+    "risk": {
+      "parameters": {
+        "slope": 0.7911221981048584,
+        "intercept": -1.2680069208145142
+      },
+      "fit_positive": 600,
+      "fit_n": 58225,
+      "before": {
+        "n": 49138,
+        "positive": 611,
+        "roc_auc": 0.7643540501594543,
+        "average_precision": 0.04221953824162483,
+        "brier": 0.012222964316606522,
+        "log_loss": 0.0621485598385334,
+        "ece": 0.004705950996140018
+      },
+      "after": {
+        "n": 49138,
+        "positive": 611,
+        "roc_auc": 0.7643540501594543,
+        "average_precision": 0.04221952706575394,
+        "brier": 0.012107003480196,
+        "log_loss": 0.061322685331106186,
+        "ece": 0.0022441308601628407
+      },
+      "accepted": true,
+      "selection_rule": "validation_eval_half_brier_and_logloss_nonworse_at_least_one_better"
+    }
+  },
+  "seconds": 4.551727600002778
+}

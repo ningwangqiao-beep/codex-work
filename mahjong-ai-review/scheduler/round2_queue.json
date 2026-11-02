@@ -1,0 +1,114 @@
+{
+  "run_dir": "experiments/round2_queue",
+  "limits": {
+    "cpu_threads": 4,
+    "min_free_ram_gb": 0.8,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 6,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "independent_audit",
+      "script": "scripts/chief_round2_audit.py",
+      "timeout_seconds": 180
+    },
+    {
+      "id": "ablation_B",
+      "script": "scripts/round2_model_ablation.py",
+      "args": [
+        "--manifest",
+        "datasets/simulation_v2/manifest.json",
+        "--variant",
+        "B",
+        "--epochs",
+        "2",
+        "--output",
+        "experiments/round2_c/B",
+        "--resume"
+      ],
+      "depends": [
+        "independent_audit"
+      ],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "ablation_C",
+      "script": "scripts/round2_model_ablation.py",
+      "args": [
+        "--manifest",
+        "datasets/simulation_v2/manifest.json",
+        "--variant",
+        "C",
+        "--epochs",
+        "2",
+        "--output",
+        "experiments/round2_c/C",
+        "--resume"
+      ],
+      "depends": [
+        "ablation_B"
+      ],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "ablation_D",
+      "script": "scripts/round2_model_ablation.py",
+      "args": [
+        "--manifest",
+        "datasets/simulation_v2/manifest.json",
+        "--variant",
+        "D",
+        "--epochs",
+        "2",
+        "--output",
+        "experiments/round2_c/D",
+        "--resume"
+      ],
+      "depends": [
+        "ablation_C"
+      ],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "ablation_E",
+      "script": "scripts/round2_model_ablation.py",
+      "args": [
+        "--manifest",
+        "datasets/simulation_v2/manifest.json",
+        "--variant",
+        "E",
+        "--epochs",
+        "2",
+        "--output",
+        "experiments/round2_c/E",
+        "--resume"
+      ],
+      "depends": [
+        "ablation_D"
+      ],
+      "timeout_seconds": 600
+    },
+    {
+      "id": "ablation_F",
+      "script": "scripts/round2_model_ablation.py",
+      "args": [
+        "--manifest",
+        "datasets/simulation_v2/manifest.json",
+        "--variant",
+        "F",
+        "--epochs",
+        "2",
+        "--output",
+        "experiments/round2_c/F",
+        "--resume"
+      ],
+      "depends": [
+        "ablation_E"
+      ],
+      "timeout_seconds": 600
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "structured_train",
+    "expected_job_digest": "f4ee6bf70948d129a2e0641fb3d2971a6e98235d26a5755d602a55f452817849",
+    "stored_digest": "39a32c85226abd1966220882952d366d45c5efce567ae0ac872b93f24b0adc7b",
+    "resume_digest_matches": false,
+    "source_matches": true
+  },
+  {
+    "id": "calibration",
+    "expected_job_digest": "75e8845088edef55e4ebfb7588be370b1e23f5653da06e63a0d505feb90386b7",
+    "stored_digest": "0fa350a073ea45d848911248d58cbc489230880f2cc2bdc5488e4b39675792cb",
+    "resume_digest_matches": false,
+    "source_matches": true
+  },
+  {
+    "id": "new_final_test",
+    "expected_job_digest": "cede46205c58d0372f0957f7de2092bb089711a742158fd636fdeb7c3fe4c8b0",
+    "stored_digest": "03e0278acd5c252968b673f7aa3dfbb21ab0afac87f034d07ee887cd3595e395",
+    "resume_digest_matches": false,
+    "source_matches": true
+  },
+  {
+    "id": "shared_policy_1000",
+    "expected_job_digest": "ccc9cc6b9218ad4d9da277e1fac1cf8ae5e3294b35f218559d13224ee4383bec",
+    "stored_digest": "da2a85c82b02dbd409dd0f39f288e3a1b380a8429a771e7fa44640d0424c906e",
+    "resume_digest_matches": false,
+    "source_matches": true
+  },
+  {
+    "id": "policy_evaluation",
+    "expected_job_digest": "9eeccfc0ccfe77c60d4ea01d1b944f8d62c45d5a80a59eea74571a808c05e4e1",
+    "stored_digest": "4b7da4077062cb88453154eb1e32e129d3852da72679261782598363dfa241e6",
+    "resume_digest_matches": false,
+    "source_matches": false
+  },
+  {
+    "id": "results",
+    "expected_job_digest": "09a6a94e53246cb7262f4a1d14a8ea04dc1699e0dc472ebc525dafb3006daa95",
+    "stored_digest": "673519e8f4838b57050272188288f2da1d67e3b4370127fca24392e49b0bba8b",
+    "resume_digest_matches": false,
+    "source_matches": true
+  },
+  {
+    "id": "package",
+    "expected_job_digest": "c2b239def4e0be199e64b8eed7230e898c5d0b5a5eb4d95224c893a68aa05b26",
+    "stored_digest": "6b290943624a2142cfb130af3dd3f8b8f941e51f7ba92a362fdc8960c4af9439",
+    "resume_digest_matches": false,
+    "source_matches": true
+  }
+]

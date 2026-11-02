@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "c72a9c1b1ae61fa36f178f5c462bd4aea72acad13eada87d28a519b0187635a7",
+  "seed_range": [
+    2300000,
+    2300019
+  ],
+  "games": 80,
+  "decisions": 1186,
+  "action_mismatches": 0,
+  "all_traces_equal": true,
+  "all_scores_equal": true,
+  "seconds": 1.9297413000022061,
+  "scope": "validation_seed_complete_game_teacher_reproduction_only",
+  "playing_strength_improvement_claimed": false,
+  "residual_zero_initialization_test": true,
+  "rl_training_performed": false
+}

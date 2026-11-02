@@ -1,0 +1,20 @@
+{
+  "games": 10000,
+  "states": 0,
+  "steps": 1212221,
+  "seconds": 20.69838709999749,
+  "workers": 4,
+  "split_rows": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "hashes": {
+    "rules\\core.py": "dcb52057fe55a64d75535cbfe30329c7a28504ce41b498393064c2d3006f819e",
+    "simulator\\table.py": "4cc1af51b68ef6d7ca9cd819673003b21087937f7ada9d4d702995e4881f6261",
+    "simulator\\selfplay.py": "8302d30550a7f69339fcff95bc6d613ba5e3aaf4b8bb99cb25c4b238bc8ba7ea",
+    "observations\\public.py": "ec474f2adf8ea395a6697fafa6abc0ee1f2c423145dd09cf9aa1044c2f86a874"
+  },
+  "simulation_only": true,
+  "strict_inventory": true
+}

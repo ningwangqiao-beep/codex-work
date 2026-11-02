@@ -1,0 +1,21 @@
+{
+  "source_hashes_unchanged": true,
+  "games": 1800,
+  "states": 107645,
+  "steps": 217700,
+  "seconds": 31.443594700001995,
+  "workers": 4,
+  "split_rows": {
+    "train": 75521,
+    "validation": 21506,
+    "test": 10618
+  },
+  "hashes": {
+    "rules\\core.py": "d56405c32e8bb6fb874f3d609f4c39a2e6edee35cb182bd31dbda4e9859c41c9",
+    "simulator\\table.py": "e39fcb3722ad79fddc0fc035f5805590dbeac2fd1f8816fb8e17127272e6613a",
+    "simulator\\selfplay.py": "d9b8a255b53263bb6941506f0a025d8396d7cbe02f343f5c48a5fe0fb889056e",
+    "observations\\public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e"
+  },
+  "simulation_only": true,
+  "strict_inventory": true
+}

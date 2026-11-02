@@ -1,0 +1,11 @@
+{
+  "reinforcement_learning_allowed": false,
+  "reason": "Revision audit: independent shanten coverage, strong BaselineBot, full-game evaluation and action-value model admission are incomplete.",
+  "required_evidence": [
+    "independent_shanten_oracle_all_open_melds",
+    "deterministic_baseline_audit",
+    "paired_out_of_sample_net_score",
+    "action_value_network_audit"
+  ],
+  "simulation_room_rules_verified": false
+}

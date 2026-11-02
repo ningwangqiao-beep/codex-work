@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "train": {
+      "tenpai_positive": 12661
+    },
+    "validation": {
+      "tenpai_positive": 3437
+    },
+    "test": {
+      "tenpai_positive": 1491
+    }
+  },
+  "unique_games": 1800,
+  "loss_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    16
+  ],
+  "passed": true
+}

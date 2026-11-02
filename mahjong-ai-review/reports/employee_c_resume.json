@@ -1,0 +1,8 @@
+{
+  "synthetic_only": true,
+  "epochs": 2,
+  "checkpoint_resume": true,
+  "optimizer_restored": true,
+  "cuda_rng_saved": true,
+  "predictor_loaded": true
+}

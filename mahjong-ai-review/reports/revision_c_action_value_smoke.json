@@ -1,0 +1,31 @@
+{
+  "smoke_only": true,
+  "legal_fixtures": 2,
+  "parameters": 5970,
+  "per_head_loss": {
+    "action_value_mse": 0.10742831230163574,
+    "equivalent_ranking_ce": 1.9327442646026611,
+    "state_value_mse": 0.4714682698249817
+  },
+  "finite_all_head_gradients": true,
+  "legal_argmax": true,
+  "equivalent_tie_test": {
+    "n": 1,
+    "exact_rate": 0.0,
+    "equivalent_rate": 1.0,
+    "teacher_value_regret_mean": 0.0,
+    "teacher_value_regret_max": 0.0,
+    "legal_action_mse": 0.6666666865348816,
+    "tolerance": 0.0,
+    "top1_exact_rate": 0.0,
+    "top1_equivalent_rate": 1.0,
+    "top3_exact_rate": 1.0,
+    "top3_equivalent_rate": 1.0,
+    "top5_exact_rate": 1.0,
+    "top5_equivalent_rate": 1.0
+  },
+  "checkpoint_roundtrip": true,
+  "rl_performed": false,
+  "actual_mahjong_training": false,
+  "state_target": "synthetic fixture index, not game return"
+}

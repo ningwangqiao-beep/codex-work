@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "torch": "2.11.0+cu128",
+  "cuda_build": "12.8",
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 3060",
+  "loss": 2040.89111328125,
+  "finite": true,
+  "seconds": 0.20379659999889554,
+  "peak_bytes": 33817600
+}

@@ -1,0 +1,34 @@
+{
+  "imitation": {
+    "means": {
+      "heuristic": 0.445,
+      "old_reading_risk": -0.8525,
+      "trained_policy_value": -0.4675
+    },
+    "comparison": {
+      "mean_difference": -0.9125,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -1.225,
+        -0.625
+      ]
+    },
+    "clear_improvement": false,
+    "scope": "configured_simulator_only"
+  },
+  "imitation_then_rl": {
+    "means": {
+      "heuristic": 0.5525,
+      "old_reading_risk": -0.6975,
+      "trained_policy_value": -0.32
+    },
+    "comparison": {
+      "mean_difference": -0.8725,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -1.27,
+        -0.4775
+      ]
+    },
+    "clear_improvement": false,
+    "scope": "configured_simulator_only"
+  }
+}

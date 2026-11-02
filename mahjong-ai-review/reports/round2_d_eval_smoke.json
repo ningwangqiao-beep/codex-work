@@ -1,0 +1,34 @@
+{
+  "simulation_only": true,
+  "not_for_tuning": true,
+  "seed_groups": 2,
+  "executed_games": 24,
+  "means": {
+    "heuristic": -0.5,
+    "old_reading_risk": -0.75,
+    "trained_policy_value": -2.0
+  },
+  "comparisons": {
+    "old_reading_risk": {
+      "mean_difference": -0.25,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -1.0,
+        0.5
+      ]
+    },
+    "trained_policy_value": {
+      "mean_difference": -1.5,
+      "paired_seed_cluster_bootstrap_95ci": [
+        -2.25,
+        -0.75
+      ]
+    }
+  },
+  "flags": [
+    "OLD_MODEL_NEW_CONCEALED_KONG_AND_ACTION_DISTRIBUTION_SHIFT",
+    "PAIRED_INITIAL_DEAL_NOT_IDENTICAL_FUTURE_TRAJECTORY",
+    "SMALL_SAMPLE_NO_STRENGTH_CLAIM"
+  ],
+  "checkpoint_sha256": "9eae3c5bf95f65b6a55c4b299a1cb3bdc6ec3d7f3d2c9f6c881c01e0f27f909c",
+  "old_checkpoint_sha256": "0f60b0ceeb9cfd2ce14d381e5d584102eb341968551956b95ff546115b695549"
+}

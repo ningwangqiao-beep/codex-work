@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "stats": {
+    "train": {
+      "phase_counts": [
+        23543,
+        26536,
+        26243
+      ]
+    },
+    "validation": {
+      "phase_counts": [
+        6695,
+        7582,
+        7497
+      ]
+    },
+    "test": {
+      "phase_counts": [
+        3326,
+        3714,
+        3659
+      ]
+    }
+  },
+  "unique_games": 1800,
+  "seed_min": 400000,
+  "seed_max": 401799,
+  "public_four_copies_with_wait_label": 2332
+}

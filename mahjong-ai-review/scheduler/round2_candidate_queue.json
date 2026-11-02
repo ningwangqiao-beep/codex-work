@@ -1,0 +1,97 @@
+{
+  "run_dir": "experiments/round2_candidate_queue",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 4,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "candidate_residual1000",
+      "script": "scripts/round2_data_candidate_rl.py",
+      "args": [
+        "--games",
+        "1000",
+        "--out",
+        "checkpoints/round2_candidate_rl_rounded",
+        "--resume",
+        "checkpoints/round2_candidate_rl_rounded/last.pt"
+      ],
+      "timeout_seconds": 1800,
+      "fingerprints": {
+        "models/round2_candidate.py": "0fb01d62bc6a14bae2832c579b4a247e62dda62cff3d34677abd4d1f8c62995e",
+        "models/round2_candidate_residual.py": "832215292ee5d773a95381e55f639b7adb4d1f9456fb57edef0da1da65b5123a",
+        "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+        "rules/core.py": "d56405c32e8bb6fb874f3d609f4c39a2e6edee35cb182bd31dbda4e9859c41c9",
+        "scripts/round2_data_candidate_rl.py": "a48692366674b81902bf0fef42ac3527c383251f378896c94af0089c8b6577c8",
+        "simulator/candidate_learning.py": "a0174dc73563b7495ceb9d1368416270e0692c54ceacf899d0bc4fac17276d9c",
+        "simulator/selfplay.py": "f4a6667edffc2637bae398f30ae665bebdac8b811541480d5219b4d708809cb0",
+        "simulator/table.py": "e39fcb3722ad79fddc0fc035f5805590dbeac2fd1f8816fb8e17127272e6613a"
+      },
+      "dynamic_imports": [],
+      "coverage": "static local imports only; environment and runtime file reads excluded"
+    },
+    {
+      "id": "candidate_eval100",
+      "script": "scripts/round2_data_candidate_rl.py",
+      "args": [
+        "--evaluate",
+        "checkpoints/round2_candidate_rl_rounded/last.pt",
+        "--games",
+        "100",
+        "--seed",
+        "2600000",
+        "--eval-out",
+        "reports/round2_d_candidate_final_eval.json"
+      ],
+      "timeout_seconds": 1800,
+      "fingerprints": {
+        "models/round2_candidate.py": "0fb01d62bc6a14bae2832c579b4a247e62dda62cff3d34677abd4d1f8c62995e",
+        "models/round2_candidate_residual.py": "832215292ee5d773a95381e55f639b7adb4d1f9456fb57edef0da1da65b5123a",
+        "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+        "rules/core.py": "d56405c32e8bb6fb874f3d609f4c39a2e6edee35cb182bd31dbda4e9859c41c9",
+        "scripts/round2_data_candidate_rl.py": "a48692366674b81902bf0fef42ac3527c383251f378896c94af0089c8b6577c8",
+        "simulator/candidate_learning.py": "a0174dc73563b7495ceb9d1368416270e0692c54ceacf899d0bc4fac17276d9c",
+        "simulator/selfplay.py": "f4a6667edffc2637bae398f30ae665bebdac8b811541480d5219b4d708809cb0",
+        "simulator/table.py": "e39fcb3722ad79fddc0fc035f5805590dbeac2fd1f8816fb8e17127272e6613a"
+      },
+      "dynamic_imports": [],
+      "coverage": "static local imports only; environment and runtime file reads excluded",
+      "depends": [
+        "candidate_residual1000"
+      ]
+    },
+    {
+      "id": "summary",
+      "script": "scripts/chief_candidate_summary.py",
+      "args": [],
+      "timeout_seconds": 1800,
+      "fingerprints": {
+        "scripts/chief_candidate_summary.py": "55ca651cd825974ba998a6d4c33ab64b00d9770464ea14790c16c00874833260"
+      },
+      "dynamic_imports": [],
+      "coverage": "static local imports only; environment and runtime file reads excluded",
+      "depends": [
+        "candidate_eval100"
+      ]
+    },
+    {
+      "id": "package",
+      "script": "scripts/chief_package.py",
+      "args": [],
+      "timeout_seconds": 1800,
+      "fingerprints": {
+        "scripts/chief_package.py": "6b290943624a2142cfb130af3dd3f8b8f941e51f7ba92a362fdc8960c4af9439"
+      },
+      "dynamic_imports": [],
+      "coverage": "static local imports only; environment and runtime file reads excluded",
+      "depends": [
+        "summary"
+      ]
+    }
+  ]
+}

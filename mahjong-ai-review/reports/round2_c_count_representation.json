@@ -1,0 +1,8 @@
+{
+  "scope": "validation_only_CPU_frozen_model_A",
+  "diagnostic_not_legal_state": "replace27 public counts by uniform same total",
+  "original_auc": 0.7850570678710938,
+  "uniform_same_total_auc": 0.7859928607940674,
+  "prediction_correlation": 0.9815545678138733,
+  "mean_abs_probability_change": 0.006472660228610039
+}

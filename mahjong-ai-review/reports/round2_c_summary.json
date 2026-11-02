@@ -1,0 +1,202 @@
+{
+  "scope": "research_simulator_only",
+  "ablation": {
+    "A": {
+      "variant": "A",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 42.291788800001086,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.7850570678710938,
+        "average_precision": 0.15767227113246918,
+        "brier": 0.049313757568597794,
+        "log_loss": 0.18557147681713104,
+        "ece": 0.0018382687121629715
+      }
+    },
+    "B": {
+      "variant": "B",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 41.4027367000017,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.7845945954322815,
+        "average_precision": 0.1560364067554474,
+        "brier": 0.049328479915857315,
+        "log_loss": 0.18574240803718567,
+        "ece": 0.0024311338074767264
+      }
+    },
+    "C": {
+      "variant": "C",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 42.80772409999918,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.7885702848434448,
+        "average_precision": 0.16917254030704498,
+        "brier": 0.04910062998533249,
+        "log_loss": 0.18480508029460907,
+        "ece": 0.004524177755229175
+      }
+    },
+    "D": {
+      "variant": "D",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 41.723876000003656,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.786962628364563,
+        "average_precision": 0.16430546343326569,
+        "brier": 0.04919775575399399,
+        "log_loss": 0.18531294167041779,
+        "ece": 0.004824408155400306
+      }
+    },
+    "E": {
+      "variant": "E",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 42.15765410000313,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.784256100654602,
+        "average_precision": 0.15050658583641052,
+        "brier": 0.04942696541547775,
+        "log_loss": 0.18620984256267548,
+        "ece": 0.0054673050181008875
+      }
+    },
+    "F": {
+      "variant": "F",
+      "seed": 42,
+      "epochs_limit": 2,
+      "seconds": 43.788400500001444,
+      "scope": "train_validation_only",
+      "not_full_requested_ablation": "D uses last11 history, not complete discard sequence; E differs by several feature groups",
+      "validation_tenpai": {
+        "n": 61936,
+        "positive": 3437,
+        "roc_auc": 0.7865005135536194,
+        "average_precision": 0.16186439990997314,
+        "brier": 0.04926715046167374,
+        "log_loss": 0.18566744029521942,
+        "ece": 0.00681340794380958
+      }
+    }
+  },
+  "reports": {
+    "round2_c_calibration.json": {
+      "scope": "validation_only_game_split",
+      "dataset_version": "simulation-v2",
+      "fit_games": 164,
+      "eval_games": 196,
+      "tasks": {
+        "tenpai": {
+          "parameters": {
+            "slope": 0.9385864734649658,
+            "intercept": -0.20459707081317902
+          },
+          "fit_positive": 1568,
+          "fit_n": 28159,
+          "before": {
+            "n": 33777,
+            "positive": 1869,
+            "roc_auc": 0.7987943887710571,
+            "average_precision": 0.1878570169210434,
+            "brier": 0.04848431795835495,
+            "log_loss": 0.18174216151237488,
+            "ece": 0.005240185171714984
+          },
+          "after": {
+            "n": 33777,
+            "positive": 1869,
+            "roc_auc": 0.7987943887710571,
+            "average_precision": 0.187856987118721,
+            "brier": 0.048533692955970764,
+            "log_loss": 0.18187949061393738,
+            "ece": 0.0036445312944124453
+          }
+        },
+        "wait": {
+          "parameters": {
+            "slope": 0.6417378187179565,
+            "intercept": -0.9434239268302917
+          },
+          "fit_positive": 2580,
+          "fit_n": 42336,
+          "before": {
+            "n": 50463,
+            "positive": 3082,
+            "roc_auc": 0.6359589695930481,
+            "average_precision": 0.09900922328233719,
+            "brier": 0.05709286406636238,
+            "log_loss": 0.22565437853336334,
+            "ece": 0.011364252446583123
+          },
+          "after": {
+            "n": 50463,
+            "positive": 3082,
+            "roc_auc": 0.6359589695930481,
+            "average_precision": 0.0990091934800148,
+            "brier": 0.05656937137246132,
+            "log_loss": 0.2232469767332077,
+            "ece": 0.0013062848047411535
+          }
+        },
+        "risk": {
+          "parameters": {
+            "slope": 0.7485329508781433,
+            "intercept": -0.9936798810958862
+          },
+          "fit_positive": 553,
+          "fit_n": 49085,
+          "before": {
+            "n": 59790,
+            "positive": 720,
+            "roc_auc": 0.7629126906394958,
+            "average_precision": 0.034985557198524475,
+            "brier": 0.011802674271166325,
+            "log_loss": 0.06027023121714592,
+            "ece": 0.0014869378683215473
+          },
+          "after": {
+            "n": 59790,
+            "positive": 720,
+            "roc_auc": 0.7629127502441406,
+            "average_precision": 0.034985531121492386,
+            "brier": 0.01175814587622881,
+            "log_loss": 0.05974888429045677,
+            "ece": 0.0009222159333148738
+          }
+        }
+      },
+      "seconds": 4.731605499997386
+    }
+  },
+  "limitations": [
+    "A-F here use constrained128-feature proxies; not requested complete ordered-history ablation",
+    "no human-player validation",
+    "old final tests never reopened for optimization",
+    "public counts may encode game progress; AUC gain does not prove history reading"
+  ]
+}

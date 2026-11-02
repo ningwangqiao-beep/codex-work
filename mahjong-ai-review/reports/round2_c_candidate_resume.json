@@ -1,0 +1,9 @@
+{
+  "actual_cli_resume": true,
+  "resumed_epoch": 1,
+  "optimizer_restored": true,
+  "model_exactly_equals_uninterrupted": true,
+  "train_games": 4,
+  "validation_games": 2,
+  "scope": "resume_correctness_only"
+}

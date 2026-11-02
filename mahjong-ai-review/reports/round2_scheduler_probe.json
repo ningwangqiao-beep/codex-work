@@ -1,0 +1,5 @@
+{
+  "failure_stopped": true,
+  "completed_job_skipped_on_resume": true,
+  "failed_job_retried": true
+}

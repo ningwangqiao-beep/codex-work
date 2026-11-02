@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "command": "py -3.13 scripts/revision_b_exhaustive.py",
+  "cases_by_group": {
+    "open4_len1": 27,
+    "open4_len2": 378,
+    "open3_len4": 35,
+    "open3_len5": 52,
+    "open0_high_len13": 1,
+    "open1_high_len10": 1,
+    "open2_high_len7": 1
+  },
+  "histogram": {
+    "open0_len13_s4": 1,
+    "open1_len10_s5": 1,
+    "open2_len7_s4": 1,
+    "open3_len4_s0": 25,
+    "open3_len4_s1": 10,
+    "open3_len5_s-1": 16,
+    "open3_len5_s0": 36,
+    "open4_len1_s0": 27,
+    "open4_len2_s-1": 27,
+    "open4_len2_s0": 351
+  },
+  "standard_cases": 495,
+  "three_plus_cases": 3,
+  "seven_pair_cases": 30,
+  "failures": [],
+  "seconds": 3.27827360000083,
+  "scope": "exhaustive specified finite domains only; full27 open4, four-type open3; no distance truncation"
+}

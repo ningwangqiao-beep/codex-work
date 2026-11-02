@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "error": null,
+  "seconds": 16.685004600003595,
+  "complete_seed_groups": 2,
+  "mean_difference": 1.0,
+  "bootstrap_ci": [
+    -0.75,
+    2.75
+  ],
+  "simulation_only": true,
+  "limitations": [
+    "two-step truncated to 2 effective draw types",
+    "structural missing-suit distance optimistic; explicit missing debt separate",
+    "opponent risk uncalibrated public heuristic",
+    "random discard opponents retain shared simulator meld decisions",
+    "no strength claim small sample"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "datasets\\round2": {
+    "dataset_version": "round2",
+    "actual_manifest_gate_passed": true,
+    "dataset_fingerprint": "b1d361764dfb067ba6875140db8b874a02d3cf2a9adb535a65a52bd296fd71e9",
+    "frozen_pipeline_source_matches": {
+      "rules\\core.py": true,
+      "simulator\\table.py": true,
+      "simulator\\selfplay.py": true,
+      "observations\\public.py": true
+    }
+  },
+  "datasets\\simulation_v1": {
+    "dataset_version": "simulation-v1",
+    "actual_manifest_gate_passed": true,
+    "dataset_fingerprint": "8c517f3c49b5b2a135045d6fda356d9db4665e7e48ee0b583a6938231f321e65",
+    "frozen_pipeline_source_matches": {
+      "rules\\core.py": true,
+      "simulator\\table.py": true,
+      "simulator\\selfplay.py": true,
+      "observations\\public.py": true
+    }
+  },
+  "datasets\\simulation_v2": {
+    "dataset_version": "simulation-v2",
+    "actual_manifest_gate_passed": true,
+    "dataset_fingerprint": "c54bcfb45c27f9e6d12f9771a7200080c4c8d03e7b48361ee688b1c6574f2e8f",
+    "frozen_pipeline_source_matches": {
+      "rules\\core.py": true,
+      "simulator\\table.py": true,
+      "simulator\\selfplay.py": true,
+      "observations\\public.py": true
+    }
+  }
+}

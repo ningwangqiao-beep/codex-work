@@ -1,0 +1,10 @@
+{
+  "rules/core.py": {
+    "current_sha256": "d56405c32e8bb6fb874f3d609f4c39a2e6edee35cb182bd31dbda4e9859c41c9",
+    "snapshot_sha256": "dcb52057fe55a64d75535cbfe30329c7a28504ce41b498393064c2d3006f819e"
+  },
+  "simulator/table.py": {
+    "current_sha256": "e39fcb3722ad79fddc0fc035f5805590dbeac2fd1f8816fb8e17127272e6613a",
+    "snapshot_sha256": "4cc1af51b68ef6d7ca9cd819673003b21087937f7ada9d4d702995e4881f6261"
+  }
+}

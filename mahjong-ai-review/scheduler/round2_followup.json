@@ -1,0 +1,138 @@
+{
+  "run_dir": "experiments/round2_followup",
+  "limits": {
+    "cpu_threads": 4,
+    "min_free_ram_gb": 0.8,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 6,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "structured_train",
+      "script": "scripts/round2_model_train.py",
+      "args": [
+        "--manifest",
+        "datasets/round2/manifest.json",
+        "--output",
+        "checkpoints/round2_structured",
+        "--epochs",
+        "8",
+        "--resume"
+      ],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/round2_model_train.py": "39a32c85226abd1966220882952d366d45c5efce567ae0ac872b93f24b0adc7b"
+      }
+    },
+    {
+      "id": "calibration",
+      "script": "scripts/round2_model_calibrate.py",
+      "args": [
+        "--manifest",
+        "datasets/round2/manifest.json",
+        "--checkpoint",
+        "checkpoints/round2_structured/best.pt",
+        "--output",
+        "reports/round2_c_new_calibration.json"
+      ],
+      "timeout_seconds": 1200,
+      "depends": [
+        "structured_train"
+      ],
+      "fingerprints": {
+        "scripts/round2_model_calibrate.py": "0fa350a073ea45d848911248d58cbc489230880f2cc2bdc5488e4b39675792cb"
+      }
+    },
+    {
+      "id": "new_final_test",
+      "script": "scripts/round2_model_final.py",
+      "args": [
+        "--manifest",
+        "datasets/round2/manifest.json",
+        "--checkpoint",
+        "checkpoints/round2_structured/best.pt",
+        "--calibration",
+        "reports/round2_c_new_calibration.json",
+        "--baseline",
+        "checkpoints/round2_structured/baseline.json",
+        "--output",
+        "reports/round2_c_new_final.json"
+      ],
+      "timeout_seconds": 1200,
+      "depends": [
+        "calibration"
+      ],
+      "fingerprints": {
+        "scripts/round2_model_final.py": "03e0278acd5c252968b673f7aa3dfbb21ab0afac87f034d07ee887cd3595e395"
+      }
+    },
+    {
+      "id": "shared_policy_1000",
+      "script": "scripts/round2_data_policy.py",
+      "args": [
+        "--games",
+        "1000",
+        "--selfplay",
+        "--audit",
+        "reports/round2_d_policy_audit.json",
+        "--out",
+        "checkpoints/round2_shared_policy",
+        "--resume",
+        "checkpoints/round2_shared_policy/last.pt"
+      ],
+      "timeout_seconds": 1800,
+      "depends": [
+        "new_final_test"
+      ],
+      "fingerprints": {
+        "scripts/round2_data_policy.py": "da2a85c82b02dbd409dd0f39f288e3a1b380a8429a771e7fa44640d0424c906e"
+      }
+    },
+    {
+      "id": "policy_evaluation",
+      "script": "scripts/round2_data_eval.py",
+      "args": [
+        "--checkpoint",
+        "checkpoints/round2_shared_policy/last.pt",
+        "--games",
+        "100",
+        "--seed",
+        "1200000"
+      ],
+      "depends": [
+        "shared_policy_1000"
+      ],
+      "timeout_seconds": 900,
+      "fingerprints": {
+        "scripts/round2_data_eval.py": "4b7da4077062cb88453154eb1e32e129d3852da72679261782598363dfa241e6"
+      }
+    },
+    {
+      "id": "results",
+      "script": "scripts/chief_round2_summary.py",
+      "args": [],
+      "timeout_seconds": 1200,
+      "depends": [
+        "policy_evaluation"
+      ],
+      "fingerprints": {
+        "scripts/chief_round2_summary.py": "673519e8f4838b57050272188288f2da1d67e3b4370127fca24392e49b0bba8b"
+      }
+    },
+    {
+      "id": "package",
+      "script": "scripts/chief_package.py",
+      "args": [],
+      "timeout_seconds": 1200,
+      "depends": [
+        "results"
+      ],
+      "fingerprints": {
+        "scripts/chief_package.py": "6b290943624a2142cfb130af3dd3f8b8f941e51f7ba92a362fdc8960c4af9439"
+      }
+    }
+  ]
+}

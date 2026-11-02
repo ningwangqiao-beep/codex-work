@@ -1,0 +1,116 @@
+{
+  "run_dir": "experiments/round2_warmstart_queue",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 4,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "imitation300",
+      "script": "scripts/chief_policy_warmstart.py",
+      "args": [
+        "--games",
+        "300"
+      ],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/chief_policy_warmstart.py": "7f079b5b543cd43ef5281f3b3e683c96ca76eeedcccf5b48356a750863dc2953"
+      }
+    },
+    {
+      "id": "imitation_eval",
+      "script": "scripts/round2_data_eval.py",
+      "args": [
+        "--checkpoint",
+        "checkpoints/round2_warmstart/last.pt",
+        "--games",
+        "100",
+        "--seed",
+        "1600000",
+        "--out",
+        "reports/round2_imitation_eval.json"
+      ],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/round2_data_eval.py": "79636adc33a0ee40e46317ed95a0d5e61a1f592b984a655c75c37ea2fd5f9f3e"
+      },
+      "depends": [
+        "imitation300"
+      ]
+    },
+    {
+      "id": "shared_rl1000",
+      "script": "scripts/round2_data_policy.py",
+      "args": [
+        "--games",
+        "1000",
+        "--seed",
+        "1500000",
+        "--selfplay",
+        "--audit",
+        "reports/round2_d_policy_audit.json",
+        "--out",
+        "checkpoints/round2_warmstart",
+        "--resume",
+        "checkpoints/round2_warmstart/last.pt"
+      ],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/round2_data_policy.py": "da2a85c82b02dbd409dd0f39f288e3a1b380a8429a771e7fa44640d0424c906e"
+      },
+      "depends": [
+        "imitation_eval"
+      ]
+    },
+    {
+      "id": "rl_eval",
+      "script": "scripts/round2_data_eval.py",
+      "args": [
+        "--checkpoint",
+        "checkpoints/round2_warmstart/last.pt",
+        "--games",
+        "100",
+        "--seed",
+        "1700000",
+        "--out",
+        "reports/round2_imitation_rl_eval.json"
+      ],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/round2_data_eval.py": "79636adc33a0ee40e46317ed95a0d5e61a1f592b984a655c75c37ea2fd5f9f3e"
+      },
+      "depends": [
+        "shared_rl1000"
+      ]
+    },
+    {
+      "id": "summary",
+      "script": "scripts/chief_warm_summary.py",
+      "args": [],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/chief_warm_summary.py": "95acc1d1fd2f8b393d05a002ea4af8a9dd659e309fb57826e0a978d222f2b141"
+      },
+      "depends": [
+        "rl_eval"
+      ]
+    },
+    {
+      "id": "package",
+      "script": "scripts/chief_package.py",
+      "args": [],
+      "timeout_seconds": 1200,
+      "fingerprints": {
+        "scripts/chief_package.py": "6b290943624a2142cfb130af3dd3f8b8f941e51f7ba92a362fdc8960c4af9439"
+      },
+      "depends": [
+        "summary"
+      ]
+    }
+  ]
+}

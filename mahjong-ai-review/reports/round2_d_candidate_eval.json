@@ -1,0 +1,13 @@
+{
+  "mean_difference": 0.75,
+  "paired_seed_bootstrap_95ci": [
+    0.5,
+    1.0
+  ],
+  "simulation_only": true,
+  "checkpoint_sha256": "2cd4df648343038f34b05b09577edb2151cb332daa8bae8982f4f4db81d80bff",
+  "flags": [
+    "PAIRED_INITIAL_SEED_NOT_IDENTICAL_FUTURE",
+    "RESIDUAL_EVAL_GREEDY_TRAIN_SOFTMAX"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "crosscheck_random_hands": 100,
+  "seconds": 167.00271179999982,
+  "calls": 1014,
+  "complete_seed_groups": 20,
+  "mean_difference": 0.15,
+  "paired_seed_bootstrap_95ci": [
+    -0.3125,
+    0.6125
+  ],
+  "simulation_only": true,
+  "teacher_uses_only_legal_observation": true
+}
