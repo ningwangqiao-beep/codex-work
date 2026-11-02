@@ -1,11 +1,11 @@
-# Warmstartֻ������������Ч�ʼ��
+# Warmstart只读审阅与评估效率检查
 
-���ű�chief_policy_warmstart.pyδ��D�޸ġ�
+主脚本chief_policy_warmstart.py未被D修改。
 
-�Ϸ��Խ��ۣ�teacher����ȡ�۲������ƺͺϷ���ѡ���Զ���/˳����������ѡ������û�ж�ȡTable����ְ��֡������ɺϷ��۲���롣value����ʹ��examples��observer_player��Ӧ�վַ���������������ȷ����Ϊ��¡������ֻ�ںϷ�����mask��Χ���㡣����RL����ʱgames=0��seed1500000��teacher1400000��ͬ��
+合法性结论：teacher仅读取观察者手牌和合法候选，以对子/顺子连接启发选择动作。没有读取Table或对手暗手。特征由合法观察编码。value返回使用examples的observer_player对应终局分数，四座归属正确。行为克隆交叉熵只在合法动作mask范围计算。后续RL加载时games=0，seed1500000与teacher1400000不同。
 
-���ֲ��ѷ��������崦����games��/������checkpointʱ����sδ���壻resume���浫���ָ�python_rng����ǰplay�ֲ�seed/teacherȷ�������Ե�ǰ��Ʋ�����������auditֻ��assert���passed/source��δ����1000�������ʵ�ʲ�����־hash������last.pt����ԭ�ӱ��档����ļ���ֹ�ظ���д��������Ӧ�ṩ��ʽ�ܾ�˵����
+发现并已发主智能体处理：games零/负且无checkpoint时变量s未定义；resume保存但不恢复python_rng（当前play局部seed/teacher确定，所以当前设计不依赖它）；audit只用assert检查passed/source，未复核1000审计数与实际测试日志hash；交付last.pt不是原子保存。完成文件阻止重复改写合理，但应提供显式拒绝说明。
 
-�����Ż���scripts/round2_data_eval.py�ɶ���ֻȡjoint head���գ����ټ���ת��ȫ��49����ʧ�����ø��ʣ�ʹ��torch.inference_mode����ʽeval��seed-group���ܸ�Ϊ�����ۼӣ������ظ�ɨ����ּ�¼��û�иĲ��Բ�����Ƚ�seed��2seed*4��*3policy��ʵ24��ð����ɣ����ļ���0.334�롣baseline�;ɶ���mean��ԭð��һ��(-.5/-.75)��trainedȨ���Ѻ�̨���¹ʸþ�ֵ�������Ȩ�ض��ա������������Ȩ��SHA256�Ա��������
+评估优化：scripts/round2_data_eval.py旧读牌只取joint head风险，不再计算转换全部49类损失等无用概率；使用torch.inference_mode并显式eval。seed-group汇总改为在线累加，避免重复扫描逐局记录。没有改策略参数或比较seed。2seed*4座*3policy真实24局冒烟完成，核心计算0.334秒。baseline和旧读牌mean与原冒烟一致(-.5/-.75)；trained权重已后台更新故该均值不能与旧权重对照。报告包含两份权重SHA256以避免混淆。
 
-���ļ�����ʾǿ��������shared1000��������ʧ����Ӧ��������һ������Ԥ��ȷ����teacherģ�º���RL������seed���������������ݾ�test���Ρ�
+此文件不表示强度提升；shared1000独立测试失败仍应保留。下一方向是预先确定的teacher模仿后共享RL，在新seed独立评估，不根据旧test调参。

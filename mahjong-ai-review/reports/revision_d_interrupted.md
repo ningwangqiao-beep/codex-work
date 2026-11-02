@@ -1,7 +1,7 @@
-# Baseline20seed��ȫ�ж�
+# Baseline20seed安全中断
 
-�յ�����/B���ֵ����ż��������󣬶��������е�exec session96114����Ctrl-C������ȷ��exit_code=1���ô�20seed����δ����completed��������ܼ�����ɶԾ֡�
+收到主审/B发现第五张假听反例后，对正在运行的exec session96114发送Ctrl-C。工具确认exit_code=1。该次20seed运行未返回completed结果，不能计入完成对局。
 
-�ж�ʱhand_analysis.py SHA256: B38AC85B5B86258C148387CA65398E45D0D87408CD510338D48C5AFC4CDE3E7C
+中断时hand_analysis.py SHA256: B38AC85B5B86258C148387CA65398E45D0D87408CD510338D48C5AFC4CDE3E7C
 
-����runnerֻ������������Exception��д��ֽ����KeyboardInterruptδ���񣻱��ν�����partialδ���̣��޷��ָ�׼ȷ����ɾ�����������partial�Ծ֡�����2seed�ɰ��������ڴ�ǰ�����ĵ���������Ϊ�޸���������һ���ȸ�Ϊ���append����¼��ֹԴ��hash���ٵ�B�޸��������顣
+现有runner只在完整结束或Exception后写逐局结果，KeyboardInterrupt未捕获；本次进程内partial未落盘，无法恢复准确已完成局数，不编造partial对局。已有2seed旧版结果保留在此前交付文档，不能作为修复后结果。下一轮先改为逐局append并记录起止源码hash，再等B修复和主审复验。

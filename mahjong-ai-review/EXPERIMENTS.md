@@ -6,10 +6,10 @@ Known limitations: score prediction is categorical over configured loss bins; su
 
 Pending: D's audited data, per-target active/candidate masks, complete independent test comparison and empirical frequency baseline, confidence intervals, trained calibration and deploy export.
 
-�ڶ����Զ�ʵ�����½���ѳ־û���ROUND2_REPORT.md��reports/round2_automatic_results.json���������޸������������Ϊ׼�����ܽ�ѵ����ɵ����ɹ���
+第二轮自动实验最新结果已持久化到ROUND2_REPORT.md和reports/round2_automatic_results.json；策略有无改善以配对评估为准，不能将训练完成当作成功。
 
 
-## ģ�»������Ժ��Զ���ʵ��
+## 模仿基础策略后自对弈实验
 {
   "imitation": {
     "means": {
@@ -44,14 +44,14 @@ Pending: D's audited data, per-target active/candidate masks, complete independe
     "scope": "configured_simulator_only"
   }
 }
-ֻ�ж�����������½����0�ű���ȷ���ƣ�ʧ�ܷ�������¼�������������齫AI�ɹ���
+只有独立配对区间下界大于0才标明确改善；失败方向保留记录，不宣布完整麻将AI成功。
 
-ģ��ѧϰ����ʧ���ѱ�������֤�ݣ�round2_warmstart_results.json����Ҫ����ä���Զ��ľ���������ת��Ϸ���ѡ�����ṹ����������/��Ч���Ų��ԡ�
+模仿学习方向失败已保存完整证据：round2_warmstart_results.json。不要继续盲增自对弈局数。正在转向合法候选动作结构特征与向听/有效进张策略。
 
-����������������160��mean��+.15/CI[-.3125,+.6125]��δȷ�ϸĽ�����ѡ����teacher������ɣ�utility����100%�����ڻ������Ը��֡��²в��Զ��Ĵ�ð�̺���ƣ�������ǰ���Ƴɹ���
+受限向听策略完整160局mean差+.15/CI[-.3125,+.6125]，未确认改进。候选线性teacher蒸馏完成，utility最优100%仅属于基础策略复现。新残差自对弈待冒烟和审计，不能提前声称成功。
 
 
-## ��ѡ�ṹ�в��Զ���ʵ�ʽ��
+## 候选结构残差自对弈实际结果
 {
   "mean_difference": 0.0125,
   "paired_seed_bootstrap_95ci": [
@@ -66,4 +66,4 @@ Pending: D's audited data, per-target active/candidate masks, complete independe
   ],
   "clear_improvement": false
 }
-����1000��ѵ�������100�����������������������齫AI��ֻѧϰ���ƣ�����������ʽ������ȷ�����䲻��ɹ���
+这是1000局训练后独立100种子组评估，不代表完整麻将AI；只学习舍牌，碰杠仍启发式。无明确正区间不标成功。

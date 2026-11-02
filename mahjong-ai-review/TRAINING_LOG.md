@@ -20,10 +20,10 @@ simulation-v2 completed8epochs, best7 val0.54708257. Final test once: 30455 acti
 
 TorchScript CPU raw-logit export executed and parity-tested; Python wrapper required for calibration, flags and legality. No ONNX dependency installed/export performed.
 
-�ڶ����Զ�ʵ�����½���ѳ־û���ROUND2_REPORT.md��reports/round2_automatic_results.json���������޸������������Ϊ׼�����ܽ�ѵ����ɵ����ɹ���
+第二轮自动实验最新结果已持久化到ROUND2_REPORT.md和reports/round2_automatic_results.json；策略有无改善以配对评估为准，不能将训练完成当作成功。
 
 
-## ģ�»������Ժ��Զ���ʵ��
+## 模仿基础策略后自对弈实验
 {
   "imitation": {
     "means": {
@@ -58,10 +58,10 @@ TorchScript CPU raw-logit export executed and parity-tested; Python wrapper requ
     "scope": "configured_simulator_only"
   }
 }
-ֻ�ж�����������½����0�ű���ȷ���ƣ�ʧ�ܷ�������¼�������������齫AI�ɹ���
+只有独立配对区间下界大于0才标明确改善；失败方向保留记录，不宣布完整麻将AI成功。
 
 
-## ��ѡ�ṹ�в��Զ���ʵ�ʽ��
+## 候选结构残差自对弈实际结果
 {
   "mean_difference": 0.0125,
   "paired_seed_bootstrap_95ci": [
@@ -76,4 +76,4 @@ TorchScript CPU raw-logit export executed and parity-tested; Python wrapper requ
   ],
   "clear_improvement": false
 }
-����1000��ѵ�������100�����������������������齫AI��ֻѧϰ���ƣ�����������ʽ������ȷ�����䲻��ɹ���
+这是1000局训练后独立100种子组评估，不代表完整麻将AI；只学习舍牌，碰杠仍启发式。无明确正区间不标成功。
