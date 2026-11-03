@@ -1,0 +1,278 @@
+{
+  "status": "completed",
+  "error": null,
+  "scope": "development_seeds_only_NO_final_test_NO_promotion",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "seed_range": [
+    7200200,
+    7200219
+  ],
+  "complete_seed_groups": 20,
+  "seconds": 66.65663369999675,
+  "summary": {
+    "multitask": {
+      "games": 80,
+      "mean_net_score": 3.45,
+      "win_rate": 0.525,
+      "self_draw_rate": 0.0375,
+      "deal_in_event_rate": 0.05,
+      "deal_in_game_rate": 0.05,
+      "mean_deal_in_loss": 0.125,
+      "seat_mean": {
+        "0": 3.9,
+        "1": 3.1,
+        "2": 3.5,
+        "3": 3.3
+      },
+      "parts_mean": {
+        "cha_jiao_big": 1.525,
+        "discard_win": 0.85,
+        "added_kong": -0.0625,
+        "direct_kong": 0.075,
+        "self_draw": 0.4,
+        "concealed_kong": 0.2,
+        "gang_refund": 0.4625
+      }
+    },
+    "relative": {
+      "games": 80,
+      "mean_net_score": 4.8625,
+      "win_rate": 0.7125,
+      "self_draw_rate": 0.175,
+      "deal_in_event_rate": 0.05,
+      "deal_in_game_rate": 0.05,
+      "mean_deal_in_loss": 0.125,
+      "seat_mean": {
+        "0": 4.45,
+        "1": 5.85,
+        "2": 4.75,
+        "3": 4.4
+      },
+      "parts_mean": {
+        "cha_jiao_big": 1.225,
+        "discard_win": 1.0,
+        "self_draw": 2.05,
+        "added_kong": -0.05,
+        "direct_kong": -0.0625,
+        "concealed_kong": 0.125,
+        "gang_refund": 0.575
+      }
+    },
+    "strong": {
+      "games": 80,
+      "mean_net_score": 5,
+      "win_rate": 0.7625,
+      "self_draw_rate": 0.1875,
+      "deal_in_event_rate": 0.05,
+      "deal_in_game_rate": 0.05,
+      "mean_deal_in_loss": 0.125,
+      "seat_mean": {
+        "0": 4.05,
+        "1": 4.95,
+        "2": 5.05,
+        "3": 5.95
+      },
+      "parts_mean": {
+        "cha_jiao_big": 0.9,
+        "discard_win": 1.025,
+        "self_draw": 2.35,
+        "added_kong": 0.0375,
+        "direct_kong": -0.025,
+        "concealed_kong": 0.075,
+        "gang_refund": 0.6375
+      }
+    }
+  },
+  "comparisons": {
+    "multitask_vs_strong": {
+      "paired_initial_seed_mean": -1.55,
+      "seed_bootstrap95ci": [
+        -2.675,
+        -0.475
+      ],
+      "seed_differences": [
+        -8.0,
+        -2.5,
+        -1.0,
+        3.5,
+        1.0,
+        -0.5,
+        1.0,
+        -3.0,
+        -0.5,
+        -3.5,
+        -2.0,
+        -2.0,
+        -3.25,
+        -1.0,
+        0.5,
+        -5.0,
+        0.25,
+        1.5,
+        -3.0,
+        -3.5
+      ]
+    },
+    "relative_vs_strong": {
+      "paired_initial_seed_mean": -0.1375,
+      "seed_bootstrap95ci": [
+        -1.2625,
+        0.7875
+      ],
+      "seed_differences": [
+        -5.5,
+        4.0,
+        1.0,
+        3.5,
+        0.0,
+        1.25,
+        0.0,
+        0.0,
+        -0.75,
+        0.0,
+        0.5,
+        1.0,
+        -1.0,
+        -1.5,
+        0.0,
+        -4.0,
+        -2.0,
+        3.5,
+        -2.25,
+        -0.5
+      ]
+    },
+    "relative_vs_multitask": {
+      "paired_initial_seed_mean": 1.4125,
+      "seed_bootstrap95ci": [
+        0.525,
+        2.375
+      ],
+      "seed_differences": [
+        2.5,
+        6.5,
+        2.0,
+        0.0,
+        -1.0,
+        1.75,
+        -1.0,
+        3.0,
+        -0.25,
+        3.5,
+        2.5,
+        3.0,
+        2.25,
+        -0.5,
+        -0.5,
+        1.0,
+        -2.25,
+        2.0,
+        0.75,
+        3.0
+      ]
+    }
+  },
+  "inference_cost": {
+    "multitask": {
+      "seconds": 43.5382743000373,
+      "decisions": 1011,
+      "mean_seconds": 0.04306456409499238
+    },
+    "relative": {
+      "seconds": 12.159142800053814,
+      "decisions": 951,
+      "mean_seconds": 0.01278563911677583
+    },
+    "strong": {
+      "seconds": 6.727143799944315,
+      "decisions": 906,
+      "mean_seconds": 0.007425103531947368
+    }
+  },
+  "decision_diagnostics": {
+    "multitask/forced": {
+      "n": 528,
+      "exact": 508,
+      "equivalent": 508,
+      "rank_regret": 19.5,
+      "ukeire_regret": 0.0,
+      "higher_structural": 0,
+      "higher_missing_debt": 0
+    },
+    "multitask/free": {
+      "n": 483,
+      "exact": 224,
+      "equivalent": 233,
+      "rank_regret": 108.86443001443,
+      "ukeire_regret": 690.0,
+      "higher_structural": 0,
+      "higher_missing_debt": 0
+    },
+    "relative/forced": {
+      "n": 508,
+      "exact": 489,
+      "equivalent": 489,
+      "rank_regret": 18.0,
+      "ukeire_regret": 0.0,
+      "higher_structural": 0,
+      "higher_missing_debt": 0
+    },
+    "relative/free": {
+      "n": 443,
+      "exact": 371,
+      "equivalent": 374,
+      "rank_regret": 25.243795093795086,
+      "ukeire_regret": 68.0,
+      "higher_structural": 0,
+      "higher_missing_debt": 0
+    }
+  },
+  "model_metadata": {
+    "multitask": {
+      "checkpoint": "checkpoints\\next_history100_multitask\\best_epoch_5.pt",
+      "checkpoint_sha256": "12e531d34b99a01921e1edec719a389a78d025e72dec8e2ff259ad819d35f8a9",
+      "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "binding": "707652bbbb0978d6928a5cd7afe924fe7c62947d02dd9cfc0bfe9bb61b0a73e2",
+      "action_semantics": "teacher preference rank NOT terminal action Q",
+      "state_semantics": "one rotating BaselineV3 seat vs three frozen simulator heuristic styles; V3 terminal net score in raw base units",
+      "decision_scope": "discard-only; other stages remain simulator baselines",
+      "training_games": 100,
+      "validation_games": 20,
+      "rl_performed": false,
+      "checkpoint_epoch": 5,
+      "loss_mode": "multitask",
+      "state_head_supervised": true
+    },
+    "relative": {
+      "checkpoint": "checkpoints\\next_history100_relative_pairwise\\best_epoch_5.pt",
+      "checkpoint_sha256": "8b0c3cea82f37e818c51168962379907cd47bd1b27decc33a7de679fd27a0a50",
+      "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "binding": "6419e5f27ec76249b1089d6135e978dc5ae8656cf24f661d6e6470be481344d8",
+      "action_semantics": "teacher preference rank NOT terminal action Q",
+      "state_semantics": "one rotating BaselineV3 seat vs three frozen simulator heuristic styles; V3 terminal net score in raw base units",
+      "decision_scope": "discard-only; other stages remain simulator baselines",
+      "training_games": 100,
+      "validation_games": 20,
+      "rl_performed": false,
+      "checkpoint_epoch": 5,
+      "loss_mode": "multitask",
+      "state_head_supervised": true
+    }
+  },
+  "source_hashes": {
+    "inference\\next_policy.py": "4005113d8128ba36f2a2ae6d623214479bd785580469758c26e146d939cf7ad7",
+    "inference\\next_relative_policy.py": "1e75c08a8d2aec2c58cae8b18d4ba7d812681da207c5480992edd191e78fe5f3",
+    "scripts\\next_model_relative_eval.py": "0d3ea3f0748b68d123d08c3405da29c64e9f65388f50e38a97663c629dcb6e68",
+    "simulator\\v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+    "baselines\\v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules\\core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules\\v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator\\table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21"
+  },
+  "limitations": [
+    "random legal-discard opponents; claims/default other stages shared simulator",
+    "paired initial deal does not imply identical future trajectories",
+    "preference head not counterfactual Q; policy-conditioned V unused for choice",
+    "20seed or smaller development sample; no strength promotion"
+  ]
+}

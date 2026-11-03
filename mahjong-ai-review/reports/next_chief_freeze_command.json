@@ -1,0 +1,4 @@
+{
+  "exit_code": 0,
+  "command": ".venv/Scripts/python.exe scripts/chief_freeze_v3_champion.py"
+}

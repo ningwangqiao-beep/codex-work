@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "manifest_sha256": "8c3e9aab53f51222fbd3502e48f086dc091c123da0e59785221a460c54f6e416",
+  "games": 6,
+  "records": 75,
+  "counts": {
+    "train": 44,
+    "validation": 31
+  },
+  "prefix_games_identical": 6,
+  "history_max": 285,
+  "source_hashes": {
+    "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator/v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+    "observations/v3_history_v2.py": "fea65417d104f35d3669e29893f5d503710cb85b7fa2f5170834b64c825fb8a3",
+    "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+    "baselines/v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules/fast_hand_analysis.py": "599cb2ba49e4743ec3d6f0160987e5ac6cf88f8b2f1fff63a3431d509757f240",
+    "models/revision_candidate_schema.py": "709a529fb0f9bcd4271def94488fc4dbb38e69ba6b8e8bef5178e2a1852ae136",
+    "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578"
+  },
+  "seconds": 0.7188942000066163,
+  "checks": [
+    "atomic commit and manifest agree",
+    "actual content SHA",
+    "unique permanent seed ranges and whole-deal split",
+    "all ledger score zero-sum",
+    "all observer terminal returns",
+    "all recorded inputs reencoded",
+    "hidden/future poison keys ignored",
+    "candidate legal masks and finite values",
+    "frozen100+fixedval exact records"
+  ],
+  "limitations": [
+    "poison-key noninterference alone not upstream full leakage proof",
+    "teacher preferences NOT counterfactual Q",
+    "no physical hidden states persisted for independent 108 recheck"
+  ],
+  "admission": "chief decision required"
+}

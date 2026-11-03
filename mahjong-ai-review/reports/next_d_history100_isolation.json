@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "records": 1459,
+  "unique_games": 120,
+  "actual_files_sha256": {
+    "train": "08192c6147f0ed392e16faa2938026efb0a6e8541e87a18a194abd81d4e1341f",
+    "validation": "e0b25914450c1f1233ddb37546c3e7c421e7ced97fd676e323e2f0f95b2d0697"
+  },
+  "checks": [
+    "whole-deal split",
+    "encoder reproduces recorded static/fullseq",
+    "hidden/future injected keys ignored",
+    "candidate shape and mask",
+    "structural tenpai waits consistency"
+  ],
+  "limitations": [
+    "poison-key noninterference not proof of all possible upstream leakage",
+    "preference rank not counterfactual Q",
+    "raw terminal state V under one-Bot-vs-three-heuristic policy"
+  ],
+  "admission": "chief required"
+}

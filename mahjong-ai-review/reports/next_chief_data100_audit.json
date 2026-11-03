@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "manifest_sha256": "25ba2e3e94e13615dcb619725632d1bf96d18a60cb359b8cb4057d6793cedc1c",
+  "counts": {
+    "train": 1224,
+    "validation": 235
+  },
+  "unique_games": 120,
+  "game_returns_checked": 120,
+  "all_ledger_and_V_labels_match": true,
+  "source_current_match": {
+    "rules\\core.py": true,
+    "rules\\v3.py": true,
+    "simulator\\table.py": true,
+    "simulator\\v3_history_v2.py": true,
+    "observations\\v3_history_v2.py": true,
+    "observations\\public.py": true,
+    "baselines\\v3_bot.py": true,
+    "rules\\fast_hand_analysis.py": true,
+    "models\\revision_candidate_schema.py": true,
+    "inference\\v3_observation.py": true
+  },
+  "old_final_seeds_excluded": true,
+  "semantics": "teacher preference NOT_Q; terminal raw score under teacher policy"
+}

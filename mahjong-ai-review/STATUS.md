@@ -299,3 +299,374 @@ T2首个V3真实GPU监督已完成：80train games/955状态、20validation game
   "no_expert_claim": true
 }
 区间跨零即证据不足；该配置模拟结果不是现实高手认证。不得用本最终集继续调参。
+
+## 神经网络提升下一阶段：正式启动
+用户要求冻结冠军、先诊断再有界改进。冠军v3-rules-20261103已冻结于champions/v3_rules_20261103，14源码依赖/7评估证据指纹，规则程序无神经网络权重；原raw评估JSONL登记原址SHA不改。入口reports/next_chief_champion_freeze.json，freeze命令exit0。
+原最终种子5000000..5004999永久禁止模型选择；新训练7000000+、验证7100000+、开发7200000+分离，见configs/next_seed_registry.json；新final尚未预注册。
+T2诊断实证：46自由错误均不增missing/structural，38降低进张，9降低fan proxy，未发现明确普通/七对转换；梯度量级提示单任务对照但不证明负迁移；部署约慢4.38倍。神经网继承规则teacher预筛，不可算自主学会算牌。
+历史v2新文件修initial draw/直杠replacement draw/rob_kong_win/pass；B独立7tests含5真抢杠种子全部过，主审全测试87过9.521秒exit0。冠军六源未改。
+100训练+20固定验证真实120游戏，1224train/235val，history最大298。D/C未伪称Q，标签仍teacher preference rank；raw终局V有全120局returns/ledger。主审独立逐1459记录验源/分片/编码/合法候选/120局零和与V标签/禁用seed通过，reports/next_chief_data100_audit.json，exit0。
+下一有界两对照同架构同seed同6epoch/batch128：action-only vs原multitask；数据/源新准入签后才GPU执行。未扩1000/5000，未RL，未晋级，未覆冠军。
+
+
+## 新历史100训练局阶段真实开发对比
+{
+  "loss_control": {
+    "status": "completed",
+    "complete_seed_groups": 20,
+    "summary": {
+      "multitask": {
+        "games": 80,
+        "mean_net_score": 4.15,
+        "win_rate": 0.5625,
+        "self_draw_rate": 0.15,
+        "deal_in_event_rate": 0,
+        "deal_in_game_rate": 0,
+        "mean_deal_in_loss": 0,
+        "seat_mean": {
+          "0": 4.75,
+          "1": 3.75,
+          "2": 4.6,
+          "3": 3.5
+        },
+        "parts_mean": {
+          "added_kong": -0.0125,
+          "direct_kong": -0.0125,
+          "gang_refund": 0.525,
+          "discard_win": 0.925,
+          "concealed_kong": -0.125,
+          "cha_jiao_big": 1.2,
+          "self_draw": 1.65
+        }
+      },
+      "action_only": {
+        "games": 80,
+        "mean_net_score": 3.925,
+        "win_rate": 0.55,
+        "self_draw_rate": 0.1375,
+        "deal_in_event_rate": 0,
+        "deal_in_game_rate": 0,
+        "mean_deal_in_loss": 0,
+        "seat_mean": {
+          "0": 4.8,
+          "1": 4.25,
+          "2": 3.65,
+          "3": 3
+        },
+        "parts_mean": {
+          "added_kong": 0.0125,
+          "direct_kong": 0.0125,
+          "gang_refund": 0.525,
+          "discard_win": 0.925,
+          "concealed_kong": -0.15,
+          "cha_jiao_big": 1.1,
+          "self_draw": 1.5
+        }
+      },
+      "strong": {
+        "games": 80,
+        "mean_net_score": 4.0625,
+        "win_rate": 0.675,
+        "self_draw_rate": 0.1125,
+        "deal_in_event_rate": 0.0125,
+        "deal_in_game_rate": 0.0125,
+        "mean_deal_in_loss": 0.025,
+        "seat_mean": {
+          "0": 4.4,
+          "1": 3.55,
+          "2": 4.9,
+          "3": 3.4
+        },
+        "parts_mean": {
+          "added_kong": -0.1,
+          "direct_kong": -0.05,
+          "gang_refund": 0.5375,
+          "discard_win": 1.15,
+          "concealed_kong": 0.05,
+          "cha_jiao_big": 1.175,
+          "self_draw": 1.3
+        }
+      }
+    },
+    "comparisons": {
+      "multitask_vs_strong": {
+        "paired_initial_seed_mean": 0.0875,
+        "seed_bootstrap95ci": [
+          -0.8125,
+          1.0625
+        ],
+        "seed_differences": [
+          -2.25,
+          -1.0,
+          -2.5,
+          -2.5,
+          -1.0,
+          -3.0,
+          1.5,
+          -0.5,
+          2.5,
+          -2.0,
+          -1.75,
+          4.5,
+          3.5,
+          2.0,
+          1.5,
+          -1.25,
+          2.5,
+          -0.5,
+          1.0,
+          1.0
+        ]
+      },
+      "action_only_vs_strong": {
+        "paired_initial_seed_mean": -0.1375,
+        "seed_bootstrap95ci": [
+          -1.0625,
+          0.775
+        ],
+        "seed_differences": [
+          -2.25,
+          -1.0,
+          -4.0,
+          -2.5,
+          -1.0,
+          -3.0,
+          1.5,
+          -0.5,
+          2.5,
+          -2.0,
+          1.5,
+          -0.75,
+          3.5,
+          2.5,
+          1.5,
+          1.25,
+          2.5,
+          -3.0,
+          1.0,
+          -0.5
+        ]
+      },
+      "action_only_vs_multitask": {
+        "paired_initial_seed_mean": -0.225,
+        "seed_bootstrap95ci": [
+          -0.9375,
+          0.425
+        ],
+        "seed_differences": [
+          0.0,
+          0.0,
+          -1.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.25,
+          -5.25,
+          0.0,
+          0.5,
+          0.0,
+          2.5,
+          0.0,
+          -2.5,
+          0.0,
+          -1.5
+        ]
+      }
+    },
+    "limitations": [
+      "random legal-discard opponents; claims/default other stages shared simulator",
+      "paired initial deal does not imply identical future trajectories",
+      "preference head not counterfactual Q; policy-conditioned V unused for choice",
+      "20seed or smaller development sample; no strength promotion"
+    ]
+  },
+  "relative_combo": {
+    "status": "completed",
+    "complete_seed_groups": 20,
+    "summary": {
+      "multitask": {
+        "games": 80,
+        "mean_net_score": 3.45,
+        "win_rate": 0.525,
+        "self_draw_rate": 0.0375,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 3.9,
+          "1": 3.1,
+          "2": 3.5,
+          "3": 3.3
+        },
+        "parts_mean": {
+          "cha_jiao_big": 1.525,
+          "discard_win": 0.85,
+          "added_kong": -0.0625,
+          "direct_kong": 0.075,
+          "self_draw": 0.4,
+          "concealed_kong": 0.2,
+          "gang_refund": 0.4625
+        }
+      },
+      "relative": {
+        "games": 80,
+        "mean_net_score": 4.8625,
+        "win_rate": 0.7125,
+        "self_draw_rate": 0.175,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 4.45,
+          "1": 5.85,
+          "2": 4.75,
+          "3": 4.4
+        },
+        "parts_mean": {
+          "cha_jiao_big": 1.225,
+          "discard_win": 1.0,
+          "self_draw": 2.05,
+          "added_kong": -0.05,
+          "direct_kong": -0.0625,
+          "concealed_kong": 0.125,
+          "gang_refund": 0.575
+        }
+      },
+      "strong": {
+        "games": 80,
+        "mean_net_score": 5,
+        "win_rate": 0.7625,
+        "self_draw_rate": 0.1875,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 4.05,
+          "1": 4.95,
+          "2": 5.05,
+          "3": 5.95
+        },
+        "parts_mean": {
+          "cha_jiao_big": 0.9,
+          "discard_win": 1.025,
+          "self_draw": 2.35,
+          "added_kong": 0.0375,
+          "direct_kong": -0.025,
+          "concealed_kong": 0.075,
+          "gang_refund": 0.6375
+        }
+      }
+    },
+    "comparisons": {
+      "multitask_vs_strong": {
+        "paired_initial_seed_mean": -1.55,
+        "seed_bootstrap95ci": [
+          -2.675,
+          -0.475
+        ],
+        "seed_differences": [
+          -8.0,
+          -2.5,
+          -1.0,
+          3.5,
+          1.0,
+          -0.5,
+          1.0,
+          -3.0,
+          -0.5,
+          -3.5,
+          -2.0,
+          -2.0,
+          -3.25,
+          -1.0,
+          0.5,
+          -5.0,
+          0.25,
+          1.5,
+          -3.0,
+          -3.5
+        ]
+      },
+      "relative_vs_strong": {
+        "paired_initial_seed_mean": -0.1375,
+        "seed_bootstrap95ci": [
+          -1.2625,
+          0.7875
+        ],
+        "seed_differences": [
+          -5.5,
+          4.0,
+          1.0,
+          3.5,
+          0.0,
+          1.25,
+          0.0,
+          0.0,
+          -0.75,
+          0.0,
+          0.5,
+          1.0,
+          -1.0,
+          -1.5,
+          0.0,
+          -4.0,
+          -2.0,
+          3.5,
+          -2.25,
+          -0.5
+        ]
+      },
+      "relative_vs_multitask": {
+        "paired_initial_seed_mean": 1.4125,
+        "seed_bootstrap95ci": [
+          0.525,
+          2.375
+        ],
+        "seed_differences": [
+          2.5,
+          6.5,
+          2.0,
+          0.0,
+          -1.0,
+          1.75,
+          -1.0,
+          3.0,
+          -0.25,
+          3.5,
+          2.5,
+          3.0,
+          2.25,
+          -0.5,
+          -0.5,
+          1.0,
+          -2.25,
+          2.0,
+          0.75,
+          3.0
+        ]
+      }
+    },
+    "limitations": [
+      "random legal-discard opponents; claims/default other stages shared simulator",
+      "paired initial deal does not imply identical future trajectories",
+      "preference head not counterfactual Q; policy-conditioned V unused for choice",
+      "20seed or smaller development sample; no strength promotion"
+    ]
+  },
+  "scope": "development only; no final test tuning; no automatic promotion"
+}
+神经网络模仿改善不能代替净分证据；区间跨零不晋级；当前冠军不覆盖，1000/5000扩充另行受控。
+
+## 100局阶段第一轮实际结果
+两个原架构控制6epoch/60step/seed42/batch128均exit0：multitask验证free-equivalent53.21%，action-only53.21%；去辅助任务未改善，不能断言负迁移。20开发seed7200000..19/240局：multi4.15 vsstrong4.0625，diff+.0875 CI[-.8125,1.0625]；action3.925 diff-.1375 CI[-1.0625,.775]，均不晋级。
+同状态随机顺序冷暖计时显示两原架构神经网warm6.67/6.70ms，强Bot4.28ms；之前固定顺序4.38倍观测受cache/状态混杂，不可归因辅助头。
+relative input+pairwise组合为20541参数（control20349），同100训练数据/6epoch/60step。fixedval109free-equivalent88.07% vs53.21%；rank regret .03114 vs .22761（不是净分Q）。整局bootstrap teacher-fit差区间为正；只说明组合更会复现teacher。
+新开发7200200..219/240局：relative4.8625、strong5、旧control3.45；relative-strong -.1375 CI[-1.2625,.7875]不晋级；relative-control +1.4125 CI[.525,2.375]。不得跨不同开发seed把绝对均分直接比较。
+准备1000数据边际试验（非5000），冻结relative架构与损失；固定6epoch意味着数据和optimizersteps都增加，结果不能只归因数据纯因果。后续仍需数据审计/明确新准入。当前无RL、无真实counterfactualQ，冠军未覆盖。
+
+## 1000局边际数据阶段启动
+已启动独立本地调度器 scheduler/next_history1000_generation.json，2个CPU生成进程，保留1536MiB空闲内存，最长1800秒，逐局提交可恢复。仅生成1000训练+固定20验证；训练仍需独立数据审计和新准入。冠军冻结，5000与RL未放行。实际进程与完成量以 experiments/next_history1000_generation/state.json 和已提交commit.json为准。

@@ -1,0 +1,77 @@
+{
+  "scope": "frozen_train_validation_and_existing_development240_only",
+  "errors": {
+    "free_wrong": 46,
+    "higher_structural": 0,
+    "higher_missing_debt": 0,
+    "lower_effective": 38,
+    "lower_fan_proxy": 9,
+    "same_structural_different_choice": 46,
+    "outside_teacher_prefilter_frontier": 0,
+    "higher_fan_proxy": 0,
+    "higher_fan_and_lower_effective": 0,
+    "seven_pairs_option_worsened": 26,
+    "seven_preferred_to_standard_preferred": 0,
+    "standard_preferred_to_seven_preferred": 0
+  },
+  "free_postdiscard_structural_groups": {
+    "2": {
+      "n": 16,
+      "equivalent": 8
+    },
+    "1": {
+      "n": 50,
+      "equivalent": 22
+    },
+    "0": {
+      "n": 55,
+      "equivalent": 45
+    }
+  },
+  "shared_encoder_gradient_single_batch": {
+    "action_value_mse": {
+      "unweighted_shared_norm": 0.06304963678121567,
+      "cosine_to_action_mse": 0.9999998807907104,
+      "weight": 1.0
+    },
+    "equivalent_ranking_ce": {
+      "unweighted_shared_norm": 0.005689428653568029,
+      "cosine_to_action_mse": 0.17110581696033478,
+      "weight": 1.0
+    },
+    "state_value_mse": {
+      "unweighted_shared_norm": 8.718436241149902,
+      "cosine_to_action_mse": -0.014519999735057354,
+      "weight": 0.01
+    },
+    "tenpai_bce": {
+      "unweighted_shared_norm": 0.09664999693632126,
+      "cosine_to_action_mse": -0.03690249100327492,
+      "weight": 0.2
+    },
+    "conditional_wait_bce": {
+      "unweighted_shared_norm": 0.10845265537500381,
+      "cosine_to_action_mse": 0.027080407366156578,
+      "weight": 0.2
+    },
+    "joint_risk_ce": {
+      "unweighted_shared_norm": 0.3336212635040283,
+      "cosine_to_action_mse": 0.034915804862976074,
+      "weight": 0.2
+    }
+  },
+  "net_component_T2_minus_strong": {
+    "added_kong": -0.0375,
+    "cha_jiao_big": 0.3999999999999999,
+    "discard_win": -0.17500000000000004,
+    "concealed_kong": -0.1,
+    "self_draw": -0.8999999999999999,
+    "direct_kong": -0.14999999999999997,
+    "gang_refund": 0.13749999999999996
+  },
+  "sum_component_difference": -0.8250000000000001,
+  "target_warning": "ordinal teacher rank is not terminal action Q; V is teacher-policy return",
+  "training_performed": false,
+  "final_test_used": false,
+  "script_sha256": "39ac73c60425fbd0fcfec53970142e13783ad620d16b57a31df0051ec4b4539b"
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "PROJECT\scripts\next_data_scale.py", line 74, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--train-games',type=int,default=4);p.add_argument('--validation-games',type=int,default=2);p.add_argument('--out',default='datasets/next_history_scale_smoke');p.add_argument('--resume',action='store_true');p.add_argument('--approval');p.add_argument('--min-free-mb',type=int,default=1024);run(p.parse_args())
+                                                                                                                                                                                                                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\scripts\next_data_scale.py", line 34, in run
+    if not approval.get('approved') or approval.get('source_hashes')!=source or approval.get('train_games')!=a.train_games:raise ValueError('Chief scale approval required')
+                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Chief scale approval required

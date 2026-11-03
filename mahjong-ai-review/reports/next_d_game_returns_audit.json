@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "games": 120,
+  "records": 1459,
+  "game_returns_sha256": "4c0bb07e4b2f0a052150ad42abfa7dbe54b7156b4e853e93c20427dadd122ecf",
+  "same_seed_replay_not_new_independent_games": true
+}

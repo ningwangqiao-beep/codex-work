@@ -1,0 +1,4 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/chief_next_data_recheck.py",
+  "exit_code": 0
+}

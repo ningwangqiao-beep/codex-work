@@ -1,0 +1,57 @@
+{
+  "scope": "teacher_fit_only_NOT_net_return_NO_training_NO_final",
+  "results": {
+    "train": {
+      "free": {
+        "control": {
+          "n": 577,
+          "equivalent": 304,
+          "rank_regret": 128.14047396183014
+        },
+        "relative_combo": {
+          "n": 577,
+          "equivalent": 487,
+          "rank_regret": 28.076586723327637
+        }
+      },
+      "relative_minus_control_equivalent_ci": [
+        0.26842105263157895,
+        0.3694158075601375
+      ],
+      "relative_minus_control_regret_ci": [
+        -0.19945668213495554,
+        -0.14887789294526382
+      ],
+      "game_clusters_with_free_decisions": 100
+    },
+    "validation": {
+      "free": {
+        "control": {
+          "n": 109,
+          "equivalent": 58,
+          "rank_regret": 24.809920370578766
+        },
+        "relative_combo": {
+          "n": 109,
+          "equivalent": 96,
+          "rank_regret": 3.3944444060325623
+        }
+      },
+      "relative_minus_control_equivalent_ci": [
+        0.23076923076923078,
+        0.4666666666666667
+      ],
+      "relative_minus_control_regret_ci": [
+        -0.2799466298571948,
+        -0.12037583569849818
+      ],
+      "game_clusters_with_free_decisions": 20
+    }
+  },
+  "limitations": [
+    "fixed20validation games, not an independent new final",
+    "combined representation+pairwise, no single-factor causality",
+    "teacher fit cannot prove policy improvement or justify1000alone"
+  ],
+  "script_sha256": "243b3e3a7244e796f282e043a1ad5090276e42cf18cf0e68895df0305516a8a8"
+}

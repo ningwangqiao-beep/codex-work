@@ -1,0 +1,13 @@
+# Independent history-v2 review
+
+Executed .venv/Scripts/python.exe -m unittest discover -s tests -p test_v3_history_v2.py . Exit0;6 tests passed0.120s. Logs next_b_history_tests.log, exit next_b_history_exitcode.txt, exact source/test hashes next_b_history_hashes.json. Champion rule/ledger/six frozen source files untouched by B.
+
+Confirmed old gaps: initial draw missing; exposed-kong replacement draw missing; robbery win only in separate win_events but missing public event history; pass missing. D wrote new versioned files, B independently tested them.
+
+Actual coverage: 10 real seeded complete games check contiguous indices, public draws omit tile, every exposed-kong immediately followed by same-player replacement draw, robbery records conditional on event occurrence. Initial dealer context explicitly exercised. Projection unit fixture strips private draw/concealed-kong faces and unapproved hidden_hand field; changing opponent hidden hand leaves observer snapshot equal. Exchange own sent/received retains historical-not-current-holdings warning. Synthetic append sequence tests pass+multiple winners ordering.
+
+Evidence limits: synthetic append ordering is schema test, not proof game driver takes rare rob/multiwin paths. Ten games did not assert actual robbery occurrence, so rob branch remains source-reviewed/conditional-check only until explicit integration fixture or seed with occurrence. D notified. Public passes mean resolved observable response, not hidden tenpai label; must not add reason='could_win' or concealed alternatives. The projector masks opponent concealed-kong identities and all draw identities. Exchange own transfer knowledge can inform posterior but is not current opponent holding truth.
+
+Minor schema gaps: append_event currently accepts bool as player through range equality and does not validate tile indices/action vocabulary; legal driver generates correct types, but untrusted external imported histories need stricter validation. No changes made by B to D source. No RL or model training launched.
+
+Real branch addendum supersedes previous robbery coverage gap: replayed chief-provided historical audit seeds3300120,3300658,3301004,3301321,3301812 with exchange_offset=seed%3+1. All five truly trigger robbery. Independent test matches win_events/public_history/ledger one-to-one for winner, payer and configured payment; event precedes next action and matches preceding added-kong tile. Actual7 methods passed0.167s exit0, same unittest command. Structured evidence next_b_rob_seed_evidence.json. These are rule/history regression replays, not model evaluation or selection; no old final model-test set reused. D notified to use known seeds instead of random search.

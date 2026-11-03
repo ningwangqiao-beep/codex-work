@@ -1,0 +1,1 @@
+{'scope': 'synthetic_interface_only', 'parameters': 8001, 'pairwise_loss': 0.7591021060943604, 'finite_gradients': True, 'formal_training': False, 'rl': False}

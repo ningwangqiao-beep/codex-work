@@ -1,0 +1,23 @@
+{
+  "multitask": {
+    "same_states": 8,
+    "cold_mean_seconds": 0.11762913749953441,
+    "cold_median_seconds": 0.12560674999986077,
+    "warm_mean_seconds": 0.006673304167634342,
+    "warm_median_seconds": 0.006214100001670886
+  },
+  "action_only": {
+    "same_states": 8,
+    "cold_mean_seconds": 0.11777663750035572,
+    "cold_median_seconds": 0.12450674999854527,
+    "warm_mean_seconds": 0.006702504163210203,
+    "warm_median_seconds": 0.006313149991910905
+  },
+  "strong": {
+    "same_states": 8,
+    "cold_mean_seconds": 0.1145701374989585,
+    "cold_median_seconds": 0.12453889999596868,
+    "warm_mean_seconds": 0.004281079165593837,
+    "warm_median_seconds": 0.0025265499934903346
+  }
+}

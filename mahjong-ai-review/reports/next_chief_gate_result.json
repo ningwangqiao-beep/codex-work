@@ -1,0 +1,14 @@
+{
+  "data_checks_passed": true,
+  "manifest_sha256": "25ba2e3e94e13615dcb619725632d1bf96d18a60cb359b8cb4057d6793cedc1c",
+  "counts": {
+    "train": 1224,
+    "validation": 235
+  },
+  "history_max": 298,
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "training_allowed": true,
+  "rl_allowed": false,
+  "admission_sha256": "c52f5ddb2e654f9062ad69aed3fa26bafa25d2ec85e9f0b4f2451a5591906d71",
+  "scope": "new-history100 fixed loss ablation only"
+}

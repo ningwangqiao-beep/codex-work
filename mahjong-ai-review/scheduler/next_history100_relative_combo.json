@@ -1,0 +1,56 @@
+{
+  "run_dir": "experiments/next_history100_relative_combo",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 1,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "relative_combo100",
+      "script": "scripts/next_model_relative_train.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history100/manifest.json",
+        "--admission",
+        "reports/next_chief_relative_admission.json",
+        "--output",
+        "checkpoints/next_history100_relative_pairwise",
+        "--epochs",
+        "6",
+        "--batch-size",
+        "128",
+        "--seed",
+        "42",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 600,
+      "fingerprints": {
+        "evaluation/revision_action_value.py": "c92be8b2f6cd65810c8f525e569e12f83e9ca46e267583eac7313a1b6cce0fde",
+        "inference/v3_legacy.py": "dfab6bebd0d01cb552422b3280e7f5e64161d2c4390f73ee51682c3c17c632f7",
+        "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+        "models/next_candidate.py": "c40b668778b0b55b4872634b66d90dcf0b4e0503a1037298cf850c07b1c2d058",
+        "models/next_relative_v3.py": "5b96932f60a0cef6e55553e940aee0c4cba48f52d5f049cda4002240fbc775c8",
+        "models/revision_action_value.py": "8c4fe95cf10391c4f3cadeafe8b3eac26fdabb1a7c7e150d7f7a8a43cd7e76f5",
+        "models/round2_candidate.py": "0fb01d62bc6a14bae2832c579b4a247e62dda62cff3d34677abd4d1f8c62995e",
+        "models/round2_candidate_residual.py": "832215292ee5d773a95381e55f639b7adb4d1f9456fb57edef0da1da65b5123a",
+        "models/v3_action_value.py": "5ba2fc39cd42a9c5a985f0c656a47745ec9de5fbaf98af9fd10ac7ad0b11f8ab",
+        "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+        "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+        "scripts/next_model_relative_train.py": "8c07ae3ffe9871e832a6623c3c0f37de9431a2ec6b2cda6271e1bea88f03257e",
+        "training/next_relative_gate.py": "d4c18ef6f8cdcbfb7c18304507b9c21ba13f328e1e19d347ad10f6096a837154",
+        "training/next_relative_supervised.py": "5f98c81b6ec7e124bc3818c7cbe61b3e8e19d824b2d670e343b294b30bdef740",
+        "training/v3_gate.py": "f0e55a23257751f138c8016652884e8cd7a1b1afd1e7462ebf7ef9740bda0c34",
+        "training/v3_losses.py": "ab0104982b57a7a161219f028020903d1c31ab755e0b74ebe15400d51ca65d7c"
+      },
+      "dynamic_imports": [],
+      "coverage": "static local imports only; environment and runtime file reads excluded"
+    }
+  ]
+}

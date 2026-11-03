@@ -1,0 +1,4 @@
+"""Combined candidate-relative input + pairwise ranking (not single-factor). Chief admission required; no RL."""
+import pathlib,sys,argparse
+root=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(root));from training.next_scale_supervised import train
+p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--admission',required=True);p.add_argument('--output',required=True);p.add_argument('--mode',choices=['multitask'],default='multitask');p.add_argument('--epochs',type=int,default=6);p.add_argument('--batch-size',type=int,default=128);p.add_argument('--seed',type=int,default=42);p.add_argument('--device',choices=['cuda','cpu'],default='cuda');p.add_argument('--resume',action='store_true');a=p.parse_args();train(a.manifest,a.admission,a.output,root,a.epochs,a.batch_size,a.seed,a.device,a.resume,a.mode)

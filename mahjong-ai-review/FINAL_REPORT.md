@@ -252,3 +252,356 @@ P10：本地PyTorch checkpoint推理实际加载通过。接口接128维公开fe
   "no_expert_claim": true
 }
 区间跨零即证据不足；该配置模拟结果不是现实高手认证。不得用本最终集继续调参。
+
+
+## 新历史100训练局阶段真实开发对比
+{
+  "loss_control": {
+    "status": "completed",
+    "complete_seed_groups": 20,
+    "summary": {
+      "multitask": {
+        "games": 80,
+        "mean_net_score": 4.15,
+        "win_rate": 0.5625,
+        "self_draw_rate": 0.15,
+        "deal_in_event_rate": 0,
+        "deal_in_game_rate": 0,
+        "mean_deal_in_loss": 0,
+        "seat_mean": {
+          "0": 4.75,
+          "1": 3.75,
+          "2": 4.6,
+          "3": 3.5
+        },
+        "parts_mean": {
+          "added_kong": -0.0125,
+          "direct_kong": -0.0125,
+          "gang_refund": 0.525,
+          "discard_win": 0.925,
+          "concealed_kong": -0.125,
+          "cha_jiao_big": 1.2,
+          "self_draw": 1.65
+        }
+      },
+      "action_only": {
+        "games": 80,
+        "mean_net_score": 3.925,
+        "win_rate": 0.55,
+        "self_draw_rate": 0.1375,
+        "deal_in_event_rate": 0,
+        "deal_in_game_rate": 0,
+        "mean_deal_in_loss": 0,
+        "seat_mean": {
+          "0": 4.8,
+          "1": 4.25,
+          "2": 3.65,
+          "3": 3
+        },
+        "parts_mean": {
+          "added_kong": 0.0125,
+          "direct_kong": 0.0125,
+          "gang_refund": 0.525,
+          "discard_win": 0.925,
+          "concealed_kong": -0.15,
+          "cha_jiao_big": 1.1,
+          "self_draw": 1.5
+        }
+      },
+      "strong": {
+        "games": 80,
+        "mean_net_score": 4.0625,
+        "win_rate": 0.675,
+        "self_draw_rate": 0.1125,
+        "deal_in_event_rate": 0.0125,
+        "deal_in_game_rate": 0.0125,
+        "mean_deal_in_loss": 0.025,
+        "seat_mean": {
+          "0": 4.4,
+          "1": 3.55,
+          "2": 4.9,
+          "3": 3.4
+        },
+        "parts_mean": {
+          "added_kong": -0.1,
+          "direct_kong": -0.05,
+          "gang_refund": 0.5375,
+          "discard_win": 1.15,
+          "concealed_kong": 0.05,
+          "cha_jiao_big": 1.175,
+          "self_draw": 1.3
+        }
+      }
+    },
+    "comparisons": {
+      "multitask_vs_strong": {
+        "paired_initial_seed_mean": 0.0875,
+        "seed_bootstrap95ci": [
+          -0.8125,
+          1.0625
+        ],
+        "seed_differences": [
+          -2.25,
+          -1.0,
+          -2.5,
+          -2.5,
+          -1.0,
+          -3.0,
+          1.5,
+          -0.5,
+          2.5,
+          -2.0,
+          -1.75,
+          4.5,
+          3.5,
+          2.0,
+          1.5,
+          -1.25,
+          2.5,
+          -0.5,
+          1.0,
+          1.0
+        ]
+      },
+      "action_only_vs_strong": {
+        "paired_initial_seed_mean": -0.1375,
+        "seed_bootstrap95ci": [
+          -1.0625,
+          0.775
+        ],
+        "seed_differences": [
+          -2.25,
+          -1.0,
+          -4.0,
+          -2.5,
+          -1.0,
+          -3.0,
+          1.5,
+          -0.5,
+          2.5,
+          -2.0,
+          1.5,
+          -0.75,
+          3.5,
+          2.5,
+          1.5,
+          1.25,
+          2.5,
+          -3.0,
+          1.0,
+          -0.5
+        ]
+      },
+      "action_only_vs_multitask": {
+        "paired_initial_seed_mean": -0.225,
+        "seed_bootstrap95ci": [
+          -0.9375,
+          0.425
+        ],
+        "seed_differences": [
+          0.0,
+          0.0,
+          -1.5,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.25,
+          -5.25,
+          0.0,
+          0.5,
+          0.0,
+          2.5,
+          0.0,
+          -2.5,
+          0.0,
+          -1.5
+        ]
+      }
+    },
+    "limitations": [
+      "random legal-discard opponents; claims/default other stages shared simulator",
+      "paired initial deal does not imply identical future trajectories",
+      "preference head not counterfactual Q; policy-conditioned V unused for choice",
+      "20seed or smaller development sample; no strength promotion"
+    ]
+  },
+  "relative_combo": {
+    "status": "completed",
+    "complete_seed_groups": 20,
+    "summary": {
+      "multitask": {
+        "games": 80,
+        "mean_net_score": 3.45,
+        "win_rate": 0.525,
+        "self_draw_rate": 0.0375,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 3.9,
+          "1": 3.1,
+          "2": 3.5,
+          "3": 3.3
+        },
+        "parts_mean": {
+          "cha_jiao_big": 1.525,
+          "discard_win": 0.85,
+          "added_kong": -0.0625,
+          "direct_kong": 0.075,
+          "self_draw": 0.4,
+          "concealed_kong": 0.2,
+          "gang_refund": 0.4625
+        }
+      },
+      "relative": {
+        "games": 80,
+        "mean_net_score": 4.8625,
+        "win_rate": 0.7125,
+        "self_draw_rate": 0.175,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 4.45,
+          "1": 5.85,
+          "2": 4.75,
+          "3": 4.4
+        },
+        "parts_mean": {
+          "cha_jiao_big": 1.225,
+          "discard_win": 1.0,
+          "self_draw": 2.05,
+          "added_kong": -0.05,
+          "direct_kong": -0.0625,
+          "concealed_kong": 0.125,
+          "gang_refund": 0.575
+        }
+      },
+      "strong": {
+        "games": 80,
+        "mean_net_score": 5,
+        "win_rate": 0.7625,
+        "self_draw_rate": 0.1875,
+        "deal_in_event_rate": 0.05,
+        "deal_in_game_rate": 0.05,
+        "mean_deal_in_loss": 0.125,
+        "seat_mean": {
+          "0": 4.05,
+          "1": 4.95,
+          "2": 5.05,
+          "3": 5.95
+        },
+        "parts_mean": {
+          "cha_jiao_big": 0.9,
+          "discard_win": 1.025,
+          "self_draw": 2.35,
+          "added_kong": 0.0375,
+          "direct_kong": -0.025,
+          "concealed_kong": 0.075,
+          "gang_refund": 0.6375
+        }
+      }
+    },
+    "comparisons": {
+      "multitask_vs_strong": {
+        "paired_initial_seed_mean": -1.55,
+        "seed_bootstrap95ci": [
+          -2.675,
+          -0.475
+        ],
+        "seed_differences": [
+          -8.0,
+          -2.5,
+          -1.0,
+          3.5,
+          1.0,
+          -0.5,
+          1.0,
+          -3.0,
+          -0.5,
+          -3.5,
+          -2.0,
+          -2.0,
+          -3.25,
+          -1.0,
+          0.5,
+          -5.0,
+          0.25,
+          1.5,
+          -3.0,
+          -3.5
+        ]
+      },
+      "relative_vs_strong": {
+        "paired_initial_seed_mean": -0.1375,
+        "seed_bootstrap95ci": [
+          -1.2625,
+          0.7875
+        ],
+        "seed_differences": [
+          -5.5,
+          4.0,
+          1.0,
+          3.5,
+          0.0,
+          1.25,
+          0.0,
+          0.0,
+          -0.75,
+          0.0,
+          0.5,
+          1.0,
+          -1.0,
+          -1.5,
+          0.0,
+          -4.0,
+          -2.0,
+          3.5,
+          -2.25,
+          -0.5
+        ]
+      },
+      "relative_vs_multitask": {
+        "paired_initial_seed_mean": 1.4125,
+        "seed_bootstrap95ci": [
+          0.525,
+          2.375
+        ],
+        "seed_differences": [
+          2.5,
+          6.5,
+          2.0,
+          0.0,
+          -1.0,
+          1.75,
+          -1.0,
+          3.0,
+          -0.25,
+          3.5,
+          2.5,
+          3.0,
+          2.25,
+          -0.5,
+          -0.5,
+          1.0,
+          -2.25,
+          2.0,
+          0.75,
+          3.0
+        ]
+      }
+    },
+    "limitations": [
+      "random legal-discard opponents; claims/default other stages shared simulator",
+      "paired initial deal does not imply identical future trajectories",
+      "preference head not counterfactual Q; policy-conditioned V unused for choice",
+      "20seed or smaller development sample; no strength promotion"
+    ]
+  },
+  "scope": "development only; no final test tuning; no automatic promotion"
+}
+神经网络模仿改善不能代替净分证据；区间跨零不晋级；当前冠军不覆盖，1000/5000扩充另行受控。

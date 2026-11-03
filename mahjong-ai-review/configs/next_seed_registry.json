@@ -1,0 +1,29 @@
+{
+  "forbidden_for_model_selection": [
+    {
+      "start": 5000000,
+      "end": 5004999,
+      "reason": "V3 frozen final evaluation already consumed"
+    }
+  ],
+  "next_training": {
+    "start": 7000000,
+    "end": 7004999
+  },
+  "next_validation": {
+    "start": 7100000,
+    "end": 7100999
+  },
+  "next_development_games": {
+    "start": 7200000,
+    "end": 7204999
+  },
+  "new_final_seeds": null,
+  "new_final_policy": "Preregister only after candidate source and checkpoint freeze; never choose models on old final seeds",
+  "marginal_training_stages": [
+    100,
+    1000,
+    5000
+  ],
+  "expansion": "Conditional on audit and measured marginal learning/game-score evidence, never automatic blind expansion"
+}

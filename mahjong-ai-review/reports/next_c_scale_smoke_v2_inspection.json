@@ -1,0 +1,18 @@
+{
+  "inspection_passed": true,
+  "manifest_sha256": "8c3e9aab53f51222fbd3502e48f086dc091c123da0e59785221a460c54f6e416",
+  "counts": {
+    "train": 44,
+    "validation": 31
+  },
+  "terminal_game_ledgers_checked": 6,
+  "canonical_prefix_records_matched": 75,
+  "history_max": 285,
+  "dataset_fingerprint": "129c58d390dd279d747cc72e4f147a545467821b2e950b891165048e0664d92d",
+  "training_allowed": false,
+  "rl_allowed": false,
+  "limitations": [
+    "smoke can use fewer than fixed20validation games; formal1000 gate will require all20",
+    "fixed6epochs with more records means more optimizersteps, not data-only causal comparison"
+  ]
+}

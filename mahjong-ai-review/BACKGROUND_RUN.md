@@ -36,3 +36,6 @@ runner先请求checkpoint（最多等待30秒），训练在batch/整局边界�
     .\.venv\Scripts\python.exe scheduler\runner.py scheduler\v3_frozen_evaluation.json
 
 STOP文件experiments/v3_frozen_evaluation/STOP。逐完整seed组恢复，不保证被中断seed内部不重复。100000局最终评估后自动保存报告及审计包；规则/模型/数据hash变化会拒绝继续。不可在该最终集调参。该队列仅评估五个预注册冻结策略，不训练或自动发明算法。新T2小监督由单独已批准任务执行，GPU主训练最多一个。
+
+## 1000局边际数据阶段启动
+已启动独立本地调度器 scheduler/next_history1000_generation.json，2个CPU生成进程，保留1536MiB空闲内存，最长1800秒，逐局提交可恢复。仅生成1000训练+固定20验证；训练仍需独立数据审计和新准入。冠军冻结，5000与RL未放行。实际进程与完成量以 experiments/next_history1000_generation/state.json 和已提交commit.json为准。

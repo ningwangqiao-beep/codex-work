@@ -1,0 +1,46 @@
+{
+  "scope": "validation_same_state_timing_only",
+  "seconds": 3.2396354999946197,
+  "cpu_threads": 2,
+  "sampling": "seed42 four free/four forced fixed validation states; randomized policy order per state",
+  "cache_clear_functions": [
+    "rules.fast_hand_analysis._cost",
+    "rules.fast_hand_analysis._distance",
+    "rules.fast_hand_analysis._suit_targets",
+    "rules.fast_hand_analysis.matrix",
+    "rules.hand_analysis._standard",
+    "rules.hand_analysis_reference._suit_distance_cached",
+    "rules.hand_analysis_reference._suit_targets"
+  ],
+  "summary": {
+    "multitask": {
+      "same_states": 8,
+      "cold_mean_seconds": 0.11762913749953441,
+      "cold_median_seconds": 0.12560674999986077,
+      "warm_mean_seconds": 0.006673304167634342,
+      "warm_median_seconds": 0.006214100001670886
+    },
+    "action_only": {
+      "same_states": 8,
+      "cold_mean_seconds": 0.11777663750035572,
+      "cold_median_seconds": 0.12450674999854527,
+      "warm_mean_seconds": 0.006702504163210203,
+      "warm_median_seconds": 0.006313149991910905
+    },
+    "strong": {
+      "same_states": 8,
+      "cold_mean_seconds": 0.1145701374989585,
+      "cold_median_seconds": 0.12453889999596868,
+      "warm_mean_seconds": 0.004281079165593837,
+      "warm_median_seconds": 0.0025265499934903346
+    }
+  },
+  "limitations": [
+    "cold includes shared table/cache rebuilding; warm repeats same state",
+    "8states not a production latency benchmark",
+    "earlier fixed-policy-order game timing confounds cache and state distribution; cannot attribute to auxiliary heads"
+  ],
+  "no_training": true,
+  "no_final_test": true,
+  "script_sha256": "e478f120ae0e45907a56ef1cc9e0e0a3b71bfd97e5b3ade597d50851ae15eab1"
+}

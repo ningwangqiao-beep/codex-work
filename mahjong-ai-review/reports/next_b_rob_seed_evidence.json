@@ -1,0 +1,157 @@
+[
+  {
+    "seed": 3300120,
+    "exchange_offset": 1,
+    "wins": [
+      {
+        "seat": 3,
+        "kind": "rob_kong_win",
+        "payer": 0,
+        "base_fan": 1,
+        "final_fan": 1,
+        "payment": 2
+      }
+    ],
+    "history": [
+      {
+        "event_index": 254,
+        "player": 3,
+        "action": "rob_kong_win",
+        "tile": 17
+      }
+    ],
+    "ledger": [
+      {
+        "category": "rob_kong_win",
+        "payer": 0,
+        "receiver": 3,
+        "amount": 2,
+        "reversal": false
+      }
+    ]
+  },
+  {
+    "seed": 3300658,
+    "exchange_offset": 2,
+    "wins": [
+      {
+        "seat": 2,
+        "kind": "rob_kong_win",
+        "payer": 3,
+        "base_fan": 1,
+        "final_fan": 1,
+        "payment": 2
+      }
+    ],
+    "history": [
+      {
+        "event_index": 245,
+        "player": 2,
+        "action": "rob_kong_win",
+        "tile": 24
+      }
+    ],
+    "ledger": [
+      {
+        "category": "rob_kong_win",
+        "payer": 3,
+        "receiver": 2,
+        "amount": 2,
+        "reversal": false
+      }
+    ]
+  },
+  {
+    "seed": 3301004,
+    "exchange_offset": 3,
+    "wins": [
+      {
+        "seat": 2,
+        "kind": "rob_kong_win",
+        "payer": 1,
+        "base_fan": 1,
+        "final_fan": 1,
+        "payment": 2
+      }
+    ],
+    "history": [
+      {
+        "event_index": 191,
+        "player": 2,
+        "action": "rob_kong_win",
+        "tile": 9
+      }
+    ],
+    "ledger": [
+      {
+        "category": "rob_kong_win",
+        "payer": 1,
+        "receiver": 2,
+        "amount": 2,
+        "reversal": false
+      }
+    ]
+  },
+  {
+    "seed": 3301321,
+    "exchange_offset": 2,
+    "wins": [
+      {
+        "seat": 2,
+        "kind": "rob_kong_win",
+        "payer": 3,
+        "base_fan": 1,
+        "final_fan": 1,
+        "payment": 2
+      }
+    ],
+    "history": [
+      {
+        "event_index": 254,
+        "player": 2,
+        "action": "rob_kong_win",
+        "tile": 25
+      }
+    ],
+    "ledger": [
+      {
+        "category": "rob_kong_win",
+        "payer": 3,
+        "receiver": 2,
+        "amount": 2,
+        "reversal": false
+      }
+    ]
+  },
+  {
+    "seed": 3301812,
+    "exchange_offset": 1,
+    "wins": [
+      {
+        "seat": 1,
+        "kind": "rob_kong_win",
+        "payer": 2,
+        "base_fan": 1,
+        "final_fan": 1,
+        "payment": 2
+      }
+    ],
+    "history": [
+      {
+        "event_index": 231,
+        "player": 1,
+        "action": "rob_kong_win",
+        "tile": 16
+      }
+    ],
+    "ledger": [
+      {
+        "category": "rob_kong_win",
+        "payer": 2,
+        "receiver": 1,
+        "amount": 2,
+        "reversal": false
+      }
+    ]
+  }
+]

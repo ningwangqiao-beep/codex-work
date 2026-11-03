@@ -1,0 +1,62 @@
+{
+  "stage": "NEXT_HISTORY100_RELATIVE_COMBO",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "manifest_sha256": "25ba2e3e94e13615dcb619725632d1bf96d18a60cb359b8cb4057d6793cedc1c",
+  "source_hashes": {
+    "rules\\core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules\\v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator\\table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator\\v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+    "observations\\v3_history_v2.py": "fea65417d104f35d3669e29893f5d503710cb85b7fa2f5170834b64c825fb8a3",
+    "observations\\public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+    "baselines\\v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules\\fast_hand_analysis.py": "599cb2ba49e4743ec3d6f0160987e5ac6cf88f8b2f1fff63a3431d509757f240",
+    "models\\revision_candidate_schema.py": "709a529fb0f9bcd4271def94488fc4dbb38e69ba6b8e8bef5178e2a1852ae136",
+    "inference\\v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578"
+  },
+  "max_epochs": 6,
+  "max_batch_size": 128,
+  "allowed_modes": [
+    "multitask"
+  ],
+  "seed": 42,
+  "rl_training_allowed": false,
+  "champion_id": "v3-rules-20261103",
+  "no_promotion": true,
+  "teacher_target": "preference_rank_NOT_Q",
+  "passed": true,
+  "supervised_training_allowed": true,
+  "baseline_development_audited": true,
+  "dataset_isolation_audited": true,
+  "state_target_definition_audited": true,
+  "history_v2_tests_passed": true,
+  "seed_family_split_audited": true,
+  "full_tests": {
+    "path": "reports/next_chief_gate_tests.log",
+    "sha256": "241e24a66e0a2e3567bc075de5d83e9fa01865c9c5919f4549750ade0817f209",
+    "exit_code": 0
+  },
+  "history_tests": {
+    "path": "reports/next_b_history_tests.log",
+    "sha256": "b67d9e5d0d5a910fa8b0d1c581fa42429e1d7388015cc61bd8427633cff846be",
+    "exit_code": 0
+  },
+  "data_isolation": {
+    "path": "reports/next_chief_data100_audit.json",
+    "sha256": "5e26a47ac8f47501cbac275e6a195c7884779a01b3088c4cd9dda49a81e6e630",
+    "exit_code": 0
+  },
+  "terminal_returns": {
+    "path": "reports/next_d_game_returns_audit.json",
+    "sha256": "4a91827aa21d111810b39683976914c6401d2d001b8e9f9c8f0b25bf022d854c",
+    "exit_code": 0
+  },
+  "returns_sha256": "4c0bb07e4b2f0a052150ad42abfa7dbe54b7156b4e853e93c20427dadd122ecf",
+  "champion_manifest_sha256": "4d1569e09bb4e62ba5f08f4b164861e07b3f56f0b0cc69e8ae677992bbaaca87",
+  "relative_combo_allowed": true,
+  "experimental_direction": "combined candidate-relative input + pairwise ranking; not single-factor",
+  "parameter_counts": {
+    "control": 20349,
+    "combo": 20541
+  }
+}

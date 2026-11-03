@@ -1,0 +1,62 @@
+{
+  "scope": "real_label_counts_and_synthetic_interfaces_only_NO_training",
+  "families": {
+    "counts": {
+      "parameters": 19563,
+      "finite_interface_backward": true
+    },
+    "progress": {
+      "parameters": 19563,
+      "finite_interface_backward": true
+    },
+    "history": {
+      "parameters": 19563,
+      "finite_interface_backward": true
+    },
+    "exchange": {
+      "parameters": 19563,
+      "finite_interface_backward": true
+    },
+    "history_shuffled": {
+      "parameters": 19563,
+      "finite_interface_backward": true
+    }
+  },
+  "splits": {
+    "train": {
+      "states": 1224,
+      "active_targets": 3536,
+      "structural_tenpai_positive": 167,
+      "conditional_wait_elements": 4509,
+      "conditional_wait_positive": 291,
+      "legal_candidates": 6240,
+      "risk_positive": 62,
+      "multiwinner_positive": 0,
+      "multiwinner_generalization": "NA",
+      "calibration_game_fit_count": 53,
+      "calibration_game_eval_count": 47
+    },
+    "validation": {
+      "states": 235,
+      "active_targets": 691,
+      "structural_tenpai_positive": 19,
+      "conditional_wait_elements": 513,
+      "conditional_wait_positive": 31,
+      "legal_candidates": 1170,
+      "risk_positive": 6,
+      "multiwinner_positive": 0,
+      "multiwinner_generalization": "NA",
+      "calibration_game_fit_count": 8,
+      "calibration_game_eval_count": 12
+    }
+  },
+  "input_contract": {
+    "always": "own/public counts,declared missing,active,public meld counts,observer seat",
+    "progress": "public wall and turn plus wall-known flag",
+    "history": "progress + entire supplied public event sequence; no last11 summary inputs",
+    "exchange": "history + own historical sent/received/direction/source; not current opponent holdings",
+    "history_shuffled": "same full event multiset, player/tile/action stay together; order shuffled deterministically per sample",
+    "calibration": "validation whole-game hash split only, no train calibration or final tuning",
+    "labels": "conditional structural waits NOT public-effective; joint risk evaluated only legal candidate mask"
+  }
+}
