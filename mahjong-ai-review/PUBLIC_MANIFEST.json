@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T07:49:11.799694+08:00",
+  "updated_at": "2026-11-03T08:11:47.495930+08:00",
   "files": [
     {
       "path": "mahjong-ai-review/BACKGROUND_RUN.md",
@@ -130,11 +130,6 @@
       "path": "mahjong-ai-review/observations/public.py",
       "public_content_sha256": "be54fea553416d8b04cc65d3fb436268ddc7edb7b5230fe5387aaf9fea98cac0",
       "local_source_sha256": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e"
-    },
-    {
-      "path": "mahjong-ai-review/README.md",
-      "public_content_sha256": "6794f938ea4c5a06203a67b499c02524aab39145fedd12c4e14462ddda88331b",
-      "local_source_sha256": "4bc1c4b324d82f95adaded1f87fe69dc511c3736d9c33222737d5a62051b1869"
     },
     {
       "path": "mahjong-ai-review/reports/candidate_scheduler_stderr.log",
@@ -380,6 +375,21 @@
       "path": "mahjong-ai-review/reports/revision_d_delivery.md",
       "public_content_sha256": "f3882e6de32712a07969996f9216212c14e7f56b17fee6e30f8a93e7bbe70b42",
       "local_source_sha256": "4d4ad8790985aa311e176b43547b6908489409927c9894038563200744e529b0"
+    },
+    {
+      "path": "mahjong-ai-review/reports/revision_d_fixed2_command.json",
+      "public_content_sha256": "bd74778e411f2d26d6f6fa9898a7a8ccddf173503b28569c89c59e709443b7f7",
+      "local_source_sha256": "b324975926872c1ba6ff61224a67cd79af7e50dc27fb0c1c736f328fc43e034b"
+    },
+    {
+      "path": "mahjong-ai-review/reports/revision_d_fixed2_comparison.json",
+      "public_content_sha256": "b322659deb3d2e89825a9af90792609866ec0282726e3d6cbd794f3fa9e1571a",
+      "local_source_sha256": "63787e74216ff972b82b5be0f929afc3952d3e52e35a6811fee6d6c732950ede"
+    },
+    {
+      "path": "mahjong-ai-review/reports/revision_d_fixed2_throughput.md",
+      "public_content_sha256": "64d194442073f469326d4d7fbc9fb40cac682554ec701f12c557f398f3b40e84",
+      "local_source_sha256": "129fdd80c3c9ddc476c6b409690bf333ce4d5aedf2c7d764d136af26679dab77"
     },
     {
       "path": "mahjong-ai-review/reports/revision_d_interrupted.md",
@@ -878,8 +888,8 @@
     },
     {
       "path": "mahjong-ai-review/scripts/revision_data_compare.py",
-      "public_content_sha256": "4857af5292e1d41ebab203e2467c9a2b740b53ee0cbe6dcb0ce44f5ccde4b3e6",
-      "local_source_sha256": "2cee644dccc8c98033dda09fd667505cae887a1b1543add716e5f814d8c879eb"
+      "public_content_sha256": "5491ecc70718d133bedd9d6c17910733fe25968c6ef8257d57c2bb6b30e1ca8c",
+      "local_source_sha256": "7e49089ff1bd02c14542b0a4f2182955636618ed763478484e2edc7f10dbb815"
     },
     {
       "path": "mahjong-ai-review/scripts/revision_model_action_value.py",

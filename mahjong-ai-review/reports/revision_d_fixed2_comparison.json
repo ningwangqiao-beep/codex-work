@@ -1,0 +1,26 @@
+{
+  "source_before": {
+    "PROJECT\\rules\\hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
+    "PROJECT\\rules\\hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf",
+    "PROJECT\\baselines\\revision_bot.py": "2fe1c425c52ea500fc5e316754ac8ea95e26117fc429fe24574f45be5bc88a77"
+  },
+  "source_after": {
+    "PROJECT\\rules\\hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
+    "PROJECT\\rules\\hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf",
+    "PROJECT\\baselines\\revision_bot.py": "2fe1c425c52ea500fc5e316754ac8ea95e26117fc429fe24574f45be5bc88a77"
+  },
+  "status": "incomplete",
+  "error": "TimeoutError('bounded comparison')",
+  "seconds": 90.1335997999995,
+  "complete_seed_groups": 0,
+  "mean_difference": null,
+  "bootstrap_ci": null,
+  "simulation_only": true,
+  "limitations": [
+    "two-step truncated to 2 effective draw types",
+    "structural missing-suit distance optimistic; explicit missing debt separate",
+    "opponent risk uncalibrated public heuristic",
+    "random discard opponents retain shared simulator meld decisions",
+    "no strength claim small sample"
+  ]
+}

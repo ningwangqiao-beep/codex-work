@@ -1,0 +1,7 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/revision_data_compare.py --games 2 --seed 3000000 --timeout 90",
+  "exit_code": 0,
+  "experiment_status": "incomplete",
+  "reason": "TimeoutError bounded comparison",
+  "completed_seed_groups": 0
+}
