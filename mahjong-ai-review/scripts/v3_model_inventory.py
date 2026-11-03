@@ -6,8 +6,8 @@ def sha(p):
  with open(p,'rb') as f:
   for b in iter(lambda:f.read(1048576),b''):h.update(b)
  return h.hexdigest()
-paths=sorted((root/'checkpoints').glob('*/*.pt'))+[root/'experiments/round2_c/candidate/best.pt']
-result={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'legacy_lineage_inventory_not_V3_performance','weights':[],'datasets':[],'current_source_hashes':{}}
+paths=sorted(p for p in (root/'checkpoints').glob('*/*.pt') if not p.parent.name.lower().startswith('v3'))+[root/'experiments/round2_c/candidate/best.pt']
+result={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'legacy_lineage_inventory_not_V3_performance','inventory_script_sha256':sha(pathlib.Path(__file__)),'weights':[],'datasets':[],'current_source_hashes':{}}
 for p in paths:
  if p.suffix!='.pt':continue
  try:
@@ -20,7 +20,7 @@ for p in paths:
     if isinstance(v,(str,int,float,bool,list,dict,type(None))):entry[k]=v
   result['weights'].append(entry)
  except Exception as e:result['weights'].append({'path':str(p.relative_to(root)),'error':repr(e)})
-for p in sorted((root/'datasets').glob('*/manifest.json')):
+for p in sorted(p for p in (root/'datasets').glob('*/manifest.json') if not p.parent.name.lower().startswith('v3')):
  m=json.load(open(p));snap=pathlib.Path(m.get('rules_path',''));entry={'path':str(p.relative_to(root)),'manifest_sha256':sha(p),'dataset_version':m.get('dataset_version'),'training_rule_sha256':m.get('rules_sha256'),'rule_snapshot_exists':snap.is_file(),'rule_snapshot_sha256':sha(snap) if snap.is_file() else None,'recorded_audit':m.get('audit'),'v3_training_compatible':False,'shards':[]}
  for split,files in m.get('shards',{}).items():
   for name in files:

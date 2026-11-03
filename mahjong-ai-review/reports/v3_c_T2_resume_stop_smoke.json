@@ -1,0 +1,19 @@
+{
+  "test_scope": "actual_admitted_T2_trainer_stop_resume_correctness_only",
+  "child_exit_codes": {
+    "interrupt": 75,
+    "resume": 0,
+    "control": 0
+  },
+  "interrupt_after_optimizer_steps": 3,
+  "restored_next_batch_cursor": 3,
+  "final_optimizer_steps": 16,
+  "max_parameter_abs_difference": 7.450580596923828e-09,
+  "exact_parameter_parity": false,
+  "main_best_unchanged_sha256": "aa8418016121f6ea89939750397aa9a0858eb22f3aa811d4120cd4afc1491b1e",
+  "CUDA_RNG_saved_restored": true,
+  "optimizer_state_restored": true,
+  "no_final_test_used": true,
+  "rl_performed": false,
+  "harness_sha256": "bacd2e3bc32220afe2f576fc34e878995b5d0b92a728e816867ed1ac25c2a054"
+}

@@ -1,0 +1,109 @@
+{
+  "scope": "train_fit_constants_validation_only_NOT_final_test",
+  "action_target_semantics": "lexicographic_preference_rank_NOT_Q",
+  "state_target_policy": "one rotating BaselineV3 seat vs three frozen simulator heuristic styles",
+  "action_metrics": {
+    "n": 249,
+    "exact_rate": 0.8152610659599304,
+    "equivalent_rate": 0.8152610659599304,
+    "teacher_value_regret_mean": 0.07171716541051865,
+    "teacher_value_regret_max": 0.8333333134651184,
+    "legal_action_mse": 0.1905139982700348,
+    "tolerance": 0.0,
+    "top1_exact_rate": 0.8152610659599304,
+    "top1_equivalent_rate": 0.8152610659599304,
+    "top3_exact_rate": 0.9437751173973083,
+    "top3_equivalent_rate": 0.9437751173973083,
+    "top5_exact_rate": 0.9879518151283264,
+    "top5_equivalent_rate": 0.9879518151283264
+  },
+  "teacher_preference_regret_not_net_points": true,
+  "value_models": {
+    "zero": {
+      "baseline_constant_raw": 0.0,
+      "model_mae": 2.489610433578491,
+      "baseline_mae": 2.875502109527588,
+      "model_minus_baseline_mae": -0.38589146733283997,
+      "whole_game_bootstrap95ci": [
+        -1.5483075892671625,
+        0.8078238506317139
+      ],
+      "games": 20
+    },
+    "train_mean": {
+      "baseline_constant_raw": 4.229319371727748,
+      "model_mae": 2.489610433578491,
+      "baseline_mae": 3.0244412422180176,
+      "model_minus_baseline_mae": -0.5348308086395264,
+      "whole_game_bootstrap95ci": [
+        -1.0204374313354492,
+        0.029481070382254466
+      ],
+      "games": 20
+    },
+    "train_median": {
+      "baseline_constant_raw": 2,
+      "model_mae": 2.489610433578491,
+      "baseline_mae": 2.1365461349487305,
+      "model_minus_baseline_mae": 0.3530643582344055,
+      "whole_game_bootstrap95ci": [
+        -0.12557745710643314,
+        0.7595307817102962
+      ],
+      "games": 20
+    }
+  },
+  "groups": {
+    "free_discard": {
+      "metrics": {
+        "n": 121,
+        "exact_rate": 0.6198347210884094,
+        "equivalent_rate": 0.6198347210884094,
+        "teacher_value_regret_mean": 0.1475832611322403,
+        "teacher_value_regret_max": 0.8333333134651184,
+        "legal_action_mse": 0.19652247428894043,
+        "tolerance": 0.0,
+        "top1_exact_rate": 0.6198347210884094,
+        "top1_equivalent_rate": 0.6198347210884094,
+        "top3_exact_rate": 0.8842975497245789,
+        "top3_equivalent_rate": 0.8842975497245789,
+        "top5_exact_rate": 0.9752066135406494,
+        "top5_equivalent_rate": 0.9752066135406494
+      },
+      "regret_game_bootstrap95ci": [
+        0.10878509057290627,
+        0.2001419794668845
+      ],
+      "games": 20
+    },
+    "missing_forced": {
+      "metrics": {
+        "n": 128,
+        "exact_rate": 1.0,
+        "equivalent_rate": 1.0,
+        "teacher_value_regret_mean": 0.0,
+        "teacher_value_regret_max": 0.0,
+        "legal_action_mse": 0.1575888842344284,
+        "tolerance": 0.0,
+        "top1_exact_rate": 1.0,
+        "top1_equivalent_rate": 1.0,
+        "top3_exact_rate": 1.0,
+        "top3_equivalent_rate": 1.0,
+        "top5_exact_rate": 1.0,
+        "top5_equivalent_rate": 1.0
+      },
+      "regret_game_bootstrap95ci": [
+        0.0,
+        0.0
+      ],
+      "games": 20
+    }
+  },
+  "limitations": [
+    "20validation games, repeated states correlated",
+    "V target belongs teacher policy family, not new neural policy",
+    "rank regret not action terminal-score regret",
+    "history contribution and calibration not established"
+  ],
+  "checkpoint_sha256": "aa8418016121f6ea89939750397aa9a0858eb22f3aa811d4120cd4afc1491b1e"
+}

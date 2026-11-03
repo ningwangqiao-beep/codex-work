@@ -1,6 +1,7 @@
 {
-  "utc": "2026-11-03T00:21:06.030145+00:00",
+  "utc": "2026-11-03T00:57:49.862990+00:00",
   "scope": "legacy_lineage_inventory_not_V3_performance",
+  "inventory_script_sha256": "a0eb7a81ed65adfba2801b65ec9f5b6fd5a622e4c3cfb5c19ebc87a034a4029b",
   "weights": [
     {
       "path": "checkpoints\\round2_candidate_rl\\last.pt",
@@ -1056,10 +1057,10 @@
   ],
   "current_source_hashes": {
     "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
-    "rules/v3.py": "e995c05fce57fbc98c9cbcb8d893adf779bd129e5a4d198d4e316fa947d8dbbf",
+    "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
     "rules/hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
     "rules/hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf",
-    "simulator/table.py": "9bdf0076f7ce4a53be6a520d8443344afcf2a58351bfea58f1974e2b593dd5ad",
+    "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
     "simulator/selfplay.py": "f4a6667edffc2637bae398f30ae665bebdac8b811541480d5219b4d708809cb0",
     "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
     "models/revision_action_value.py": "8c4fe95cf10391c4f3cadeafe8b3eac26fdabb1a7c7e150d7f7a8a43cd7e76f5",

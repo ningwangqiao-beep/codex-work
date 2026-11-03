@@ -1,0 +1,34 @@
+{
+  "train": {
+    "states": 955,
+    "active_target_states": 2811,
+    "structural_tenpai_positive": 139,
+    "conditional_wait_elements": 3753,
+    "conditional_wait_positive": 204,
+    "legal_candidates": 4833,
+    "deal_in_positive": 37,
+    "multiwinner_positive": 2,
+    "games": 80,
+    "terminal_raw_min": -11,
+    "terminal_raw_max": 16,
+    "state_weighted_mean": 4.229319371727748,
+    "game_weighted_mean": 4.5375,
+    "train_median_if_train": 2
+  },
+  "validation": {
+    "states": 249,
+    "active_target_states": 705,
+    "structural_tenpai_positive": 34,
+    "conditional_wait_elements": 918,
+    "conditional_wait_positive": 57,
+    "legal_candidates": 1283,
+    "deal_in_positive": 12,
+    "multiwinner_positive": 0,
+    "games": 20,
+    "terminal_raw_min": -5,
+    "terminal_raw_max": 7,
+    "state_weighted_mean": 1.9357429718875503,
+    "game_weighted_mean": 1.75,
+    "train_median_if_train": null
+  }
+}
