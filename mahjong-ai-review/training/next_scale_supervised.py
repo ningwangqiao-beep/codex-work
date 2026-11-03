@@ -29,10 +29,11 @@ def batches(path,device,size):
  if rows:yield collate(rows,device)
 
 def train(manifest,admission,out,root,epochs=6,batch_size=128,seed=42,device='cuda',resume=False,mode='multitask'):
- root=pathlib.Path(root);out=pathlib.Path(out);audit=validate_next_manifest(manifest,root,admission);m=json.load(open(manifest));m['files']=m['shards'];sources={str(p.relative_to(root)):sha(p) for p in [root/'models/v3_action_value.py',root/'models/revision_action_value.py',root/'training/next_scale_supervised.py',root/'training/v3_losses.py',root/'training/next_scale_gate.py',root/'models/next_relative_v3.py',root/'models/next_candidate.py',root/'training/v3_gate.py',root/'evaluation/revision_action_value.py']};config={'epochs':epochs,'batch_size':batch_size,'seed':seed,'device':device,'loss_weights':{'action_value_mse':1.,'pairwise_preference':1.,'state_value_mse':.01,'tenpai_bce':.2,'conditional_wait_bce':.2,'joint_risk_ce':.2},'action_target_semantics':m['target_semantics'],'state_target_units':m['state_target_units'],'state_target_policy':m['state_target_policy']};binding=hashlib.sha256(json.dumps({'admission':audit,'sources':sources,'config':{k:v for k,v in config.items() if k!='epochs'}},sort_keys=True).encode()).hexdigest()
- allowed=json.load(open(admission))
+ root=pathlib.Path(root);out=pathlib.Path(out);audit=validate_next_manifest(manifest,root,admission);m=json.loads(pathlib.Path(manifest).read_text(encoding='utf-8'));m['files']=m['shards'];sources={str(p.relative_to(root)):sha(p) for p in [root/'models/v3_action_value.py',root/'models/revision_action_value.py',root/'training/next_scale_supervised.py',root/'training/v3_losses.py',root/'training/next_scale_gate.py',root/'models/next_relative_v3.py',root/'models/next_candidate.py',root/'training/v3_gate.py',root/'evaluation/revision_action_value.py']};config={'epochs':epochs,'batch_size':batch_size,'seed':seed,'device':device,'loss_weights':{'action_value_mse':1.,'pairwise_preference':1.,'state_value_mse':.01,'tenpai_bce':.2,'conditional_wait_bce':.2,'joint_risk_ce':.2},'action_target_semantics':m['target_semantics'],'state_target_units':m['state_target_units'],'state_target_policy':m['state_target_policy']};binding=hashlib.sha256(json.dumps({'admission':audit,'sources':sources,'config':{k:v for k,v in config.items() if k!='epochs'}},sort_keys=True).encode()).hexdigest()
+ allowed=json.loads(pathlib.Path(admission).read_text(encoding='utf-8'))
+ if seed!=42:raise ValueError('Fixed seed42 required')
  if epochs>allowed.get('max_epochs',0) or batch_size>allowed.get('max_batch_size',0):raise ValueError('Chief epoch/batch admission bound exceeded')
- if mode not in ('multitask','action_only'):raise ValueError('Unknown loss control')
+ if mode!='multitask':raise ValueError('Unknown loss control')
  config['loss_mode']=mode
  config['experimental_direction']='candidate_relative_input_plus_pairwise_NOT_single_factor'
  config['parameter_count']=20541
@@ -46,16 +47,16 @@ def train(manifest,admission,out,root,epochs=6,batch_size=128,seed=42,device='cu
  if (out/'COMPLETE.json').exists():raise ValueError('Completed run immutable')
  if not resume and any(out.iterdir()):raise ValueError('Nonempty output needs --resume')
  if resume and any(out.iterdir()) and not (out/'last.pt').exists():raise ValueError('Nonempty output has no resumable last checkpoint')
- torch.set_num_threads(2);torch.manual_seed(seed);random.seed(seed);model=V3ActionValueNet(candidate_dim=len(m['candidate_feature_names'])).to(device);opt=torch.optim.Adam(model.parameters(),lr=.001);start_epoch=0;skip=0;best=float('inf');best_epoch=-1;steps=0;started=time.perf_counter()
+ torch.set_num_threads(2);torch.manual_seed(seed);random.seed(seed);model=V3ActionValueNet(candidate_dim=len(m['candidate_feature_names'])).to(device);opt=torch.optim.Adam(model.parameters(),lr=.001);start_epoch=0;skip=0;best=float('inf');best_epoch=-1;steps=0;resumed_heads={};resumed_rows=0;started=time.perf_counter()
  if device=='cuda':torch.cuda.reset_peak_memory_stats()
  if resume and (out/'last.pt').exists():
   s=torch.load(out/'last.pt',map_location=device,weights_only=False)
   if s['binding']!=binding:raise ValueError('Resume rules/data/admission/model/config fingerprint mismatch')
   model.load_state_dict(s['model']);opt.load_state_dict(s['optimizer']);torch.set_rng_state(s['rng'].cpu());random.setstate(s['python_rng'])
   if s.get('cuda_rng') and torch.cuda.is_available():torch.cuda.set_rng_state_all([v.cpu() for v in s['cuda_rng']])
-  start_epoch=s['epoch']+int(s['epoch_complete']);skip=0 if s['epoch_complete'] else s['next_batch_index'];best=s['best'];best_epoch=s['best_epoch'];steps=s['optimizer_steps']
+  start_epoch=s['epoch']+int(s['epoch_complete']);skip=0 if s['epoch_complete'] else s['next_batch_index'];best=s['best'];best_epoch=s['best_epoch'];steps=s['optimizer_steps'];resumed_heads=s.get('train_epoch_heads',{});resumed_rows=s.get('train_epoch_rows',0)
  def save(epoch,complete,next_batch):
-  state={'version':'NEXT-HISTORY1000-RELATIVE-PAIRWISE-v1','rule_version':m.get('rule_version','SICHUAN-XUEZHAN-4FAN-V3'),'model':model.state_dict(),'model_config':model.config,'optimizer':opt.state_dict(),'rng':torch.get_rng_state(),'cuda_rng':torch.cuda.get_rng_state_all() if torch.cuda.is_available() else [],'python_rng':random.getstate(),'epoch':epoch,'epoch_complete':complete,'next_batch_index':next_batch,'optimizer_steps':steps,'best':best,'best_epoch':best_epoch,'binding':binding,'config':config,'source_hashes':sources,'data_admission':audit,'head_semantics':{'action':'teacher preference NOT counterfactual Q','state':m['state_target_policy']+'; '+m['state_target_units'],'aux_tenpai':'structural/legal-hand NOT public-effective'},'rl_performed':False};torch.save(state,out/'last.tmp');os.replace(out/'last.tmp',out/'last.pt');return state
+  state={'version':'NEXT-HISTORY1000-RELATIVE-PAIRWISE-v1','rule_version':m.get('rule_version','SICHUAN-XUEZHAN-4FAN-V3'),'model':model.state_dict(),'model_config':model.config,'optimizer':opt.state_dict(),'rng':torch.get_rng_state(),'cuda_rng':torch.cuda.get_rng_state_all() if torch.cuda.is_available() else [],'python_rng':random.getstate(),'epoch':epoch,'epoch_complete':complete,'next_batch_index':next_batch,'optimizer_steps':steps,'train_epoch_heads':heads,'train_epoch_rows':n,'best':best,'best_epoch':best_epoch,'binding':binding,'config':config,'source_hashes':sources,'data_admission':audit,'head_semantics':{'action':'teacher preference NOT counterfactual Q','state':m['state_target_policy']+'; '+m['state_target_units'],'aux_tenpai':'structural/legal-hand NOT public-effective'},'rl_performed':False};torch.save(state,out/'last.tmp');os.replace(out/'last.tmp',out/'last.pt');return state
  def stop(epoch,next_batch):
   path=os.environ.get('MAHJONG_STOP_FILE')
   if path and pathlib.Path(path).exists():save(epoch,False,next_batch);raise SystemExit(75)
@@ -74,7 +75,7 @@ def train(manifest,admission,out,root,epochs=6,batch_size=128,seed=42,device='cu
    select=torch.tensor([r['best_postdiscard_structural']==shanten for r in metadata]);groups['best_postdiscard_structural:'+str(shanten)]=action_value_metrics(p[select],y[select],mask[select])
   return {'per_head_loss':{k:v/n for k,v in heads.items()},'action_groups':groups,'state_v_mae_raw':float((value-vt).abs().mean()),'state_v_mse_raw':float((value-vt).square().mean()),'state_v_target_mean':float(vt.mean()),'state_zero_baseline_mae':float(vt.abs().mean()),'interpretation':'teacher preference ranking and policy-conditioned terminal V, not counterfactual Q; no net-strength evaluation'}
  for epoch in range(start_epoch,epochs):
-  model.train();heads={};n=0;next_batch=skip
+  model.train();heads=dict(resumed_heads) if epoch==start_epoch and skip else {};n=resumed_rows if epoch==start_epoch and skip else 0;next_batch=skip
   for index,(inp,t,meta) in enumerate(batches(m['files']['train'],device,batch_size)):
    if epoch==start_epoch and index<skip:continue
    stop(epoch,index);o=model(*inp);ls=v3_losses(o,t,inp[2]);opt.zero_grad();sum(ls[k]*config['loss_weights'][k] for k in ls).backward();torch.nn.utils.clip_grad_norm_(model.parameters(),5.);opt.step();steps+=1;next_batch=index+1;n+=len(meta)

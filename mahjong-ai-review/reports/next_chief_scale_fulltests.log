@@ -1,0 +1,112 @@
+test_masked (test_data_isolation.ConcealedKongIsolation.test_masked) ... ok
+test_counterfactual_hidden (test_data_isolation.DataIsolation.test_counterfactual_hidden) ... ok
+test_snapshot (test_data_isolation.DataIsolation.test_snapshot) ... ok
+test_hundred (test_next_hidden.HiddenSampling.test_hundred) ... ok
+test_inactive_archive (test_next_hidden.HiddenSampling.test_inactive_archive) ... ok
+test_missing_sizes_rejected (test_next_hidden.HiddenSampling.test_missing_sizes_rejected) ... ok
+test_poison_no_effect (test_next_hidden.HiddenSampling.test_poison_no_effect) ... ok
+test_unknown_kong (test_next_hidden.HiddenSampling.test_unknown_kong) ... ok
+test_draw_metadata_not_inferred (test_next_hidden_audit.HiddenAudit.test_draw_metadata_not_inferred) ... ok
+test_every_physical_tile (test_next_hidden_audit.HiddenAudit.test_every_physical_tile) ... ok
+test_inactive_flag_is_not_win_constraint (test_next_hidden_audit.HiddenAudit.test_inactive_flag_is_not_win_constraint) ... ok
+test_missing_sizes_and_bad_sum (test_next_hidden_audit.HiddenAudit.test_missing_sizes_and_bad_sum) ... ok
+test_sizes_not_phase_validated (test_next_hidden_audit.HiddenAudit.test_sizes_not_phase_validated) ... ok
+test_visible_fifth_rejected (test_next_hidden_audit.HiddenAudit.test_visible_fifth_rejected) ... ok
+test_completed_smoke_physical_and_targets (test_next_scale_audit.ScaleAudit.test_completed_smoke_physical_and_targets) ... ok
+test_full_prefix_has_120_groups (test_next_scale_audit.ScaleAudit.test_full_prefix_has_120_groups) ... ok
+test_stream_labels_stop_resume (test_next_scale_training.ScaleTrainingTest.test_stream_labels_stop_resume) ... PROJECT\training\next_relative_supervised.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='PROJECT\\reports\\next_c_scale_cpu_h5l5f169\\old_manifest.json' mode='r' encoding='cp936'>
+  root=pathlib.Path(root);out=pathlib.Path(out);audit=validate_next_manifest(manifest,root,admission);m=json.load(open(manifest));sources={str(p.relative_to(root)):sha(p) for p in [root/'models/v3_action_value.py',root/'models/revision_action_value.py',root/'training/next_relative_supervised.py',root/'training/v3_losses.py',root/'training/next_relative_gate.py',root/'models/next_relative_v3.py',root/'models/next_candidate.py',root/'training/v3_gate.py',root/'evaluation/revision_action_value.py']};config={'epochs':epochs,'batch_size':batch_size,'seed':seed,'device':device,'loss_weights':{'action_value_mse':1.,'pairwise_preference':1.,'state_value_mse':.01,'tenpai_bce':.2,'conditional_wait_bce':.2,'joint_risk_ce':.2},'action_target_semantics':m['target_semantics'],'state_target_units':m['state_target_units'],'state_target_policy':m['state_target_policy']};binding=hashlib.sha256(json.dumps({'admission':audit,'sources':sources,'config':{k:v for k,v in config.items() if k!='epochs'}},sort_keys=True).encode()).hexdigest()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+PROJECT\training\next_relative_supervised.py:31: ResourceWarning: unclosed file <_io.TextIOWrapper name='PROJECT\\reports\\next_c_scale_cpu_h5l5f169\\admission.json' mode='r' encoding='cp936'>
+  allowed=json.load(open(admission))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_illegal_mask (test_revision_bot.RevisionBotTests.test_illegal_mask) ... ok
+test_legal_deterministic (test_revision_bot.RevisionBotTests.test_legal_deterministic) ... ok
+test_expected_branch_weight (test_revision_bot.TwoDrawAccounting.test_expected_branch_weight) ... ok
+test_two_draw_weight_without_replacement (test_revision_bot.TwoDrawAccounting.test_two_draw_weight_without_replacement) ... ok
+test_added_kong (test_rules_actions.ActionTests.test_added_kong) ... ok
+test_advance (test_rules_actions.ActionTests.test_advance) ... ok
+test_concealed (test_rules_actions.ActionTests.test_concealed) ... ok
+test_config_cha_jiao (test_rules_actions.ActionTests.test_config_cha_jiao) ... ok
+test_exhaustion (test_rules_actions.ActionTests.test_exhaustion) ... ok
+test_flower_pig (test_rules_actions.ActionTests.test_flower_pig) ... ok
+test_gang_fee_refund (test_rules_actions.ActionTests.test_gang_fee_refund) ... ok
+test_kong (test_rules_actions.ActionTests.test_kong) ... ok
+test_multiwin (test_rules_actions.ActionTests.test_multiwin) ... ok
+test_peng (test_rules_actions.ActionTests.test_peng) ... ok
+test_ready_settlement (test_rules_actions.ActionTests.test_ready_settlement) ... ok
+test_reject_missing (test_rules_actions.ActionTests.test_reject_missing) ... ok
+test_rob_kong (test_rules_actions.ActionTests.test_rob_kong) ... ok
+test_self_win (test_rules_actions.ActionTests.test_self_win) ... ok
+test_strict (test_rules_actions.ActionTests.test_strict) ... ok
+test_wrong_payment (test_rules_actions.ActionTests.test_wrong_payment) ... ok
+test_dead (test_rules_analysis.Analysis.test_dead) ... ok
+test_fifth (test_rules_analysis.Analysis.test_fifth) ... ok
+test_missing (test_rules_analysis.Analysis.test_missing) ... ok
+test_open (test_rules_analysis.Analysis.test_open) ... ok
+test_quad_pairs_match_core (test_rules_analysis.Analysis.test_quad_pairs_match_core) ... ok
+test_ready_complete (test_rules_analysis.Analysis.test_ready_complete) ... ok
+test_seven (test_rules_analysis.Analysis.test_seven) ... ok
+test_completed_missing_clear (test_rules_analysis_reference.LegalProgressTests.test_completed_missing_clear) ... ok
+test_missing_debt_separate (test_rules_analysis_reference.LegalProgressTests.test_missing_debt_separate) ... ok
+test_pairs_quad (test_rules_analysis_reference.LegalProgressTests.test_pairs_quad) ... ok
+test_effective_inputs_unchanged (test_rules_analysis_reference.ReferenceTests.test_effective_inputs_unchanged) ... ok
+test_high_distance_missing_debt_is_not_exact (test_rules_analysis_reference.ReferenceTests.test_high_distance_missing_debt_is_not_exact) ... ok
+test_open_target_oracle (test_rules_analysis_reference.ReferenceTests.test_open_target_oracle) ... ok
+test_open_zero_one_high_shanten_analytic (test_rules_analysis_reference.ReferenceTests.test_open_zero_one_high_shanten_analytic) ... ok
+test_all_open_and_sizes (test_rules_analysis_reference.SuitOracleTests.test_all_open_and_sizes) ... ok
+test_missing_debt_reference (test_rules_analysis_reference.SuitOracleTests.test_missing_debt_reference) ... ok
+test_bad_config (test_rules_boundaries.Boundaries.test_bad_config) ... ok
+test_bad_kong_transaction (test_rules_boundaries.Boundaries.test_bad_kong_transaction) ... ok
+test_bad_win_transaction (test_rules_boundaries.Boundaries.test_bad_win_transaction) ... ok
+test_concealed_metadata (test_rules_boundaries.Boundaries.test_concealed_metadata) ... ok
+test_dragon_pairs_config (test_rules_boundaries.Boundaries.test_dragon_pairs_config) ... ok
+test_empty_wall_kong_transaction (test_rules_boundaries.Boundaries.test_empty_wall_kong_transaction) ... ok
+test_multihit_next_seat (test_rules_boundaries.Boundaries.test_multihit_next_seat) ... ok
+test_rob_no_gang_fee (test_rules_boundaries.Boundaries.test_rob_no_gang_fee) ... ok
+test_win_priority_atomic (test_rules_boundaries.Boundaries.test_win_priority_atomic) ... ok
+test_bad_exchange (test_rules_core.AdditionalTests.test_bad_exchange) ... ok
+test_bad_seat (test_rules_core.AdditionalTests.test_bad_seat) ... ok
+test_cap (test_rules_core.AdditionalTests.test_cap) ... ok
+test_context (test_rules_core.AdditionalTests.test_context) ... ok
+test_exchange (test_rules_core.AdditionalTests.test_exchange) ... ok
+test_fifth_across_meld (test_rules_core.AdditionalTests.test_fifth_across_meld) ... ok
+test_seven_pairs (test_rules_core.AdditionalTests.test_seven_pairs) ... ok
+test_deal (test_rules_core.TestCore.test_deal) ... ok
+test_invalid (test_rules_core.TestCore.test_invalid) ... ok
+test_missing (test_rules_core.TestCore.test_missing) ... ok
+test_multiwin (test_rules_core.TestCore.test_multiwin) ... ok
+test_wait (test_rules_core.TestCore.test_wait) ... ok
+test_win (test_rules_core.TestCore.test_win) ... ok
+test_added_matrix (test_rules_v3.V3Tests.test_added_matrix) ... ok
+test_all_active_subsets_gang_matrix (test_rules_v3.V3Tests.test_all_active_subsets_gang_matrix) ... ok
+test_basic_self_draw (test_rules_v3.V3Tests.test_basic_self_draw) ... ok
+test_concealed_kong_matrix (test_rules_v3.V3Tests.test_concealed_kong_matrix) ... ok
+test_direct_kong_matrix (test_rules_v3.V3Tests.test_direct_kong_matrix) ... ok
+test_fan_levels (test_rules_v3.V3Tests.test_fan_levels) ... ok
+test_ledger_reconstruct (test_rules_v3.V3Tests.test_ledger_reconstruct) ... ok
+test_provenance (test_rules_v3.V3Tests.test_provenance) ... ok
+test_self_active_only (test_rules_v3.V3Tests.test_self_active_only) ... ok
+test_v3_identity (test_rules_v3.V3Tests.test_v3_identity) ... ok
+test_active_subsets (test_rules_v3_matrix.V3Matrix.test_active_subsets) ... ok
+test_cha_jiao_modes (test_rules_v3_matrix.V3Matrix.test_cha_jiao_modes) ... ok
+test_pattern_fixtures (test_rules_v3_matrix.V3Matrix.test_pattern_fixtures) ... ok
+test_refund_ledger (test_rules_v3_matrix.V3Matrix.test_refund_ledger) ... ok
+test_exchange_snapshot_and_hidden (test_v3_data.V3Data.test_exchange_snapshot_and_hidden) ... ok
+test_three_directions_ledger (test_v3_data.V3Data.test_three_directions_ledger) ... ok
+test_canonical_and_result_copy (test_v3_data_memo.V3Memo.test_canonical_and_result_copy) ... ok
+test_effective_exact (test_v3_data_memo.V3Memo.test_effective_exact) ... ok
+test_fifth_copy_fix_preserved (test_v3_data_memo.V3Memo.test_fifth_copy_fix_preserved) ... ok
+test_indices_and_public_draw (test_v3_history_v2.HistoryV2.test_indices_and_public_draw) ... ok
+test_initial_and_replacement_draw (test_v3_history_v2.HistoryV2.test_initial_and_replacement_draw) ... ok
+test_initial_draw_context (test_v3_history_v2.HistoryV2.test_initial_draw_context) ... ok
+test_private_draw_rejected_or_masked (test_v3_history_v2.HistoryV2.test_private_draw_rejected_or_masked) ... ok
+test_projection_and_exchange_scope (test_v3_history_v2.HistoryV2.test_projection_and_exchange_scope) ... ok
+test_public_pass_and_win_sequence (test_v3_history_v2.HistoryV2.test_public_pass_and_win_sequence) ... ok
+test_rob_history_ledger_real_seeds (test_v3_history_v2.RealRobberySeeds.test_rob_history_ledger_real_seeds) ... ok
+
+----------------------------------------------------------------------
+Ran 101 tests in 21.895s
+
+OK

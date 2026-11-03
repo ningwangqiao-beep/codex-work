@@ -1,0 +1,11 @@
+{
+  "checkpoint": "checkpoints/next_history1000_relative_pairwise/best_epoch_5.pt",
+  "sha256": "dab98a7765a132a8de9064a0ab9374136d59c5ee6c752d45e85b07c4e712b358",
+  "best_epoch": 5,
+  "selection": "fixed20validation action MSE; no dev selection",
+  "development_seeds": [
+    7200400,
+    7200419
+  ],
+  "promoted": false
+}

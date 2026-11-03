@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "TEST_ONLY_scoped_admission": true,
+  "formal_training_started": false,
+  "device": "cpu",
+  "train_rows": 44,
+  "validation_rows": 31,
+  "epochs": 2,
+  "batch_size": 8,
+  "uninterrupted_steps": 12,
+  "stop_steps": 2,
+  "stop_exitcode": 75,
+  "resumed_steps": 12,
+  "model_max_abs_difference": 0.0,
+  "optimizer_allclose": true,
+  "resumed_epoch_loss_totals_preserved": true,
+  "reference_collate_labels_exact": true,
+  "reference_stream_order_exact": true,
+  "reference_trainer_weight_max_difference": 0.0,
+  "actual_original_file_prefix_order_exact": true,
+  "old_and_new_shuffle": false
+}

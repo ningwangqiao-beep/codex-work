@@ -15,12 +15,16 @@ def inspect_scale(manifest,root):
  if norm(m['source_hashes'])!=norm(reference['source_hashes']):raise ValueError('Scaled data changed Calculator/rules/history/encoder')
  for rel,digest in m['source_hashes'].items():
   if sha(root/rel)!=digest:raise ValueError('Source drift '+rel)
- commits={(c['split'],c['seed']):c for c in m['commits']};seen={};counts={};matches=0;history_max=0;returns=0;shard_hashes={}
+ commits={(c['split'],c['seed']):c for c in m['commits']};seen={};counts={};matches=0;history_max=0;returns=0;shard_hashes={};listed=set();record_keys=set()
  if len(commits)!=len(m['commits']):raise ValueError('Duplicate committed game')
  for split in ('train','validation'):
   count=0;games=0
   for path in m['shards'][split]:
-   p=pathlib.Path(path);seed=int(p.parent.name);commit=commits[(split,seed)];gamepath=p.parent/'game.json';game=json.load(open(gamepath));games+=1
+   p=pathlib.Path(path);seed=int(p.parent.name)
+   if (split,seed) in listed:raise ValueError('Duplicate listed shard')
+   listed.add((split,seed));commit=commits[(split,seed)];
+   if p.parent.parent.name!=split or commit['seat']!=seed%4:raise ValueError('Shard directory split/rotating seat mismatch')
+   gamepath=p.parent/'game.json';game=json.load(open(gamepath));games+=1
    if norm(commit['source_hashes'])!=norm(m['source_hashes']) or sha(p)!=commit['records_sha256'] or sha(gamepath)!=commit['game_sha256']:raise ValueError('Invalid committed shard binding')
    if (split=='train' and not 7000000<=seed<7001000) or (split=='validation' and not 7100000<=seed<7100020):raise ValueError('Permanent seed partition violated')
    scores=[0]*4
@@ -29,6 +33,8 @@ def inspect_scale(manifest,root):
    shard_hashes[str(p)]=sha(p);n=0
    for line in open(p,encoding='utf-8'):
     r=json.loads(line);obs=r['observation'];key=(r['seed'],obs['turn_index']);encoded=encode_observation(obs)
+    if key in record_keys:raise ValueError('Duplicate decision record')
+    record_keys.add(key)
     if r['seed']!=seed or r['rule_version']!='SICHUAN-XUEZHAN-4FAN-V3' or r['state_features']!=encoded['state_features'] or r['history_tokens']!=encoded['history_tokens'] or r['history_truncated'] or r['history_original_length']!=len(r['history_tokens']):raise ValueError('Causal encoder/history mismatch')
     for group in (str(r['game_id']),str(r['deal_group_id']),str(seed)):
      if group in seen and seen[group]!=split:raise ValueError('Game/deal split leakage')
@@ -48,6 +54,8 @@ def inspect_scale(manifest,root):
    count+=n;returns+=1
   if games!=m[split+'_games']:raise ValueError('Committed game total mismatch')
   counts[split]=count
+ if listed!=set(commits):raise ValueError('Unlisted committed game')
+ if not all(counts.values()):raise ValueError('Empty train/validation split')
  return {'inspection_passed':True,'manifest_sha256':sha(manifest),'counts':counts,'terminal_game_ledgers_checked':returns,'canonical_prefix_records_matched':matches,'history_max':history_max,'dataset_fingerprint':hashlib.sha256(json.dumps(shard_hashes,sort_keys=True).encode()).hexdigest(),'training_allowed':False,'rl_allowed':False,'limitations':['smoke can use fewer than fixed20validation games; formal1000 gate will require all20','fixed6epochs with more records means more optimizersteps, not data-only causal comparison']}
 
 def validate_scale_manifest(path,root,admission_path):
@@ -57,7 +65,11 @@ def validate_scale_manifest(path,root,admission_path):
  if a.get('stage')!='NEXT_HISTORY1000_RELATIVE_PAIRWISE' or a.get('manifest_sha256')!=sha(path) or a.get('dataset_fingerprint')!=data['dataset_fingerprint']:raise ValueError('Chief1000 data admission mismatch')
  for flag in ('passed','supervised_training_allowed','prefix_100_exact_audited','fixed_validation_exact_audited','terminal_return_ledger_audited','history_data_isolation_audited'):
   if a.get(flag) is not True:raise ValueError('Missing1000 admission '+flag)
+ if a.get('seed')!=42 or a.get('loss_mode')!='multitask' or a.get('model_parameter_count')!=20541:raise ValueError('Only frozen relative20541 seed42 multitask admitted')
  if a.get('rl_training_allowed') is not False or a.get('max_epochs')!=6 or a.get('max_batch_size')!=128:raise ValueError('Only6epoch/batch128 supervised admitted')
+ pipeline=['training/next_scale_gate.py','training/next_scale_supervised.py','scripts/next_model_scale_train.py','models/next_relative_v3.py','models/next_candidate.py','models/v3_action_value.py','training/v3_losses.py','evaluation/revision_action_value.py']
+ if a.get('pipeline_source_hashes')!={name:sha(root/name) for name in pipeline}:raise ValueError('Frozen1000 training pipeline changed')
+ if a.get('producer_sha256')!=m.get('producer_sha256') or m.get('producer_sha256')!=sha(root/'scripts/next_data_scale.py'):raise ValueError('Data producer changed')
  if a.get('source_hashes')!=m['source_hashes']:raise ValueError('Chief1000 source mismatch')
  spec=a['prior_100_relative_admission'];p=pathlib.Path(spec['path']);p=p if p.is_absolute() else root/p
  if sha(p)!=spec['sha256']:raise ValueError('Previous relative admission changed')

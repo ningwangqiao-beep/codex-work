@@ -1,0 +1,58 @@
+{
+  "run_dir": "experiments/next_history1000_training",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1.5,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 1,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "train1000_relative",
+      "script": "scripts/next_model_scale_train.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--admission",
+        "reports/next_chief_scale_admission.json",
+        "--output",
+        "checkpoints/next_history1000_relative_pairwise",
+        "--epochs",
+        "6",
+        "--batch-size",
+        "128",
+        "--seed",
+        "42",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 900,
+      "fingerprints": {
+        "training/next_scale_gate.py": "b343f6774a2875d343c9d17fd605de28df54fa6d34c6d6a1a7286356dde96d66",
+        "training/next_scale_supervised.py": "7556d336e4d12c734dcfc7e18884949c07326c9c5d57c8157062b714e690c5fb",
+        "scripts/next_model_scale_train.py": "f350f57fd7fb633d358807bb861bf3aab1a3444eb2949d58f728fffe8247ef0e",
+        "models/next_relative_v3.py": "5b96932f60a0cef6e55553e940aee0c4cba48f52d5f049cda4002240fbc775c8",
+        "models/next_candidate.py": "c40b668778b0b55b4872634b66d90dcf0b4e0503a1037298cf850c07b1c2d058",
+        "models/v3_action_value.py": "5ba2fc39cd42a9c5a985f0c656a47745ec9de5fbaf98af9fd10ac7ad0b11f8ab",
+        "training/v3_losses.py": "ab0104982b57a7a161219f028020903d1c31ab755e0b74ebe15400d51ca65d7c",
+        "evaluation/revision_action_value.py": "c92be8b2f6cd65810c8f525e569e12f83e9ca46e267583eac7313a1b6cce0fde",
+        "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+        "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+        "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+        "simulator/v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+        "observations/v3_history_v2.py": "fea65417d104f35d3669e29893f5d503710cb85b7fa2f5170834b64c825fb8a3",
+        "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+        "baselines/v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+        "rules/fast_hand_analysis.py": "599cb2ba49e4743ec3d6f0160987e5ac6cf88f8b2f1fff63a3431d509757f240",
+        "models/revision_candidate_schema.py": "709a529fb0f9bcd4271def94488fc4dbb38e69ba6b8e8bef5178e2a1852ae136",
+        "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "reports/next_chief_scale_admission.json": "43f7e39aef2b5afa726ec61ca6b7c1230e8b354cb7993ad2e5f4e263636a0fa2"
+      }
+    }
+  ]
+}

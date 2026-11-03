@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "PROJECT\scripts\next_model_scale_diagnose.py", line 54, in <module>
+    if __name__=='__main__':diagnose()
+                            ^^^^^^^^^^
+  File "PROJECT\scripts\next_model_scale_diagnose.py", line 33, in diagnose
+    torch.set_num_threads(2);old=json.loads((ROOT/'datasets/next_history100/manifest.json').read_text());new=json.loads((ROOT/'datasets/next_history1000/manifest.json').read_text());result={'scope':'frozen teacher-fit/train-validation diagnosis only; no training, no development or final selection','coverage':{'100_train':coverage(old['files']['train']),'1000_train':coverage(new['shards']['train']),'added900_train':coverage([p for p in new['shards']['train'] if int(pathlib.Path(p).parent.name)>=7000100]),'fixed_validation':coverage(old['files']['validation'])}}
+                                                                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\scripts\next_model_scale_diagnose.py", line 15, in coverage
+    for r in records(paths):
+             ^^^^^^^^^^^^^^
+  File "PROJECT\training\next_scale_supervised.py", line 11, in records
+    for shard in sorted(paths,key=lambda p:int(pathlib.Path(p).parent.name)):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\training\next_scale_supervised.py", line 11, in <lambda>
+    for shard in sorted(paths,key=lambda p:int(pathlib.Path(p).parent.name)):
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'next_history100'

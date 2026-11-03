@@ -1,0 +1,12 @@
+test_stream_labels_stop_resume (tests.test_next_scale_training.ScaleTrainingTest.test_stream_labels_stop_resume) ... PROJECT\training\next_relative_supervised.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='PROJECT\\reports\\next_c_scale_cpu_bqi1swcu\\old_manifest.json' mode='r' encoding='cp936'>
+  root=pathlib.Path(root);out=pathlib.Path(out);audit=validate_next_manifest(manifest,root,admission);m=json.load(open(manifest));sources={str(p.relative_to(root)):sha(p) for p in [root/'models/v3_action_value.py',root/'models/revision_action_value.py',root/'training/next_relative_supervised.py',root/'training/v3_losses.py',root/'training/next_relative_gate.py',root/'models/next_relative_v3.py',root/'models/next_candidate.py',root/'training/v3_gate.py',root/'evaluation/revision_action_value.py']};config={'epochs':epochs,'batch_size':batch_size,'seed':seed,'device':device,'loss_weights':{'action_value_mse':1.,'pairwise_preference':1.,'state_value_mse':.01,'tenpai_bce':.2,'conditional_wait_bce':.2,'joint_risk_ce':.2},'action_target_semantics':m['target_semantics'],'state_target_units':m['state_target_units'],'state_target_policy':m['state_target_policy']};binding=hashlib.sha256(json.dumps({'admission':audit,'sources':sources,'config':{k:v for k,v in config.items() if k!='epochs'}},sort_keys=True).encode()).hexdigest()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+PROJECT\training\next_relative_supervised.py:31: ResourceWarning: unclosed file <_io.TextIOWrapper name='PROJECT\\reports\\next_c_scale_cpu_bqi1swcu\\admission.json' mode='r' encoding='cp936'>
+  allowed=json.load(open(admission))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.570s
+
+OK

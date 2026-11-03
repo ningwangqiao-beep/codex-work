@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "exitcode": 0,
+  "checks": {
+    "duplicate_shard": "Duplicate listed shard",
+    "empty_validation": "Committed game total mismatch",
+    "source_drift": "Scaled data changed Calculator/rules/history/encoder",
+    "smoke_training_refused": "Formal1000 requires exact original100prefix and full fixed20validation",
+    "streaming_validation_rows": 31,
+    "collate_shapes": [
+      [
+        2,
+        191
+      ],
+      [
+        2,
+        27,
+        12
+      ],
+      [
+        2,
+        27
+      ],
+      [
+        2,
+        29,
+        3
+      ],
+      [
+        2,
+        29
+      ]
+    ]
+  },
+  "training_started": false
+}

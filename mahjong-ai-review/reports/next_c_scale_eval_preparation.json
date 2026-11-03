@@ -1,0 +1,24 @@
+{
+  "compile_and_help_exitcode": 0,
+  "old100_checkpoint_refused": true,
+  "new1000_checkpoint_callback_test": "pending chief frozen checkpoint; not evaluated",
+  "pre_registered_seeds": [
+    7200400,
+    7200419
+  ],
+  "strategies": [
+    "relative100",
+    "scale1000",
+    "strong"
+  ],
+  "games_planned": 240,
+  "same_opponents_and_seat_rotation": true,
+  "policy_execution_order_rotates": true,
+  "formal_evaluation_started": false,
+  "source_sha256": {
+    "inference/next_scale_policy.py": "899a2ce03cbc90d18448ba5ae5cca73ad51ad666aae449c959bb6dc606a5eff0",
+    "scripts/next_model_scale_eval.py": "5cbd387a81455fc32268f65bec182cbae18750c9eb9a7db9e09562a2d1a1f1d9",
+    "training/next_scale_supervised.py": "7556d336e4d12c734dcfc7e18884949c07326c9c5d57c8157062b714e690c5fb",
+    "training/next_scale_gate.py": "b343f6774a2875d343c9d17fd605de28df54fa6d34c6d6a1a7286356dde96d66"
+  }
+}

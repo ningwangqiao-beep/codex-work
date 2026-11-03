@@ -1,0 +1,59 @@
+{
+  "output": "PROJECT\\reports\\next_c_scale_diagnosis.json",
+  "coverage": {
+    "100_train": {
+      "states": 1224,
+      "free": 577,
+      "active_opponents": 3536,
+      "structural_tenpai_positive": 167,
+      "legal_risk_candidates": 6240,
+      "risk_positive": 62,
+      "multi_winner_positive": 0,
+      "conditional_wait_elements": 4509,
+      "conditional_wait_positive": 291
+    },
+    "1000_train": {
+      "states": 12372,
+      "free": 5725,
+      "active_opponents": 35464,
+      "structural_tenpai_positive": 1624,
+      "legal_risk_candidates": 62994,
+      "risk_positive": 647,
+      "multi_winner_positive": 3,
+      "conditional_wait_elements": 43848,
+      "conditional_wait_positive": 2766
+    },
+    "added900_train": {
+      "states": 11148,
+      "free": 5148,
+      "active_opponents": 31928,
+      "structural_tenpai_positive": 1457,
+      "legal_risk_candidates": 56754,
+      "risk_positive": 585,
+      "multi_winner_positive": 3,
+      "conditional_wait_elements": 39339,
+      "conditional_wait_positive": 2475
+    },
+    "fixed_validation": {
+      "states": 235,
+      "free": 109,
+      "active_opponents": 691,
+      "structural_tenpai_positive": 19,
+      "legal_risk_candidates": 1170,
+      "risk_positive": 6,
+      "multi_winner_positive": 0,
+      "conditional_wait_elements": 513,
+      "conditional_wait_positive": 31
+    }
+  },
+  "paired_ci": {
+    "equivalent_scale1000_minus_relative100": [
+      -0.09848484848484848,
+      0.08433734939759036
+    ],
+    "rank_regret_scale1000_minus_relative100": [
+      -0.024453024453024455,
+      0.031339031339031334
+    ]
+  }
+}

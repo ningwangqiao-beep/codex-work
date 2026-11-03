@@ -1,0 +1,153 @@
+{
+  "status": "independently_recomputed_matches",
+  "complete_seed_groups": 20,
+  "summary": {
+    "relative100": {
+      "games": 80,
+      "mean_net_score": 3.775,
+      "self_draw_rate": 0.1,
+      "deal_in_event_rate": 0.025,
+      "mean_deal_in_loss": 0.05,
+      "parts_mean": {
+        "added_kong": 0.0375,
+        "cha_jiao_big": 1.15,
+        "concealed_kong": -0.125,
+        "direct_kong": -0.1125,
+        "discard_win": 0.975,
+        "gang_refund": 0.725,
+        "rob_kong_win": 0.025,
+        "self_draw": 1.1
+      }
+    },
+    "scale1000": {
+      "games": 80,
+      "mean_net_score": 3.7625,
+      "self_draw_rate": 0.0875,
+      "deal_in_event_rate": 0,
+      "mean_deal_in_loss": 0,
+      "parts_mean": {
+        "added_kong": 0.05,
+        "cha_jiao_big": 1.025,
+        "concealed_kong": -0.2,
+        "direct_kong": 0.0625,
+        "discard_win": 1.3,
+        "gang_refund": 0.475,
+        "self_draw": 1.05
+      }
+    },
+    "strong": {
+      "games": 80,
+      "mean_net_score": 3.675,
+      "self_draw_rate": 0.1125,
+      "deal_in_event_rate": 0,
+      "mean_deal_in_loss": 0,
+      "parts_mean": {
+        "added_kong": 0.0125,
+        "cha_jiao_big": 0.875,
+        "concealed_kong": -0.125,
+        "direct_kong": -0.1,
+        "discard_win": 1.225,
+        "gang_refund": 0.6375,
+        "self_draw": 1.15
+      }
+    }
+  },
+  "comparisons": {
+    "relative100_vs_strong": {
+      "paired_initial_seed_mean": 0.1,
+      "seed_bootstrap95ci": [
+        -0.45,
+        0.65
+      ],
+      "seed_differences": [
+        1.5,
+        -0.5,
+        0.0,
+        -0.5,
+        1.0,
+        -1.0,
+        1.75,
+        0.0,
+        0.0,
+        0.0,
+        -0.5,
+        -0.5,
+        1.5,
+        3.0,
+        1.0,
+        0.5,
+        0.0,
+        -2.25,
+        -1.5,
+        -1.5
+      ]
+    },
+    "scale1000_vs_strong": {
+      "paired_initial_seed_mean": 0.0875,
+      "seed_bootstrap95ci": [
+        -0.9875,
+        1.125
+      ],
+      "seed_differences": [
+        2.5,
+        4.0,
+        -3.0,
+        2.5,
+        4.25,
+        0.0,
+        -2.25,
+        0.0,
+        0.5,
+        2.5,
+        -4.0,
+        2.5,
+        -3.0,
+        0.5,
+        1.5,
+        -1.5,
+        1.0,
+        -2.25,
+        -2.5,
+        -1.5
+      ]
+    },
+    "scale1000_vs_relative100": {
+      "paired_initial_seed_mean": -0.0125,
+      "seed_bootstrap95ci": [
+        -1.1125,
+        1.0875
+      ],
+      "seed_differences": [
+        1.0,
+        4.5,
+        -3.0,
+        3.0,
+        3.25,
+        1.0,
+        -4.0,
+        0.0,
+        0.5,
+        2.5,
+        -3.5,
+        3.0,
+        -4.5,
+        -2.5,
+        0.5,
+        -2.0,
+        1.0,
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  "input_sha256": {
+    "reports\\next_c_scale_development20.json": "033d1a6ec01f9592d416b3bdb40df4c4239a44e7966c4d8d4f9e0d35c150cd82",
+    "reports\\next_c_scale_development20.jsonl": "d628f4f3e8569608e78fc5dd450bd0f182b49e111c7e35dba06653f1dd7ae17b"
+  },
+  "limitations": [
+    "development only; no final strength promotion",
+    "all three comparison CIs include zero",
+    "aggregate per-row parts reconstructed; raw full transfer ledger not present in evaluation jsonl"
+  ]
+}
