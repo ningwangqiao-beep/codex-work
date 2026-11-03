@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-03T20:30:59.848851+08:00",
+  "updated_at": "2026-11-03T20:50:54.195282+08:00",
   "files": [
     {
       "path": "mahjong-ai-review/BACKGROUND_RUN.md",
-      "public_content_sha256": "4f5c2aba5b1f4266fea21fca5fbe50b9e6bd39f3c5c3d24f85264725c8ae7238",
-      "local_source_sha256": "bd7c83c8a82bced5f592937ccdb43b83877c67ae72662b692468201619fa3a8f"
+      "public_content_sha256": "cdb81663d30d80ca002d91716ba16b28f9338ff657fdb6e12eefca71e0e1ad7b",
+      "local_source_sha256": "cf8d919a2197bda9045d99987a6f83f6de61c144ee4da2bae4ba89c80d4d069e"
     },
     {
       "path": "mahjong-ai-review/BASELINE_V3_REPORT.md",
@@ -33,13 +33,13 @@
     },
     {
       "path": "mahjong-ai-review/BUG_REPORT.md",
-      "public_content_sha256": "f879febdcc0699ef7cb0d6af101d455bf98f920357d6b855af024ffde9e09e64",
-      "local_source_sha256": "c0463bd46368e032308a6b76eb1603fdeee65b1867b66c23afcab5189316ad4f"
+      "public_content_sha256": "915c656edb9dfca0610e5cfe3860819f67485c70c38bdefb0f6b50bbe90594b6",
+      "local_source_sha256": "371b6652b4ab06985db2b0d0703a4ac6b0e5ef81d088ecb670a86c5131512d13"
     },
     {
       "path": "mahjong-ai-review/configs/next_seed_registry.json",
-      "public_content_sha256": "33402b65b8942ac7b10736c6f41ec00d0812bf38296d809c06d34599a79e0544",
-      "local_source_sha256": "c7e759baa1f19ca2a9e8615cc009c216c59df65262f9436c4b5128f1fcb783b9"
+      "public_content_sha256": "dea551cf7db6fc0c35ae5b33e5268571c3c97ee40839e0a83cd97f5c225b972c",
+      "local_source_sha256": "6760fac153f92657166a1d7c7d2af8d60c53b987bab074668a494bb726e9c86c"
     },
     {
       "path": "mahjong-ai-review/configs/rl_admission.json",
@@ -93,13 +93,13 @@
     },
     {
       "path": "mahjong-ai-review/EXPERIMENTS.md",
-      "public_content_sha256": "0460c5c3f5874d221254c45b3f49da8671f01db6acd0f5f484cb0575bc996771",
-      "local_source_sha256": "b0f5509e9bb228beb346f255e3b7b8d34cd95085144c7b25fe565e67c8f7e429"
+      "public_content_sha256": "e4d404e2e2e049416af62809ef9126d1022a86e6dbce2cee3cafb24bf2b2f676",
+      "local_source_sha256": "dcebed4c10418b83585d788a7cff40d219e228a87327ec5823370c95a72bef47"
     },
     {
       "path": "mahjong-ai-review/FINAL_REPORT.md",
-      "public_content_sha256": "06bd53aedf2a538616df9151660e4b8e4143bfd5a57f18892264f70c59ad329b",
-      "local_source_sha256": "24048a1faa6e36975955f472563dd86a6218b9f43b19ab527edfba842eec1991"
+      "public_content_sha256": "aa74a2dd65ba6c6a7c30484dd1fd8a0313b4eb3ac55d4976ec27527eca0fc044",
+      "local_source_sha256": "410e63d2679ba67180ca168cc9a0576e17800494ffd75bb39b84a7031e2597d1"
     },
     {
       "path": "mahjong-ai-review/inference/next_policy.py",
@@ -177,6 +177,11 @@
       "local_source_sha256": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500"
     },
     {
+      "path": "mahjong-ai-review/models/next_opponent_tile_v2.py",
+      "public_content_sha256": "0c6d145a4b0a4e73967ac44b9feb7bbc760a359c9faf8c234236c4b55858b5c4",
+      "local_source_sha256": "0c6d145a4b0a4e73967ac44b9feb7bbc760a359c9faf8c234236c4b55858b5c4"
+    },
+    {
       "path": "mahjong-ai-review/models/next_relative_v3.py",
       "public_content_sha256": "86bc265b0792499c326b045de31f1031fcfcf53b8f3c8dc927a6c05653e44efb",
       "local_source_sha256": "5b96932f60a0cef6e55553e940aee0c4cba48f52d5f049cda4002240fbc775c8"
@@ -238,8 +243,8 @@
     },
     {
       "path": "mahjong-ai-review/PUBLIC_REVIEW_STATUS.md",
-      "public_content_sha256": "3ade6a56625376381d97630e0e80f68c5bbfa8a0b27b4f715d4501628346004f",
-      "local_source_sha256": "bd84102ab380bd8f32489a9a76be33f7a916b309d898969af3d61cc3bd89e6d1"
+      "public_content_sha256": "86e01f3c2b8fd231d04688d92e89fc99a0a74402fda42d01c6f3a7df40efc7b9",
+      "local_source_sha256": "9a8a859c246f51b0e5ca6f8ea01177b3658f03353280e9b5052093aaf4585dda"
     },
     {
       "path": "mahjong-ai-review/reports/candidate_scheduler_stderr.log",
@@ -452,6 +457,36 @@
       "local_source_sha256": "43fc49a6bc78a30f15d0ebfa434ee6f3dde09b32ab950e74ce95995f805892bd"
     },
     {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_audit.md",
+      "public_content_sha256": "654d8eff4ba749e9097073e078a290618dd7489b020e7655b59b68e0393df833",
+      "local_source_sha256": "8be3d6d307feacd77df57840cd86b840f63dff1cc4173b4db6dabd28ab8c5c51"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_exitcode.txt",
+      "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_fixture_recheck.log",
+      "public_content_sha256": "3b276704f3e563f93455088f7ce46c6323f4b89f61012ff8ddd99bba729ec60f",
+      "local_source_sha256": "7e26d2498cb5fb78c35e0e5bb4b73254ecb045b85b89135ed0e85d9f70d14d5c"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_fixture_recheck_exitcode.txt",
+      "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_hashes.json",
+      "public_content_sha256": "735f15eb2dc3d6b4bfe2b1a947ef0f00ae484a4014a79c2a8f32855c98403a72",
+      "local_source_sha256": "80fd3b9467874bb27110a5d5b482d0eef5dfac16302de64930dedace3a3b055b"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_b_opponent_v2_tests.log",
+      "public_content_sha256": "533131dad8973c589ae697ab1dd346cc55caa134cd1e536cedf26f1b057c0f1f",
+      "local_source_sha256": "fd066b6efa8a759f5d4e421c8aa2bdd6a70a3decac360d1e440912e7a9cb51cb"
+    },
+    {
       "path": "mahjong-ai-review/reports/next_b_rob_seed_evidence.json",
       "public_content_sha256": "e3ebc5445155a64f127e8a74e3cdb81d2a1f4ec658102b1328ace8744999c43e",
       "local_source_sha256": "e5cc1f858e4a6a02374630be13cd1bbdb2265a57004ef491ad665a9cf4b8d4d2"
@@ -602,6 +637,36 @@
       "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
     },
     {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_command.txt",
+      "public_content_sha256": "4331df6519cfa0e76d6c1aa782da3364779ae334a9a0a7032a14ac49edef9b3d",
+      "local_source_sha256": "d8c7edbce67d822cfe93157a955cf5491162690aca97dd878324dfb1e7cbbb2b"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_eval.json",
+      "public_content_sha256": "bb2e3119c5b89172136bbf4382b4609cec43c7322a833de1453d0cbfab111ce3",
+      "local_source_sha256": "c87717767cacd72852569c98fff3d9b367bfcff0de7b4ebff6d0b9666495f78a"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_eval.log",
+      "public_content_sha256": "e874d17d32f03c0ec2172dbb6403540b58951f86af939e387d55fd50b8fd90f0",
+      "local_source_sha256": "ba5a0e9e10a9427a96cb29708a1a4be3951b4d239f15e2d15100404f53731175"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_eval_exitcode.txt",
+      "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_interpretation.md",
+      "public_content_sha256": "4b4f80fe06243bd2ed573977b9b9f197f7e3fb0e6c1af8527ebf00fdc5a7369f",
+      "local_source_sha256": "6c0757225ead6a94a8a6d6ecc8ee597aefe2ce01bcd407593ad6e358e3fffb4e"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_fresh200_prediction_replay.json",
+      "public_content_sha256": "a9c9d079de044f75ce94dae6300145ceaacf43cfb165bd8d9dcecc6046a013dc",
+      "local_source_sha256": "8a35930cb588090c5ee587cc907d2c5915d48e2a7e3565a7d902b4b4ff675d08"
+    },
+    {
       "path": "mahjong-ai-review/reports/next_c_opponent_jobs_v1.json",
       "public_content_sha256": "7e3f4a6aa162599e1f051855645b37c939f241e2e5e6fd25245bbb41f1a2187c",
       "local_source_sha256": "45e6869627bd251287618baa142c058464da021efa0365e8f37e3145e20c7ae3"
@@ -638,6 +703,41 @@
     },
     {
       "path": "mahjong-ai-review/reports/next_c_opponent_smoke_v1_exitcode.txt",
+      "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_admission_template.json",
+      "public_content_sha256": "9d11dfdb4515cb9566365ecc2366883b2ecb8ce667f36650119d21c6afcb2fa8",
+      "local_source_sha256": "f74c5ec20bdeeb837f9954cae54e637a76662d85a4db235772b874e794961e5d"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_aux100_development.json",
+      "public_content_sha256": "b5af8bf12f4e8ab4395fbddfdaf5b991e63021d44dca774f1e4899efe9635c21",
+      "local_source_sha256": "724af830ba607537daa5f98414b315eaae52684c613375189e1577598d366d2b"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_job.json",
+      "public_content_sha256": "1600996b22322a03d28d12963e9163ee08c69dfe1112c6301a8ed8ac5977de2d",
+      "local_source_sha256": "a7b2f434940f541e797a55cf6939eb659a0c7dc78d19e7e0bd12f239be73fe09"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_preparation.md",
+      "public_content_sha256": "f5b44d1a423f591a990b711aef5fd47a9286cd4ca538309b9bd1ea2582f253ae",
+      "local_source_sha256": "b8bfb0e00e490d0c36f108b4ae79bb6037aacf0bc126c712594861b233275d1c"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_smoke.json",
+      "public_content_sha256": "22448121b0541330f705c9e6fde1d16783e04fdff8fd3c181e92fd68914f4921",
+      "local_source_sha256": "22608116f75b8a393973b713e1d38e3c6241d4681dfea60b92e4fb98520eed25"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_smoke.log",
+      "public_content_sha256": "4da6e075a3da046d2713fe1f1cd034d15f937290fe8fcae29dc4fd5be38583db",
+      "local_source_sha256": "b8ccc5b6a3ade90fcfc016c39a53c4c447cd297a184894dd9c72297a653fa830"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_c_opponent_tile_v2_smoke_exitcode.txt",
       "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
       "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
     },
@@ -902,6 +1002,16 @@
       "local_source_sha256": "91ea4b30c31583f5919ffc320a2674a0b92dc06cf34fea76c346de6d3b5ae99e"
     },
     {
+      "path": "mahjong-ai-review/reports/next_chief_holdout200_approval.json",
+      "public_content_sha256": "3ce8a17f6aaa04729bd9de414095c6a835f4262427f67dfd84e4cda3b34b6d11",
+      "local_source_sha256": "5c98afcf5e5ffb646e59edcdca7aaac9740b403228f6aadb7f343b02d41e4600"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_holdout200_audit.json",
+      "public_content_sha256": "3a237f7c20300e61f495b1c493b92c44cf18552ca84706fd094091af24858dbe",
+      "local_source_sha256": "95613337343071b8764377b326d2ae5084b19d7ae77a8d054bfd3e36817ca966"
+    },
+    {
       "path": "mahjong-ai-review/reports/next_chief_loss_ablation_results.json",
       "public_content_sha256": "fda179e5706e4ef3be849248044da452aea1ce88bacca05a53c8b9db578c53af",
       "local_source_sha256": "32b113331ca2d193e4e907973068605693dc45c8649fe7a9d567ca8e3bfaefad"
@@ -920,6 +1030,36 @@
       "path": "mahjong-ai-review/reports/next_chief_opponent_results_v1.json",
       "public_content_sha256": "5da54939ee81f3969c72d03e5f20c89e688e78bd1a24a371686131c9266e741b",
       "local_source_sha256": "5df054a0a01c2858fddb6f3bd76a043c98e664458b6c9a89a14e70362e522068"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_opponent_tile_v2_admission.json",
+      "public_content_sha256": "887cff94af9381bc96bf8d84e3c4bf9bb6dc16c4aad6e51f5f0fdf87308ac29c",
+      "local_source_sha256": "ed28a37b1ad0d0b484b136bfeb8876e5b10164ee147ad8506967e25054e97bda"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_opponent_tile_v2_data_gate.json",
+      "public_content_sha256": "090e3973718bec7c298d0eb00b4f355d946dcf5390064ab2a29ec8feed1e5ec0",
+      "local_source_sha256": "605cd7ec6c0ef7363bd555172d329f159c211ba3e95c436702d0d6fceae000b8"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_reading_v2_recheck.log",
+      "public_content_sha256": "40a40633569c576dcbfb3af9449932383e50df195993f2ee2b1b8297a49f1ef9",
+      "local_source_sha256": "79e11feb8384310553befd4370bff1853e5561ccc533095790770b8e3ca48dde"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_reading_v2_recheck_exitcode.txt",
+      "public_content_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "local_source_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_reading_v2_tests.log",
+      "public_content_sha256": "dd676a7a9975b2dfe0394359258ebccb934ddf082427a3db09951f50ac8e5edc",
+      "local_source_sha256": "f8f8e25ae13b034b025611a623a441b8b17e1d0d18cb800ce2777a70beac3510"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_chief_reading_v2_tests_exitcode.txt",
+      "public_content_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "local_source_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
     },
     {
       "path": "mahjong-ai-review/reports/next_chief_relative_admission.json",
@@ -1012,6 +1152,16 @@
       "local_source_sha256": "967c6d5a2d8a8c26e4afc34a8d1f3e2f1c36872b9d3ca2ff1c492f4e94982953"
     },
     {
+      "path": "mahjong-ai-review/reports/next_d_fresh200_audit.json",
+      "public_content_sha256": "d12dca0adc22d2e0938ad063e0e2dbc9ea309c51e31891edfd95c36c4b283ff3",
+      "local_source_sha256": "87e4b6b70ddb8a47c86703fa67fe0491bfda59ee7f3c2de50eba03d3a26c0c3c"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_d_fresh200_command.log",
+      "public_content_sha256": "5e200c135dd5a5c1c27d29b37d1fcc4ee8debc45e0fd928dcd6f9f2667019ac3",
+      "local_source_sha256": "2de38c184487a7981c2df38b2dc604cd230c499b18539545e72c05b0bae97509"
+    },
+    {
       "path": "mahjong-ai-review/reports/next_d_game_returns_audit.json",
       "public_content_sha256": "7a8d0372edb16c86987b18588dad40eed46c95b26ab2aa194b50d88c49e40b2f",
       "local_source_sha256": "4a91827aa21d111810b39683976914c6401d2d001b8e9f9c8f0b25bf022d854c"
@@ -1050,6 +1200,11 @@
       "path": "mahjong-ai-review/reports/next_d_holdout200_reject.log",
       "public_content_sha256": "1d91fc7d37ad3ea347c53eb65e2c509de4b60dc8343c30b497ab03588878ea17",
       "local_source_sha256": "7dbe6acc94d2c3eb6439c3f459bf684c280184157132b3d082a37cd2a7f3c6d1"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_d_holdout_delivery.md",
+      "public_content_sha256": "8317ba2dbcd6b33523bed576c467ea06d6421ef70bfd84cc977578d0a0c3f147",
+      "local_source_sha256": "34abb18c8ffd4dca9659309dec6dfecd1493625f5cd0c3e5e094afc8f2aa1a06"
     },
     {
       "path": "mahjong-ai-review/reports/next_d_holdout_smoke.log",
@@ -1152,6 +1307,16 @@
       "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "mahjong-ai-review/reports/next_holdout200_scheduler.stderr.log",
+      "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_holdout200_scheduler.stdout.log",
+      "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "mahjong-ai-review/reports/next_loss_scheduler_stderr.log",
       "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -1233,6 +1398,16 @@
     },
     {
       "path": "mahjong-ai-review/reports/next_scale_train_scheduler.stdout.log",
+      "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_tile_v2_scheduler.stderr.log",
+      "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "mahjong-ai-review/reports/next_tile_v2_scheduler.stdout.log",
       "public_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "local_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
@@ -2452,6 +2627,16 @@
       "local_source_sha256": "13a2783c18b578c77c467a3e22c925c5f55c1d0b0d5f7938570035f064012eae"
     },
     {
+      "path": "mahjong-ai-review/scheduler/next_opponent_holdout200.json",
+      "public_content_sha256": "afcf9cb47143e4a834e70aff6d82632d30e9fd638640877dceb1f124eedf558b",
+      "local_source_sha256": "56077c1cff6a97e4cbc3759a0ce2de4e4cb59c1bec96bbbff9870da5369e5c95"
+    },
+    {
+      "path": "mahjong-ai-review/scheduler/next_opponent_shared_tile_v2.json",
+      "public_content_sha256": "e0db237820c1a424d13d83f8eff013d4b120577c5f5c857d3f9ebe1c39a1a37f",
+      "local_source_sha256": "27e26c2003e69526c3f393db664ea647a0ed37235bf553691de013b3f5e140a1"
+    },
+    {
       "path": "mahjong-ai-review/scheduler/round2_candidate_queue.json",
       "public_content_sha256": "7b779c19aba265c5b8394e672213449863359e2a5457d6d1472fbf698090e9b6",
       "local_source_sha256": "607e94744e04e19dbec8dc6297ee1c920bd1bb7f67cb15c5c28727a0cc14b22b"
@@ -2587,6 +2772,11 @@
       "local_source_sha256": "d103a201a5b4d96598f128dfaa49a7ec2521f9c3a9beccad0b18d3b4dcfce912"
     },
     {
+      "path": "mahjong-ai-review/scripts/next_data_fresh200_audit.py",
+      "public_content_sha256": "824f8180769d1d310cc8928aaa430157c0c87dc6fe955a2f8d111d700918b5b6",
+      "local_source_sha256": "df85bdb248dac1e3f48b0885fac5483af1d2e72faf615c4854b0693e7477da17"
+    },
+    {
       "path": "mahjong-ai-review/scripts/next_data_history100.py",
       "public_content_sha256": "7c1b3b847a910c5b285904f2bf177a07f20063c005aa38e19547830b87b5f1ae",
       "local_source_sha256": "1b5982317f1a9ca75b49f40a62a0ad85c233780e1c3d099f43fec133d2b329a4"
@@ -2662,9 +2852,29 @@
       "local_source_sha256": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297"
     },
     {
+      "path": "mahjong-ai-review/scripts/next_model_opponent_fresh200_eval.py",
+      "public_content_sha256": "bb5581b4b2d265f6fc03e243cd006ac34560bde60f788a89ed50cd7fbe64f945",
+      "local_source_sha256": "adc8712a4d93787500084e7722cff21a5962b709dde3bfb5b92e7735979c73b5"
+    },
+    {
       "path": "mahjong-ai-review/scripts/next_model_opponent_smoke_v1.py",
       "public_content_sha256": "50dd828df0edcf6f8ccbc32a9ebb3c66e047789e6fc24a0f01a9a623427dda7a",
       "local_source_sha256": "9213d0b0b70ee8ed27bfeb01312db0f70985823e80cdd626f90c0a125927649c"
+    },
+    {
+      "path": "mahjong-ai-review/scripts/next_model_opponent_tile_v2_eval.py",
+      "public_content_sha256": "62f3f2579a6abb6c677b9d1b725a53101efbf63410409c86507cfcd4876f742f",
+      "local_source_sha256": "b2179d6d25c90a8a7a6a3e28720fb2693fe93716bb84ec4c561800f77d59dbda"
+    },
+    {
+      "path": "mahjong-ai-review/scripts/next_model_opponent_tile_v2_smoke.py",
+      "public_content_sha256": "a02bd97fa882a1a3f66ad9214804cb3079b00c5e080bda97297c84d232f809a0",
+      "local_source_sha256": "d6bacc423718aa8aba2c303f3bdce99a46c78009c8ca708963fd73331251f320"
+    },
+    {
+      "path": "mahjong-ai-review/scripts/next_model_opponent_tile_v2_train.py",
+      "public_content_sha256": "66aceb188001970eed4a96e813a222050ef6e14d86a1a97a75454aed376f1997",
+      "local_source_sha256": "14c53a9186693c015e3547b94112ab93a8ca004a3dd6ff919974ec16c23ad76c"
     },
     {
       "path": "mahjong-ai-review/scripts/next_model_opponent_train_v1.py",
@@ -2993,8 +3203,8 @@
     },
     {
       "path": "mahjong-ai-review/STATUS.md",
-      "public_content_sha256": "d5b9b40ad6eb63fcf29b04c74546e13df24190c616d9218213a986c01d869f50",
-      "local_source_sha256": "40b061629faf22a0ee7d01942ec1dbb1022d2e298eb88425a7d66c0c110ad7ba"
+      "public_content_sha256": "28750d263d31bb08564386ad579a2b29d8218f51df1192a30dc0adf9b3fa2fdc",
+      "local_source_sha256": "c51f7a186e50ba948a71315e6a831576ad37b13d1c0ca13aed95642673494012"
     },
     {
       "path": "mahjong-ai-review/tests/test_data_isolation.py",
@@ -3020,6 +3230,11 @@
       "path": "mahjong-ai-review/tests/test_next_opponent_label_audit.py",
       "public_content_sha256": "49d0579edddfdb916409cecbbef9f684e17ab3da944b272354bea853f5115a79",
       "local_source_sha256": "3a1d7d0794dd282e647da9d398c1bd1a042b9f1f57a3873bc313ade6128158a1"
+    },
+    {
+      "path": "mahjong-ai-review/tests/test_next_opponent_v2_audit.py",
+      "public_content_sha256": "e7e77cb72eafab03438b6e6710404bb03ad6a04da2b8f04659be7bf4bba6fd93",
+      "local_source_sha256": "250687b2d75169bb117f40d35c4aaff58336ac4401f24bf5ccb7dc20aece9278"
     },
     {
       "path": "mahjong-ai-review/tests/test_next_scale_audit.py",
@@ -3117,6 +3332,26 @@
       "local_source_sha256": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174"
     },
     {
+      "path": "mahjong-ai-review/training/next_opponent_tile_v2_eval.py",
+      "public_content_sha256": "276f508bc5b5b5595ceadf197f047a63ba74c55fcc19b13df939f239924bf52a",
+      "local_source_sha256": "f22962bec9c82b4b70bdaeff1b3dc558754fc8f11b13bc47679e264fba49221f"
+    },
+    {
+      "path": "mahjong-ai-review/training/next_opponent_tile_v2_fit.py",
+      "public_content_sha256": "9a19e0fc3c039786b18268575c140098f8543883bc2eabbee6a99d6f843d96d8",
+      "local_source_sha256": "29e2a14273c340982413f470126e5e55aaa89d8dd9408728f6c18759b0dec41f"
+    },
+    {
+      "path": "mahjong-ai-review/training/next_opponent_tile_v2_gate.py",
+      "public_content_sha256": "fd1d4d6f0a6b14957b38b167625c6874b5e544ed2e03b6817bcf045f71b22b01",
+      "local_source_sha256": "d466b728590529b6edd313d529e25e1582905db21cabc1ec8b9c1c81bd09293f"
+    },
+    {
+      "path": "mahjong-ai-review/training/next_opponent_tile_v2_pipeline.py",
+      "public_content_sha256": "523d8ce23eaff4e325d78523ba39f0ff2501be50222b044d162f394e1bd4e226",
+      "local_source_sha256": "00ee86f76e8ae3142a57081f04cdefcdd7dc78d9fa8ac94b2b2bac52495ae860"
+    },
+    {
       "path": "mahjong-ai-review/training/next_relative_gate.py",
       "public_content_sha256": "f5b1e92cdbe125d8af0ca440cc5eef6cfd8cf95853a37fb1c6dc856ab17c22ef",
       "local_source_sha256": "d4c18ef6f8cdcbfb7c18304507b9c21ba13f328e1e19d347ad10f6096a837154"
@@ -3163,8 +3398,8 @@
     },
     {
       "path": "mahjong-ai-review/TRAINING_LOG.md",
-      "public_content_sha256": "a72a6004c9997c53214d78d8b608d506bc97647ea02869129f0943769f3fa3a0",
-      "local_source_sha256": "5f1c199f1ac5650472102f424d3fed8d40f7d9f58c8aba3e048a8101b81694b0"
+      "public_content_sha256": "4887a8556b738cee302e0e334e2009fd05c691c43efa15212ae644ed9371836e",
+      "local_source_sha256": "39ec9242561e2326ece8c2bcc747be47c851612cc3e32c88d1c85511c3ce7b16"
     },
     {
       "path": "mahjong-ai-review/TRAINING_RESULTS_V3.md",

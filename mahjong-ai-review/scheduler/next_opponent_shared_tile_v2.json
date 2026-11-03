@@ -1,0 +1,82 @@
+{
+  "run_dir": "experiments/next_opponent_shared_tile_v2",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1.5,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 1,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "train_shared_tile",
+      "script": "scripts/next_model_opponent_tile_v2_train.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_tile_v2_admission.json",
+        "--family",
+        "shared_tile",
+        "--output",
+        "checkpoints/next_opponent1000_shared_tile_v2",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent_tile_v2.py": "0c6d145a4b0a4e73967ac44b9feb7bbc760a359c9faf8c234236c4b55858b5c4",
+        "training/next_opponent_tile_v2_pipeline.py": "00ee86f76e8ae3142a57081f04cdefcdd7dc78d9fa8ac94b2b2bac52495ae860",
+        "training/next_opponent_tile_v2_gate.py": "d466b728590529b6edd313d529e25e1582905db21cabc1ec8b9c1c81bd09293f",
+        "training/next_opponent_tile_v2_fit.py": "29e2a14273c340982413f470126e5e55aaa89d8dd9408728f6c18759b0dec41f",
+        "training/next_opponent_tile_v2_eval.py": "f22962bec9c82b4b70bdaeff1b3dc558754fc8f11b13bc47679e264fba49221f",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_tile_v2_train.py": "14c53a9186693c015e3547b94112ab93a8ca004a3dd6ff919974ec16c23ad76c",
+        "scripts/next_model_opponent_tile_v2_eval.py": "b2179d6d25c90a8a7a6a3e28720fb2693fe93716bb84ec4c561800f77d59dbda",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_tile_v2_admission.json": "ed28a37b1ad0d0b484b136bfeb8876e5b10164ee147ad8506967e25054e97bda"
+      }
+    },
+    {
+      "id": "development_eval",
+      "script": "scripts/next_model_opponent_tile_v2_eval.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_tile_v2_admission.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_shared_tile_v2/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent_tile_v2_aux100_development.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent_tile_v2.py": "0c6d145a4b0a4e73967ac44b9feb7bbc760a359c9faf8c234236c4b55858b5c4",
+        "training/next_opponent_tile_v2_pipeline.py": "00ee86f76e8ae3142a57081f04cdefcdd7dc78d9fa8ac94b2b2bac52495ae860",
+        "training/next_opponent_tile_v2_gate.py": "d466b728590529b6edd313d529e25e1582905db21cabc1ec8b9c1c81bd09293f",
+        "training/next_opponent_tile_v2_fit.py": "29e2a14273c340982413f470126e5e55aaa89d8dd9408728f6c18759b0dec41f",
+        "training/next_opponent_tile_v2_eval.py": "f22962bec9c82b4b70bdaeff1b3dc558754fc8f11b13bc47679e264fba49221f",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_tile_v2_train.py": "14c53a9186693c015e3547b94112ab93a8ca004a3dd6ff919974ec16c23ad76c",
+        "scripts/next_model_opponent_tile_v2_eval.py": "b2179d6d25c90a8a7a6a3e28720fb2693fe93716bb84ec4c561800f77d59dbda",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_tile_v2_admission.json": "ed28a37b1ad0d0b484b136bfeb8876e5b10164ee147ad8506967e25054e97bda"
+      },
+      "depends": [
+        "train_shared_tile"
+      ]
+    }
+  ]
+}

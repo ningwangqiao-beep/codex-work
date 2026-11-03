@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "games": 200,
+  "records": 2395,
+  "seed_range": [
+    7120000,
+    7120199
+  ],
+  "structural_tenpai_positive": 329,
+  "legal_risk_positive": 114,
+  "legal_multiwinner_positive": 0,
+  "manifest_sha256": "1e2c228f138bd44e74c29a80bee2d26acd491ccc8d26f07d55d3ae9190df9b1f",
+  "no_training": true,
+  "no_calibration": true,
+  "no_selection": true,
+  "limitations": [
+    "correlated within-game labels",
+    "frozen producer record source_group legacy; manifest owns holdout role"
+  ]
+}

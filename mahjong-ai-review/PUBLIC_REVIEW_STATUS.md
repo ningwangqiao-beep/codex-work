@@ -32,3 +32,6 @@
 
 ## 读牌五组与失败诊断更新
 五组1000局GPU训练/辅助100局评估真实完成，10任务exit0，约360秒。独立配对与标签审计已执行。具体听口原AUC约.52，flat81未学对手定缺必零；规则后处理和公开计数简单基线明显更好，这些是程序能力而非神经提升。现aux100已用于开发诊断，不能再冒称下一版本独立final。详见next_chief_opponent_results_v1、next_c_opponent_diagnose_v2、next_b_opponent_labels_audit、next_d_opponent_paired_audit。新共享逐牌模型仅准备中，未放行RL/未替换冠军。
+
+## shared-tile v2独立验证
+小网络15918参数已GPU固定6epoch训练，独立200局验证完成：听口AUC .7736，旧网络加定缺规则.6820；两主损失相对旧规则模型整局配对CI改善。但尚未显著超过train-only统计先验，且公开计数基线排序更强，故不晋级、不替换冠军。115tests实际过exit0，旧4错误测试夹具及修复保留日志。新7120000..199已消耗，不能用于未来模型选择。详情见next_c_opponent_fresh200_eval和next_chief_reading_v2_recheck。下一prior残差方向仅准备，尚未训练。

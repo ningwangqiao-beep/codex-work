@@ -1,0 +1,38 @@
+{
+  "stage": "NEXT_OPPONENT1000_SHARED_TILE_V2",
+  "passed": false,
+  "supervised_training_allowed": false,
+  "rl_training_allowed": false,
+  "calibration_allowed": false,
+  "families": [
+    "shared_tile"
+  ],
+  "epochs": 6,
+  "batch_size": 128,
+  "seed": 42,
+  "model_parameters": 15918,
+  "train_manifest_sha256": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+  "aux_manifest_sha256": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+  "pipeline_source_hashes": {
+    "models/next_opponent_tile_v2.py": "0c6d145a4b0a4e73967ac44b9feb7bbc760a359c9faf8c234236c4b55858b5c4",
+    "training/next_opponent_tile_v2_pipeline.py": "00ee86f76e8ae3142a57081f04cdefcdd7dc78d9fa8ac94b2b2bac52495ae860",
+    "training/next_opponent_tile_v2_gate.py": "d466b728590529b6edd313d529e25e1582905db21cabc1ec8b9c1c81bd09293f",
+    "training/next_opponent_tile_v2_fit.py": "29e2a14273c340982413f470126e5e55aaa89d8dd9408728f6c18759b0dec41f",
+    "training/next_opponent_tile_v2_eval.py": "f22962bec9c82b4b70bdaeff1b3dc558754fc8f11b13bc47679e264fba49221f",
+    "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+    "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+    "scripts/next_model_opponent_tile_v2_train.py": "14c53a9186693c015e3547b94112ab93a8ca004a3dd6ff919974ec16c23ad76c",
+    "scripts/next_model_opponent_tile_v2_eval.py": "b2179d6d25c90a8a7a6a3e28720fb2693fe93716bb84ec4c561800f77d59dbda"
+  },
+  "prior_scale_admission": {
+    "path": "reports/next_chief_scale_admission.json",
+    "sha256": "43f7e39aef2b5afa726ec61ca6b7c1230e8b354cb7993ad2e5f4e263636a0fa2"
+  },
+  "aux_independent_audit": {
+    "path": "reports/next_d_aux100_audit.json",
+    "sha256": "4a1f80513cf8f2b269372e813edc223e67f57e919185c6864dacde1755d4546a"
+  },
+  "auxiliary_role": "reused_DEVELOPMENT_only",
+  "missing_zero_rule_constraint": true,
+  "public_dead_zero_constraint": false
+}

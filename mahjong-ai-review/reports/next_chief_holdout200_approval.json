@@ -1,0 +1,57 @@
+{
+  "approved": true,
+  "games": 200,
+  "source_hashes": {
+    "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator/v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+    "observations/v3_history_v2.py": "fea65417d104f35d3669e29893f5d503710cb85b7fa2f5170834b64c825fb8a3",
+    "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+    "baselines/v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules/fast_hand_analysis.py": "599cb2ba49e4743ec3d6f0160987e5ac6cf88f8b2f1fff63a3431d509757f240",
+    "models/revision_candidate_schema.py": "709a529fb0f9bcd4271def94488fc4dbb38e69ba6b8e8bef5178e2a1852ae136",
+    "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+    "scripts/next_data_scale.py": "d686d9f83818e34287fecace19b9391bc7e841bf1ba4b12c94cc037c9f93c842",
+    "scripts/next_data_holdout200.py": "2cac3a8424f13aa46e9161cd3ff6f6af8d277eb1b140788eae613f92338847c4",
+    "observations/v3_public.py": "aa1e818f1e02fc173c06d561b776ffbadd8588c280f527cfe40fc1460567cada",
+    "inference/v3_legacy.py": "dfab6bebd0d01cb552422b3280e7f5e64161d2c4390f73ee51682c3c17c632f7",
+    "rules/hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
+    "rules/hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf"
+  },
+  "candidates_frozen": true,
+  "candidate_checkpoint_hashes": {
+    "PROJECT\\checkpoints\\next_opponent1000_shared_tile_v2\\epoch_5.pt": "fb1a5bf797e1fe9fe17f176a76ace999598f02281123adade5a6395400e0e948",
+    "PROJECT\\checkpoints\\next_opponent1000_v1_counts\\epoch_5.pt": "da494046a41c495c0555e1911fff9135bc83b00b4d83e6af04a1667089e559ae"
+  },
+  "protocol": {
+    "train_seed": 42,
+    "epoch": 5,
+    "seed_range": [
+      7120000,
+      7120199
+    ],
+    "comparators": [
+      "v1counts_raw",
+      "v1counts_missing_zero",
+      "train_missing_tile_known_prior",
+      "public_missing_unknown_copy_weight"
+    ],
+    "primary_metrics": [
+      "conditional_wait_brier",
+      "conditional_wait_log_loss"
+    ],
+    "secondary": [
+      "all27_auc",
+      "allowed18_auc",
+      "AP",
+      "tenpai",
+      "legal_risk"
+    ],
+    "bootstrap_unit": "whole_game_paired",
+    "calibration": false,
+    "selection": false,
+    "policy_promotion": false,
+    "baseline_source_sha256": "d83865ac2968f7d20d982ecb0831c3ad84023e0bb4c538c07da53146c35aca9d"
+  }
+}

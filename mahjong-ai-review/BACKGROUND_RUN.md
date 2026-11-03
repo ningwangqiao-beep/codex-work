@@ -53,3 +53,13 @@ GPU(cuda)6epoch/582steps/60.05秒exit0，best_epoch5已冻结。12372训练状�
 
 ## 五组高级读牌消融正式启动
 主控已检查实际gate、训练/评估实现、CPU STOP恢复证据及B四项信息屏蔽测试，签next_chief_opponent_admission_v1.json。独立本地队列scheduler/next_opponent1000_v1.json按顺序执行counts/progress/history/exchange/history_shuffled五组GPU训练及aux100评估；每组固定6epoch/seed42/batch128/19563 allocated参数，无并行重GPU。只训练1000train，不读取固定20val或aux记录训练，不挑epoch，不校准、不晋级。失败即停/保存断点，实际状态见experiments/next_opponent1000_v1/state.json；全部完成后REPORT.md自动保存各命令退出码。注意history仅现有token编码，非完整上下文；有效模型容量并不完全相同，风险仅52阳性、多响0，结论须保留限制。
+
+## shared-tile v2实际启动
+主控真实复核13591train+dev记录的static/history encoder及target_active相对顺序，exit0；B5tests、C真实STOP恢复exit0。已签next_chief_opponent_tile_v2_admission并启动scheduler/next_opponent_shared_tile_v2.json，15918参数，固定1000train/6epoch/582更新，单GPU；queue自动接开发aux100评估。定缺硬零为程序约束，known4不强制硬零。新fresh200未生成，等候选epoch5冻结后许可；C另新增holdout评估入口，不能修改训练gate或挑epoch。冠军不变。实际结果以experiments/next_opponent_shared_tile_v2/state.json和checkpoints/next_opponent1000_shared_tile_v2/COMPLETE.json为准。
+
+## shared-tile v2实际训练/开发评估完成
+train与development eval全部exit0，固定6epoch/582steps/15918参数。开发aux100条件听口AUC .79662（旧flat约.52），Brier .056727/logloss .203706；公开copyweight baseline AUC .81630/Brier .055078但logloss .219881，不能只挑排序指标认定胜负。missing硬零包含程序规则收益。新候选epoch5 SHAfb1a5bf797e1fe9fe17f176a76ace999598f02281123adade5a6395400e0e948已冻结；签next_chief_holdout200_approval预注册新7120000..199、四基线和主指标Brier/logloss/整局pairedCI，已启动独立本地生成+审核queue scheduler/next_opponent_holdout200.json。无校准/无选择/无晋级/无RL，fresh结果待实际评估。
+
+## shared-tile v2独立200局真实结果（不晋级）
+预注册fresh7120000..199生成/审计/唯一评估均exit0；2395状态，条件听口8883项/556阳性。v2 Brier .055697/LL .201828/AUC .773593；旧counts+missingzero .057890/.219089/.681987，整局paired Brier差CI[-.002744,-.001613]、LL[-.022555,-.011754]，说明不止missing程序规则提升。但与train-only统计prior Brier.056213/LL.204365两主指标差CI跨0，未证实超过简单统计；copyweight Brier.054663/LL.227173/AUC.789636，v2 LL较好而允许花色AUC更差(.64866vs.68596)。不能只选有利指标宣称成功，无实战晋级/无RL。下一步只准备公开prior+小残差的有界研究，尚未训练，旧fresh200已经消耗禁止复用为未来选择/最终集。
+全量初次114tests有4error：B synthetic active与相对target不一致，被新增guard拒绝。只修test fixture，新增mismatch拒绝测试；115tests重跑exit0，保留原失败log，不放宽生产规则。

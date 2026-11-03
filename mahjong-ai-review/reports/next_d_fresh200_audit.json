@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "original_records": 2395,
+  "games": 200,
+  "explicit_wait_samples": 8883,
+  "positive_waits": 556,
+  "sample_file_sha256": "c07f6ef4cfe92ef326b5f29166c8db132a9a1e0d816f4cc44e8dfb1a29a93c16",
+  "candidate_hashes": {
+    "PROJECT\\checkpoints\\next_opponent1000_shared_tile_v2\\epoch_5.pt": "fb1a5bf797e1fe9fe17f176a76ace999598f02281123adade5a6395400e0e948",
+    "PROJECT\\checkpoints\\next_opponent1000_v1_counts\\epoch_5.pt": "da494046a41c495c0555e1911fff9135bc83b00b4d83e6af04a1667089e559ae"
+  },
+  "comparisons": {
+    "all27": {
+      "v1counts_raw": {
+        "brier": {
+          "new_minus_comparator": -0.004208081481434788,
+          "ci95": [
+            -0.004841296166052734,
+            -0.003593116162657308
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.04160947505695565,
+          "ci95": [
+            -0.0471111121584375,
+            -0.03634466116778375
+          ]
+        }
+      },
+      "v1counts_missing_zero": {
+        "brier": {
+          "new_minus_comparator": -0.00219272919742883,
+          "ci95": [
+            -0.002744425573136414,
+            -0.0016128180954481889
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.01726143484170721,
+          "ci95": [
+            -0.022554995605509647,
+            -0.011754364990599812
+          ]
+        }
+      },
+      "train_missing_tile_known_prior": {
+        "brier": {
+          "new_minus_comparator": -0.0005157202494433149,
+          "ci95": [
+            -0.0016639797261284823,
+            0.0008818101029040587
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.002537514158835978,
+          "ci95": [
+            -0.008426728250296903,
+            0.003999107459802589
+          ]
+        }
+      },
+      "public_missing_unknown_copy_weight": {
+        "brier": {
+          "new_minus_comparator": 0.0010338114715670362,
+          "ci95": [
+            -0.00015140382845350143,
+            0.0021308843469297583
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.025345550495217934,
+          "ci95": [
+            -0.05170846267606851,
+            -0.00473609097407529
+          ]
+        }
+      }
+    },
+    "allowed18": {
+      "v1counts_raw": {
+        "brier": {
+          "new_minus_comparator": -0.0032890937961432454,
+          "ci95": [
+            -0.00411663835970462,
+            -0.00241922714317228
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.025892152262560798,
+          "ci95": [
+            -0.03383249340826446,
+            -0.01763154748589971
+          ]
+        }
+      },
+      "v1counts_missing_zero": {
+        "brier": {
+          "new_minus_comparator": -0.0032890937961432454,
+          "ci95": [
+            -0.00411663835970462,
+            -0.00241922714317228
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.025892152262560798,
+          "ci95": [
+            -0.03383249340826446,
+            -0.01763154748589971
+          ]
+        }
+      },
+      "train_missing_tile_known_prior": {
+        "brier": {
+          "new_minus_comparator": -0.000773580374164978,
+          "ci95": [
+            -0.0024959695891927248,
+            0.0013227151543560793
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.0038062712382539673,
+          "ci95": [
+            -0.012640092375445361,
+            0.005998661189703872
+          ]
+        }
+      },
+      "public_missing_unknown_copy_weight": {
+        "brier": {
+          "new_minus_comparator": 0.0015507172073505474,
+          "ci95": [
+            -0.0002271057426802549,
+            0.0031963265203946334
+          ]
+        },
+        "log_loss": {
+          "new_minus_comparator": -0.03801832574282681,
+          "ci95": [
+            -0.07756269401410265,
+            -0.0071041364611128905
+          ]
+        }
+      }
+    }
+  },
+  "bootstrap_unit": "200 whole games with all correlated target/tile samples together",
+  "replicates": 300,
+  "no_inference": true,
+  "no_fit": true,
+  "no_calibration": true,
+  "no_selection": true,
+  "limitations": [
+    "audit reconstructs saved model probabilities, does not rerun networks",
+    "statistical prior probabilities not independently recomputed from train in this pass",
+    "200simulated games not playing-strength or production certification"
+  ]
+}

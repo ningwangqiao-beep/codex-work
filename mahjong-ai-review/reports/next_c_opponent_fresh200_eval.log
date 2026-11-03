@@ -1,0 +1,102 @@
+{
+  "output": "reports\\next_c_opponent_fresh200_eval.json",
+  "games": 200,
+  "conditional_wait_elements": 8883,
+  "metrics": {
+    "all27": {
+      "shared_tile_v2": {
+        "n": 8883,
+        "positive": 556,
+        "roc_auc": 0.7735933661460876,
+        "average_precision": 0.15406298637390137,
+        "brier": 0.055697277188301086,
+        "log_loss": 0.20182771980762482,
+        "ece": 0.013574070762842894
+      },
+      "v1counts_raw": {
+        "n": 8883,
+        "positive": 556,
+        "roc_auc": 0.5117495059967041,
+        "average_precision": 0.06190241500735283,
+        "brier": 0.05990535765886307,
+        "log_loss": 0.24343717098236084,
+        "ece": 0.01631292753154412
+      },
+      "v1counts_missing_zero": {
+        "n": 8883,
+        "positive": 556,
+        "roc_auc": 0.6819866299629211,
+        "average_precision": 0.09141986072063446,
+        "brier": 0.05789000913500786,
+        "log_loss": 0.21908913552761078,
+        "ece": 0.025384330379893072
+      },
+      "train_missing_tile_known_prior": {
+        "n": 8883,
+        "positive": 556,
+        "roc_auc": 0.7595881819725037,
+        "average_precision": 0.14345073699951172,
+        "brier": 0.05621299892663956,
+        "log_loss": 0.20436522364616394,
+        "ece": 0.016125532216392457
+      },
+      "public_missing_unknown_copy_weight": {
+        "n": 8883,
+        "positive": 556,
+        "roc_auc": 0.7896361947059631,
+        "average_precision": 0.17946968972682953,
+        "brier": 0.054663464426994324,
+        "log_loss": 0.22717325389385223,
+        "ece": 0.008112435167731746
+      }
+    },
+    "allowed18": {
+      "shared_tile_v2": {
+        "n": 5922,
+        "positive": 556,
+        "roc_auc": 0.6486603617668152,
+        "average_precision": 0.15406298637390137,
+        "brier": 0.08354591578245163,
+        "log_loss": 0.30274149775505066,
+        "ece": 0.020361109636723995
+      },
+      "v1counts_raw": {
+        "n": 5922,
+        "positive": 556,
+        "roc_auc": 0.5065044164657593,
+        "average_precision": 0.09141986072063446,
+        "brier": 0.08683501183986664,
+        "log_loss": 0.3286336362361908,
+        "ece": 0.03807648833026178
+      },
+      "v1counts_missing_zero": {
+        "n": 5922,
+        "positive": 556,
+        "roc_auc": 0.5065044164657593,
+        "average_precision": 0.09141986072063446,
+        "brier": 0.08683501183986664,
+        "log_loss": 0.3286336362361908,
+        "ece": 0.03807648833026178
+      },
+      "train_missing_tile_known_prior": {
+        "n": 5922,
+        "positive": 556,
+        "roc_auc": 0.6269271373748779,
+        "average_precision": 0.14345073699951172,
+        "brier": 0.08431949466466904,
+        "log_loss": 0.30654776096343994,
+        "ece": 0.02418829849921167
+      },
+      "public_missing_unknown_copy_weight": {
+        "n": 5922,
+        "positive": 556,
+        "roc_auc": 0.6859615445137024,
+        "average_precision": 0.18087688088417053,
+        "brier": 0.08199519664049149,
+        "log_loss": 0.34075984358787537,
+        "ece": 0.012168650367129885
+      }
+    }
+  },
+  "seconds": 12.158069100012654
+}

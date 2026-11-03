@@ -25,5 +25,16 @@
     1000,
     5000
   ],
-  "expansion": "Conditional on audit and measured marginal learning/game-score evidence, never automatic blind expansion"
+  "expansion": "Conditional on audit and measured marginal learning/game-score evidence, never automatic blind expansion",
+  "opponent_aux_development": {
+    "start": 7110000,
+    "end": 7110099,
+    "status": "consumed_for_development_no_new_final_claim"
+  },
+  "opponent_frozen_v2_holdout": {
+    "start": 7120000,
+    "end": 7120199,
+    "status": "consumed_once_for_registered_v2_evaluation_do_not_reuse_for_future_selection",
+    "checkpoint_sha256": "fb1a5bf797e1fe9fe17f176a76ace999598f02281123adade5a6395400e0e948"
+  }
 }

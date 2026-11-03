@@ -1,0 +1,40 @@
+{
+  "NOT_EXECUTED": true,
+  "train_argv": [
+    ".venv/Scripts/python.exe",
+    "scripts/next_model_opponent_tile_v2_train.py",
+    "--manifest",
+    "datasets/next_history1000/manifest.json",
+    "--auxiliary",
+    "datasets/next_aux_validation100/manifest.json",
+    "--admission",
+    "reports/next_chief_opponent_tile_v2_admission.json",
+    "--family",
+    "shared_tile",
+    "--output",
+    "checkpoints/next_opponent1000_shared_tile_v2",
+    "--device",
+    "cuda",
+    "--resume"
+  ],
+  "development_eval_argv": [
+    ".venv/Scripts/python.exe",
+    "scripts/next_model_opponent_tile_v2_eval.py",
+    "--manifest",
+    "datasets/next_history1000/manifest.json",
+    "--auxiliary",
+    "datasets/next_aux_validation100/manifest.json",
+    "--admission",
+    "reports/next_chief_opponent_tile_v2_admission.json",
+    "--checkpoint",
+    "checkpoints/next_opponent1000_shared_tile_v2/epoch_5.pt",
+    "--output",
+    "reports/next_c_opponent_tile_v2_aux100_development.json"
+  ],
+  "epochs": 6,
+  "batch_size": 128,
+  "seed": 42,
+  "expected_optimizer_steps": 582,
+  "parameter_count": 15918,
+  "timeout_seconds_preparation_estimate": 180
+}

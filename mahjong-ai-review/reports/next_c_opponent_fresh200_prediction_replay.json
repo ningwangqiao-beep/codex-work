@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "explicit_sample_ids_unique": true,
+  "relative_target_and_missing_label_checked": true,
+  "all27_and_allowed18_metrics_rebuilt_exact": true,
+  "conditional_items": 8883,
+  "positive_structural_wait_at_known4": 25,
+  "no_model_reevaluation": true
+}
