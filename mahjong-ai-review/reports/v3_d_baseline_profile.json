@@ -1,0 +1,55 @@
+{
+  "seed": 3500000,
+  "cold_seconds": 0.48395789999631234,
+  "warm_seconds": 0.0001883000004454516,
+  "legal_count": 3,
+  "chosen": 24,
+  "exact_repeat": true,
+  "shanten_cache": "CacheInfo(hits=51, misses=9, maxsize=30000, currsize=9)",
+  "effective_cache": "CacheInfo(hits=27, misses=9, maxsize=10000, currsize=9)",
+  "details": [
+    {
+      "tile": 24,
+      "standard": 3,
+      "seven_pairs": 3,
+      "structural": 3,
+      "missing_debt": 2,
+      "effective": 49,
+      "one_draw_value": 8,
+      "two_draw_value": 0.014641958361930909,
+      "fan_cap_potential": 0,
+      "public_risk": 3.0
+    },
+    {
+      "tile": 25,
+      "standard": 3,
+      "seven_pairs": 3,
+      "structural": 3,
+      "missing_debt": 2,
+      "effective": 49,
+      "one_draw_value": 8,
+      "two_draw_value": 0.014641958361930909,
+      "fan_cap_potential": 0,
+      "public_risk": 3.0
+    },
+    {
+      "tile": 26,
+      "standard": 3,
+      "seven_pairs": 3,
+      "structural": 3,
+      "missing_debt": 2,
+      "effective": 49,
+      "one_draw_value": 8,
+      "two_draw_value": 0.014641958361930909,
+      "fan_cap_potential": 0,
+      "public_risk": 3.0
+    }
+  ],
+  "limits": {
+    "shanten_cache": 30000,
+    "effective_cache": 10000,
+    "draw_branch": 2,
+    "discard_branch": 2
+  },
+  "not_game_strength_evaluation": true
+}

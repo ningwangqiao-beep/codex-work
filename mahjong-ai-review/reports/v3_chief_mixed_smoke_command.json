@@ -1,0 +1,4 @@
+{
+  "exit_code": 1,
+  "command": ".venv/Scripts/python.exe scripts/v3_data_resumable_compare.py --games 2 --seed 4000000 --strong --opponents mixed --timeout 120"
+}

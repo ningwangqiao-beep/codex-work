@@ -1,0 +1,4 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/v3_model_admission.py --manifest datasets/v3_teacher100/manifest.json --inspect-only --output reports/v3_chief_teacher100_inspect.json",
+  "exit_code": 0
+}

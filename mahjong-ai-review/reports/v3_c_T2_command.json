@@ -1,0 +1,6 @@
+{
+  "trainer_sha256": "1bdf34d9c9268e45cbe6080de616ffa7e372d00704b5d5372d94cced7c309015",
+  "command": ".venv/Scripts/python.exe scripts/v3_model_train.py --manifest datasets/v3_teacher100/manifest.json --admission reports/v3_chief_t2_admission.json --output checkpoints/v3_T2_teacher100_seed42 --epochs 6 --batch-size 128 --seed 42 --device cuda --resume",
+  "scope": "admitted T2 supervision only; no RL/no final test",
+  "script_sha256": "9f332867c71d81bee563800c89208fb2835821af6c713fdd286169cec34fee4b"
+}

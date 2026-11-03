@@ -1,0 +1,20 @@
+{
+  "scope": "data_contract_forward_backward_only_NO_optimizer",
+  "batch": 128,
+  "history_padded_length": 120,
+  "history_true_max": 120,
+  "parameters": 20349,
+  "finite_gradients": true,
+  "per_head_loss": {
+    "action_value_mse": 0.4565756618976593,
+    "equivalent_ranking_ce": 1.3099347352981567,
+    "state_value_mse": 43.0968017578125,
+    "tenpai_bce": 0.6828743815422058,
+    "conditional_wait_bce": 0.6869767308235168,
+    "joint_risk_ce": 2.065025806427002
+  },
+  "formal_training": false,
+  "optimizer_steps": 0,
+  "rl_performed": false,
+  "script_sha256": "6dedd74d3467881ed56205bf37c51cdedc8e6130edff6cf9cd2cc278aa7abc2e"
+}

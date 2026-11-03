@@ -1,0 +1,21 @@
+{
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "seed_range": [
+    5000000,
+    5004999
+  ],
+  "seats": 4,
+  "policies": [
+    "random",
+    "shape",
+    "old_candidate",
+    "old_residual",
+    "new_baseline"
+  ],
+  "primary_comparison": "new_baseline vs shape",
+  "mode": "mixed opponents; frozen policies; no training",
+  "seed_groups": 5000,
+  "expected_games": 100000,
+  "no_final_test_tuning": true,
+  "promotion_automatic": false
+}

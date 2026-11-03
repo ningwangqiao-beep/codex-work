@@ -1,0 +1,4 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/v3_b_fast_analysis_check.py",
+  "exit_code": 0
+}

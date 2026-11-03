@@ -1,0 +1,16 @@
+[
+  {
+    "games": 1000,
+    "steps": 120860,
+    "seconds": 3.0652337999999872,
+    "all_ledger_reconciled": true,
+    "source_current_match": true
+  },
+  {
+    "games": 10000,
+    "steps": 1210107,
+    "seconds": 29.31571570000233,
+    "all_ledger_reconciled": true,
+    "source_current_match": true
+  }
+]

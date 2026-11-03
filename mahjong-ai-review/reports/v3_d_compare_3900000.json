@@ -1,0 +1,178 @@
+{
+  "status": "completed",
+  "error": null,
+  "complete_seed_groups": 20,
+  "seconds": 37.60789439999644,
+  "summary": {
+    "random": {
+      "net": -0.325,
+      "win": 0.0125,
+      "self_draw": 0.0,
+      "deal_in_events": 0.0,
+      "deal_in_loss": 0.0,
+      "mean_winning_fan": 1.0,
+      "parts_mean": {
+        "concealed_kong": 0.1,
+        "discard_win": 0.025,
+        "self_draw": -0.3,
+        "cha_jiao_big": 0.0,
+        "added_kong": 0.075,
+        "gang_refund": -0.0375,
+        "direct_kong": -0.1875
+      }
+    },
+    "shape": {
+      "net": 4.1125,
+      "win": 0.4125,
+      "self_draw": 0.0875,
+      "deal_in_events": 0.025,
+      "deal_in_loss": 0.05,
+      "mean_winning_fan": 1.4545454545454546,
+      "parts_mean": {
+        "concealed_kong": -0.25,
+        "discard_win": 0.725,
+        "self_draw": 1.2,
+        "cha_jiao_big": 1.775,
+        "added_kong": 0.125,
+        "gang_refund": 0.35,
+        "direct_kong": 0.1875
+      }
+    },
+    "old_candidate": {
+      "net": 4.1125,
+      "win": 0.4125,
+      "self_draw": 0.0875,
+      "deal_in_events": 0.025,
+      "deal_in_loss": 0.05,
+      "mean_winning_fan": 1.4545454545454546,
+      "parts_mean": {
+        "concealed_kong": -0.25,
+        "discard_win": 0.725,
+        "self_draw": 1.2,
+        "cha_jiao_big": 1.775,
+        "added_kong": 0.125,
+        "gang_refund": 0.35,
+        "direct_kong": 0.1875
+      }
+    },
+    "old_residual": {
+      "net": 3.8625,
+      "win": 0.3625,
+      "self_draw": 0.075,
+      "deal_in_events": 0.025,
+      "deal_in_loss": 0.05,
+      "mean_winning_fan": 1.5172413793103448,
+      "parts_mean": {
+        "concealed_kong": -0.2,
+        "discard_win": 0.7,
+        "self_draw": 1.0,
+        "cha_jiao_big": 1.7,
+        "added_kong": 0.15,
+        "gang_refund": 0.2125,
+        "direct_kong": 0.3
+      }
+    },
+    "new_baseline": {
+      "net": 4.525,
+      "win": 0.625,
+      "self_draw": 0.1375,
+      "deal_in_events": 0.0375,
+      "deal_in_loss": 0.075,
+      "mean_winning_fan": 1.26,
+      "parts_mean": {
+        "concealed_kong": 0.05,
+        "discard_win": 0.95,
+        "self_draw": 1.3,
+        "cha_jiao_big": 1.625,
+        "added_kong": 0.075,
+        "gang_refund": 0.4625,
+        "direct_kong": 0.0625
+      }
+    }
+  },
+  "comparisons": {
+    "random": {
+      "mean_vs_shape": -4.4375,
+      "paired_seed_ci": [
+        -6.4125,
+        -2.7125
+      ]
+    },
+    "old_candidate": {
+      "mean_vs_shape": 0.0,
+      "paired_seed_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "old_residual": {
+      "mean_vs_shape": -0.25,
+      "paired_seed_ci": [
+        -1.35,
+        0.9625
+      ]
+    },
+    "new_baseline": {
+      "mean_vs_shape": 0.4125,
+      "paired_seed_ci": [
+        -1.8875,
+        2.5
+      ]
+    }
+  },
+  "source_before": {
+    "rules\\core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules\\v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator\\table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator\\v3_selfplay.py": "add902686b874fc4a327b3c85ceb4580210526b5ffac7d8e84bc3e228d1f2bc8",
+    "observations\\v3_public.py": "aa1e818f1e02fc173c06d561b776ffbadd8588c280f527cfe40fc1460567cada",
+    "observations\\public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e"
+  },
+  "source_after": {
+    "rules\\core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules\\v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator\\table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator\\v3_selfplay.py": "add902686b874fc4a327b3c85ceb4580210526b5ffac7d8e84bc3e228d1f2bc8",
+    "observations\\v3_public.py": "aa1e818f1e02fc173c06d561b776ffbadd8588c280f527cfe40fc1460567cada",
+    "observations\\public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e"
+  },
+  "legacy_metadata": {
+    "old_candidate": {
+      "kind": "candidate",
+      "checkpoint": "PROJECT\\experiments\\round2_c\\candidate\\best.pt",
+      "checkpoint_sha256": "c72a9c1b1ae61fa36f178f5c462bd4aea72acad13eada87d28a519b0187635a7",
+      "trained_under": "legacy_non_V3",
+      "evaluation_rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "financial_output_compatible": false,
+      "decision_scope": "legal discard only; other actions simulator baseline",
+      "flags": [
+        "LEGACY_NOT_V3_TRAINED",
+        "LEGACY_STATE_VALUE_IGNORED",
+        "LEGACY_RISK_AND_LOSS_NOT_V3_SCORES",
+        "OWN_EXCHANGE_AND_FULL_HISTORY_NOT_ENCODED"
+      ]
+    },
+    "old_residual": {
+      "kind": "residual",
+      "checkpoint": "PROJECT\\checkpoints\\round2_candidate_rl_rounded\\last.pt",
+      "checkpoint_sha256": "a022c3df22b947da72d589753616c00b54b17df36867334493816d890303ad17",
+      "trained_under": "legacy_non_V3",
+      "evaluation_rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "financial_output_compatible": false,
+      "decision_scope": "legal discard only; other actions simulator baseline",
+      "flags": [
+        "LEGACY_NOT_V3_TRAINED",
+        "LEGACY_STATE_VALUE_IGNORED",
+        "LEGACY_RISK_AND_LOSS_NOT_V3_SCORES",
+        "OWN_EXCHANGE_AND_FULL_HISTORY_NOT_ENCODED"
+      ]
+    }
+  },
+  "limitations": [
+    "random opponent discards; meld actions shared simulator",
+    "win events not transfer count",
+    "configured singlemax settlement; not verified room",
+    "paired initial deal not identical future",
+    "small sample no strength claim"
+  ]
+}

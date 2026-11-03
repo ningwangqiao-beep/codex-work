@@ -1,0 +1,35 @@
+{
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "stage": "T2_SUPERVISED_ONLY",
+  "manifest_sha256": "c403e3ec738496fe8c16200de46159d06bb80c4fe9a2ef564310f2bac37c5f77",
+  "rl_training_allowed": false,
+  "max_epochs": 6,
+  "max_batch_size": 128,
+  "scope": "small teacher preference and teacher-policy terminal V; not counterfactual Q; not promotion",
+  "passed": true,
+  "baseline_development_audited": true,
+  "dataset_isolation_audited": true,
+  "state_target_definition_audited": true,
+  "history_complete_audited": true,
+  "candidate_legal_audited": true,
+  "seed_family_split_audited": true,
+  "supervised_training_allowed": true,
+  "rules_ready": {
+    "path": "reports/v3_chief_ready.json",
+    "sha256": "c7f559047ed0ab6631f5f0d294949194c63c8debc1293f2ff7b1c1628622d5d2"
+  },
+  "strict1000": {
+    "path": "reports/v3_d_batch_1000_3200000.json",
+    "sha256": "949daa300c1f51a745fad26a24b45d138165fc3cb23af13b0b2d7f2bd49d279a"
+  },
+  "performance10000": {
+    "path": "reports/v3_d_batch_10000_3300000.json",
+    "sha256": "c96aba6eb5adbe1897002743605945890a70844be237b0244054068f26bbd658"
+  },
+  "chief_evidence": {
+    "reports/v3_chief_gate_tests.log": "ec6c55437152ee884d4fd7e982bc9710967313e3d1c2a938a595f852b43e13ad",
+    "reports/v3_chief_batch_recheck.json": "97de5b152a60b2c49e0a77a728e7b1f986075581eb246c658be9fa7e8ed7cf4c",
+    "reports/v3_chief_teacher100_inspect.json": "832d002829ba84e2732f427479d53a70cbccbe59a5b629dd5336d7de727a8bbe",
+    "reports/v3_chief_baseline_vs_random.json": "30c6fa51f50424521131f08ba25620a22e26156a2c9c1c819b6be83720ea8078"
+  }
+}

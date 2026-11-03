@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-03T00:44:10.361047+00:00",
+  "python": "3.12.14",
+  "torch": "2.11.0+cu128",
+  "cuda_build": "12.8",
+  "cuda_available": true,
+  "scope": "GPU_environment_probe_not_mahjong_training",
+  "script_sha256": "5dd33c31a8c3ef2a9a2a6723241ab5bc3e45a074cd5f0972b1725f9ef4b24eb5",
+  "nvidia_smi": "NVIDIA GeForce RTX 3060, 610.88, 8192 MiB, 1594 MiB, 49",
+  "device": "NVIDIA GeForce RTX 3060",
+  "forward_backward_finite": true,
+  "loss": 2040.89111328125,
+  "seconds": 0.18106819999957224,
+  "peak_allocated_bytes": 33817600
+}

@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "epochs_limit": 6,
+  "best_epoch": 5,
+  "optimizer_steps": 48,
+  "seconds_this_invocation": 4.764175299998897,
+  "binding": "35c1c57d80b725dd1cfbe811c924430c347dd7a1ae3ad06f1211a2cc9cb1d68e",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "train_games": 80,
+  "validation_games": 20,
+  "target_semantics": "lexicographic_preference_rank_NOT_Q",
+  "state_target_policy": "one rotating BaselineV3 seat vs three frozen simulator heuristic styles",
+  "source_hashes": {
+    "models\\v3_action_value.py": "5ba2fc39cd42a9c5a985f0c656a47745ec9de5fbaf98af9fd10ac7ad0b11f8ab",
+    "models\\revision_action_value.py": "8c4fe95cf10391c4f3cadeafe8b3eac26fdabb1a7c7e150d7f7a8a43cd7e76f5",
+    "training\\v3_supervised.py": "1bdf34d9c9268e45cbe6080de616ffa7e372d00704b5d5372d94cced7c309015",
+    "training\\v3_losses.py": "ab0104982b57a7a161219f028020903d1c31ab755e0b74ebe15400d51ca65d7c",
+    "training\\v3_gate.py": "f0e55a23257751f138c8016652884e8cd7a1b1afd1e7462ebf7ef9740bda0c34",
+    "evaluation\\revision_action_value.py": "c92be8b2f6cd65810c8f525e569e12f83e9ca46e267583eac7313a1b6cce0fde"
+  },
+  "formal_RL": false,
+  "playing_strength_promotion_claimed": false,
+  "resources": {
+    "utc_seconds": 1793667086.2901409,
+    "device": "cuda",
+    "cuda_peak_allocated_bytes": 34328576,
+    "cuda_peak_reserved_bytes": 50331648,
+    "process_peak_working_set_bytes": 1571819520,
+    "process_working_set_bytes": 1571397632,
+    "gpu_sample": "48, 1667, 12"
+  }
+}

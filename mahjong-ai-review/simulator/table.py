@@ -9,7 +9,7 @@ class Table:
   self.config=config or AssumptionConfig();self.strict=strict
   self.hands=deepcopy(hands);self.missing=list(missing);self.wall=list(wall)
   self.melds=[[] for _ in range(4)];self.discards=[];self.active=[True]*4;self.scores=[0]*4
-  self.gang_ledger=[];self.concealed_kongs=set()
+  self.settlement_ledger=[];self.gang_ledger=[];self.concealed_kongs=set()
   self.turn=0;self.phase='discard';self.pending=None;self.wins=[]
   self.inventory=self.counts()
   if strict and (self.inventory!=Counter({t:4 for t in range(27)}) or [len(h) for h in hands]!=[14,13,13,13]):raise ValueError("strict initial inventory/hand sizes")
@@ -24,6 +24,10 @@ class Table:
   c=self.counts()
   if any(type(t)!=int or t not in range(27) or n>4 for t,n in c.items()) or c!=self.inventory:raise ValueError('inventory conservation')
   if sum(self.scores)!=0:raise ValueError('score conservation')
+  reconstructed=[0]*4
+  for e in self.settlement_ledger:
+   reconstructed[e["payer"]]-=e["amount"];reconstructed[e["receiver"]]+=e["amount"]
+  if reconstructed!=self.scores:raise ValueError("ledger reconstruction")
   if self.strict:
    for p in range(4):
     if not self.active[p]:
@@ -54,7 +58,8 @@ class Table:
   self.discards.pop();self.melds[p].append([t]*(need+1));self.pending=None;self.turn=p;self.phase='discard'
   if kind=='exposed_kong':
    self.hands[p].append(self.wall.pop())
-   self.pay_gang(p,[payer],self.config.exposed_kong_fee)
+   self.pay_gang(p,[payer],self.config.exposed_kong_fee,"direct_kong")
+   if getattr(self.config,"rule_version",None)=="SICHUAN-XUEZHAN-4FAN-V3":self.pay_gang(p,[q for q in range(4) if q not in (p,payer) and self.active[q]],1,"direct_kong")
   self.check()
  def concealed_kong(self,p,t):
   self.seat(p)
@@ -63,7 +68,7 @@ class Table:
   for _ in range(4):self.hands[p].remove(t)
   self.concealed_kongs.add((p,len(self.melds[p])))
   self.melds[p].append([t]*4);self.hands[p].append(self.wall.pop())
-  self.pay_gang(p,[q for q in range(4) if q!=p and self.active[q]],self.config.concealed_kong_fee);self.check()
+  self.pay_gang(p,[q for q in range(4) if q!=p and self.active[q]],self.config.concealed_kong_fee,"concealed_kong");self.check()
  def discard_win(self,winners,payments=None):
   if self.phase!='claims' or not self.pending or not winners or len(set(winners))!=len(winners):raise ValueError('win phase')
   payer,t=self.pending
@@ -73,7 +78,7 @@ class Table:
   from rules.core import score
   expected=[score(self.hands[p]+[t],self.missing[p],self.melds[p],self.config)["payment"] for p in winners]
   if payments is not None and list(payments)!=expected:raise ValueError("incorrect payment")
-  updated=transfer(self.scores,payer,winners,expected)
+  updated=self.book(payer,winners,expected,"discard_win")
   self.discards.pop();self.wins.append((payer,t,list(winners)));self.pending=None;self.scores=updated
   for p in winners:self.active[p]=False
   self.phase='ended' if sum(self.active)<=1 else 'advance'
@@ -99,8 +104,11 @@ class Table:
   self.seat(p)
   if self.phase!='discard' or self.turn!=p or not self.can_win(p):raise ValueError('illegal self win')
   amount=score(self.hands[p],self.missing[p],self.melds[p],self.config)['payment']
+  if getattr(self.config,'rule_version',None)=='SICHUAN-XUEZHAN-4FAN-V3':
+   from rules.v3 import score_v3
+   amount=score_v3(self.hands[p],self.missing[p],self.melds[p],self.config,True)['payment']
   for q in range(4):
-   if q!=p and self.active[q]:self.scores=transfer(self.scores,q,[p],[amount])
+   if q!=p and self.active[q]:self.scores=self.book(q,[p],[amount],"self_draw")
   self.active[p]=False;self.phase='ended' if sum(self.active)<=1 else 'advance';self.check()
  def added_kong(self,p,t):
   self.seat(p)
@@ -119,14 +127,14 @@ class Table:
     self.seat(q)
     if q==p or not self.can_win(q,t):raise ValueError('illegal rob win')
     payments.append(score(self.hands[q]+[t],self.missing[q],self.melds[q],self.config)['payment'])
-   updated=transfer(self.scores,p,list(winners),payments)
+   updated=self.book(p,list(winners),payments,"rob_kong_win")
    self.hands[p].remove(t);self.wins.append((p,t,list(winners)));self.scores=updated
    for q in winners:self.active[q]=False
    self.phase='ended' if sum(self.active)<=1 else 'advance'
   else:
    self.hands[p].remove(t);self.melds[p][self.melds[p].index([t]*3)].append(t)
    self.hands[p].append(self.wall.pop());self.phase='discard'
-   self.pay_gang(p,[q for q in range(4) if q!=p and self.active[q]],self.config.added_kong_fee)
+   self.pay_gang(p,[q for q in range(4) if q!=p and self.active[q]],self.config.added_kong_fee,"added_kong")
   self.pending=None;self.check()
  def finish(self):
   from rules.core import score
@@ -138,23 +146,32 @@ class Table:
   for p in active:
    if p in pigs:continue
    amounts=[score(self.hands[p]+[t],self.missing[p],self.melds[p],self.config)['payment'] for t in range(27) if self.can_win(p,t)]
-   if amounts:ready[p]=max(amounts)
+   if amounts:ready[p]=min(amounts) if getattr(self.config,"cha_jiao_mode","max_wait_payment")=="min_wait_payment" else max(amounts)
   for p in pigs:
    for q in active:
-    if q not in pigs:self.scores=transfer(self.scores,p,[q],[2**self.config.fan_cap])
+    if q not in pigs:self.scores=self.book(p,[q],[2**self.config.fan_cap],"flower_pig")
   for p in active:
-   if self.config.cha_jiao_enabled and p not in pigs and p not in ready:
-    for q,amount in ready.items():self.scores=transfer(self.scores,p,[q],[amount])
+   if self.config.cha_jiao_enabled and getattr(self.config,"cha_jiao_mode","max_wait_payment")!="disabled" and p not in pigs and p not in ready:
+    for q,amount in ready.items():self.scores=self.book(p,[q],[amount],("cha_jiao_small" if self.config.cha_jiao_mode=="min_wait_payment" else "cha_jiao_big") if hasattr(self.config,"cha_jiao_mode") else "cha_jiao")
   if self.config.gang_payments_enabled and self.config.refund_unready_gangs:
    for receiver,payer,amount in self.gang_ledger:
-    if receiver in active and receiver not in ready:self.scores=transfer(self.scores,receiver,[payer],[amount])
+    if receiver in active and receiver not in ready:self.scores=self.book(receiver,[payer],[amount],"gang_refund")
   self.settled=True;self.phase='ended';self.check()
 
 
 
- def pay_gang(self,receiver,payers,amount):
+ def pay_gang(self,receiver,payers,amount,category="gang"):
   if not self.config.gang_payments_enabled:return
   for p in payers:
-   self.scores=transfer(self.scores,p,[receiver],[amount]);self.gang_ledger.append((receiver,p,amount))
+   self.scores=self.book(p,[receiver],[amount],category);self.gang_ledger.append((receiver,p,amount))
+
+
+
+ def book(self,payer,winners,amounts,category):
+  out=transfer(self.scores,payer,winners,amounts)
+  for winner,amount in zip(winners,amounts):self.settlement_ledger.append({"category":category,"payer":payer,"receiver":winner,"amount":amount,"reversal":category=="gang_refund"})
+  return out
+
+
 
 

@@ -1,0 +1,9 @@
+{
+  "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+  "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+  "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+  "rules/hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
+  "rules/hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf",
+  "tests/test_rules_v3.py": "19b984faafb67e1b34dbd0d6d125ee2ad10f4e871a34e7b55ca81a3e2964bee8",
+  "tests/test_rules_v3_matrix.py": "4336048d3c5a963c420fb496a4eb9fc573b0a4e642f9d875d55f2e0515611e1b"
+}

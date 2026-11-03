@@ -1,0 +1,5 @@
+{
+  "note": "Live initial checkpoint; V3 implementation may still be changing",
+  "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+  "exit_code": 0
+}

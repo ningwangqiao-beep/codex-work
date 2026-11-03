@@ -135,3 +135,19 @@ C继续完整game动作/净收益复现测试；D对接候选残差actor-critic�
   "clear_improvement": false
 }
 这是1000局训练后独立100种子组评估，不代表完整麻将AI；只学习舍牌，碰杠仍启发式。无明确正区间不标成功。
+
+## V3额度恢复后主审准入
+用户确认额度恢复，B/C/D实际重新调度。V3 core/v3/table冻结，大小查叫三配置与杠分active子集测试已新增。
+主智能体执行 .venv/Scripts/python.exe -m unittest discover -s tests -v，80项通过9.651秒、exit0，日志reports/v3_chief_gate_tests.log和command.json。
+主智能体独立完成12 strict集成局、三交换方向，生成六源hash/testlogsha绑定reports/v3_chief_ready.json。已向D放行1000局seed3200000，成功后10000局独立seed3300000。尚不声明批次已完成。
+旧模型V3 32局仅smoke，未晋级；强Bot memo单决策缓存对照不等于整局吞吐提升。新V3正式训练/RL继续不准入，等待批次及强baseline/数据价值审计。
+
+## V3最新独立验收与实际后台运行
+主审独立执行80tests通过；12strict集成、1000strict120860步骤3.065秒、10000独立性能1210107步骤29.316秒，并对11000局每笔ledger重建score零和及六源码当前hash核对，均通过。证据v3_chief_batch_recheck.json。
+Calculator fast模块主审实际615case回归exit0；这是相对已修复算法一致，不是新的独立数学证明。
+V3strong开发20seed400局mean4.525 vs shape4.1125，差+.4125 CI[-1.8875,2.5]，无相对shape提升证据。vs随机开发差+4.85 CI[3.975,5.6875]，仅准入基础监督，不宣称高手。
+独立最终评估已实际后台启动：experiments/v3_frozen_evaluation/state.json，runner pid42188，child37532，5000新seed5000000..5004999，四座五冻结策略100000局。已现场观察2544局持久化，非完成。CPU2，最低空闲RAM1GB/温度80/显存7GB/8h，eval timeout6h；checkpoint为逐完整seed组JSONL，支持resume。预注册v3_final_preregistration.json。新T2模型不在这批已冻结最终名单，不能中途加模型。
+主审实际inspect teacher100：955train/249validation/fullhistory最大134/10源+分片hash/整局隔离通过，T2_SUPERVISED_ONLY准入reports/v3_chief_t2_admission.json已验证training_allowedTrue/RLFalse。仅授权6epochs128batch小监督，老师rank非counterfactualQ、终局raw V只是老师策略的V。C正在执行，尚未报告训练结果。
+强化学习仍关闭；模型不自动覆盖best，不基于最终测试调参。
+
+T2首个V3真实GPU监督已完成：80train games/955状态、20validation games/249状态，6epochs/48 optimizer steps，best epoch5。主审已读取COMPLETE/metrics/weights文件及命令，validation exact/equivalent=.815261、Top3=.943775、teacher preference regret=.071717（非净分Q）。CUDA峰值allocated34328576B、process working set约1.57GB；C记录实际4.764秒。权重checkpoints/v3_T2_teacher100_seed42，各best_epoch独立保留；无RL，不覆盖旧best，不宣称强度晋级。后续新模型开发整局评估使用新seed，绝不插入正在运行的五冻结策略最终评估。

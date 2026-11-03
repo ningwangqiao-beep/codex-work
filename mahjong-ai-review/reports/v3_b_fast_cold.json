@@ -1,0 +1,23 @@
+{
+  "process_cold_seconds": 0.17248329999711132,
+  "working_set_bytes": 32522240,
+  "peak_working_bytes": 32522240,
+  "result": {
+    "standard": 0,
+    "seven_pairs": 5,
+    "minimum": 0
+  },
+  "effective": [
+    {
+      "tile": 10,
+      "remaining": 3,
+      "shanten": -1
+    },
+    {
+      "tile": 11,
+      "remaining": 4,
+      "shanten": -1
+    }
+  ],
+  "uses_gpu": false
+}

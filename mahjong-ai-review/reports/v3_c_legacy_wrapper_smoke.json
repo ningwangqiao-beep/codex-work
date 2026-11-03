@@ -1,0 +1,57 @@
+{
+  "scope": "fixture_migration_only_not_V3_game_performance",
+  "results": [
+    {
+      "kind": "static",
+      "checkpoint": "PROJECT\\checkpoints\\round2_warmstart\\imitation_last.pt",
+      "checkpoint_sha256": "ddf2f16e05d6b9384f76976240ca30fcad6beee6d0160ebde53fbbffbca8a85c",
+      "trained_under": "legacy_non_V3",
+      "evaluation_rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "financial_output_compatible": false,
+      "decision_scope": "legal discard only; other actions simulator baseline",
+      "flags": [
+        "LEGACY_NOT_V3_TRAINED",
+        "LEGACY_STATE_VALUE_IGNORED",
+        "LEGACY_RISK_AND_LOSS_NOT_V3_SCORES",
+        "OWN_EXCHANGE_AND_FULL_HISTORY_NOT_ENCODED"
+      ],
+      "fixture_action": 0,
+      "hidden_future_invariance": true
+    },
+    {
+      "kind": "candidate",
+      "checkpoint": "PROJECT\\experiments\\round2_c\\candidate\\best.pt",
+      "checkpoint_sha256": "c72a9c1b1ae61fa36f178f5c462bd4aea72acad13eada87d28a519b0187635a7",
+      "trained_under": "legacy_non_V3",
+      "evaluation_rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "financial_output_compatible": false,
+      "decision_scope": "legal discard only; other actions simulator baseline",
+      "flags": [
+        "LEGACY_NOT_V3_TRAINED",
+        "LEGACY_STATE_VALUE_IGNORED",
+        "LEGACY_RISK_AND_LOSS_NOT_V3_SCORES",
+        "OWN_EXCHANGE_AND_FULL_HISTORY_NOT_ENCODED"
+      ],
+      "fixture_action": 5,
+      "hidden_future_invariance": true
+    },
+    {
+      "kind": "residual",
+      "checkpoint": "PROJECT\\checkpoints\\round2_candidate_rl_rounded\\last.pt",
+      "checkpoint_sha256": "a022c3df22b947da72d589753616c00b54b17df36867334493816d890303ad17",
+      "trained_under": "legacy_non_V3",
+      "evaluation_rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+      "financial_output_compatible": false,
+      "decision_scope": "legal discard only; other actions simulator baseline",
+      "flags": [
+        "LEGACY_NOT_V3_TRAINED",
+        "LEGACY_STATE_VALUE_IGNORED",
+        "LEGACY_RISK_AND_LOSS_NOT_V3_SCORES",
+        "OWN_EXCHANGE_AND_FULL_HISTORY_NOT_ENCODED"
+      ],
+      "fixture_action": 5,
+      "hidden_future_invariance": true
+    }
+  ],
+  "source_sha256": "dfab6bebd0d01cb552422b3280e7f5e64161d2c4390f73ee51682c3c17c632f7"
+}

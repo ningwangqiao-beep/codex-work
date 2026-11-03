@@ -1,0 +1,9 @@
+{
+  "cases": 615,
+  "parity": true,
+  "slow_seconds": 1.3337848000010126,
+  "first_fast_seconds": 0.03040599999803817,
+  "warm_10passes_seconds": 0.02226830000290647,
+  "warm_calls_per_second": 276177.3462364571,
+  "note": "cold fast measured after slow target enumeration; not process cold start; no GPU"
+}

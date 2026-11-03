@@ -1,0 +1,31 @@
+{
+  "scope": "CPU_interface_fixture_only",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "schema": "v3-public191-fullseq-v2",
+  "parameters": 20349,
+  "history_encoded_lengths": [
+    257,
+    0
+  ],
+  "history_stress_scope": "synthetic257-event concatenation, not a physical-game claim",
+  "not_truncated_to_last11": true,
+  "hidden_future_invariance": true,
+  "draw_tiles_erased": true,
+  "finite_all_head_gradients": true,
+  "per_head_loss": {
+    "action_value_mse": 0.0026191971264779568,
+    "equivalent_ranking_ce": 2.485848903656006,
+    "state_value_mse": 0.4891558885574341,
+    "tenpai_bce": 0.7215425968170166,
+    "conditional_wait_bce": 0.0,
+    "joint_risk_ce": 2.1199772357940674
+  },
+  "formal_V3_training": false,
+  "rl_performed": false,
+  "source_sha256": {
+    "models\\v3_action_value.py": "5ba2fc39cd42a9c5a985f0c656a47745ec9de5fbaf98af9fd10ac7ad0b11f8ab",
+    "inference\\v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+    "training\\v3_losses.py": "ab0104982b57a7a161219f028020903d1c31ab755e0b74ebe15400d51ca65d7c",
+    "scripts\\v3_model_interface_smoke.py": "a432ffab376ef0abd0c353fc0feacc83d1e97e1fd80a15f97a0a214febe82cc9"
+  }
+}

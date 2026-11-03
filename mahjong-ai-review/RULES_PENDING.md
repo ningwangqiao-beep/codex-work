@@ -11,3 +11,7 @@ Optional gang proposal now implemented: gang_payments_enabled=False by default; 
 Dragon seven pairs: dragon_pair_quad_fan is configurable, default 0. At positive value each four-copy group in seven-pairs adds that many fan, still capped at four. Claim API rejects any peng/kong when an active opponent can win the pending tile; this isolated configuration assumes all legal discard wins are taken rather than voluntary pass. This avoids an unmodelled passed-win state. Advancing without claims remains an explicit caller operation; selfplay must resolve wins before advance.
 
 Round 2 privacy interpretation: concealed-kong identity is private to its owner; Table.concealed_kongs stores owner/meld-index so observation exporter can mask opponent identities. Tile count four and kong action remain public. This conservative information policy is a simulation assumption pending room evidence.
+
+V3 assumptions now supersede legacy only under explicit V3Config. See RULES_V3.md. Dai-yao/jiang-triplet interpretation, unlisted combo max target, terminal flower-pig/max cha-jiao/refund relations remain unconfirmed. Big/small cha-jiao distinct payout modes remain not implemented, don't imply full room support.
+
+V3 now implements explicit max_wait_payment/min_wait_payment/disabled cha-jiao modes. Naming max=big/min=small is a simulation interpretation requiring room evidence, not official confirmation. Supersedes earlier 'not implemented' status.

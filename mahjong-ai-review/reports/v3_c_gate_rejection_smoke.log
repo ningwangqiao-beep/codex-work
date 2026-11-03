@@ -1,0 +1,5 @@
+{
+  "expected_rejection": "Missing V3 rule_version",
+  "formal_training_started": false,
+  "rl_started": false
+}

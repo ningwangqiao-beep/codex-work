@@ -1,0 +1,10 @@
+{
+  "scope": "development_only_random_discard_opponents",
+  "seed_groups": 20,
+  "baseline_minus_random": 4.85,
+  "paired_seed_bootstrap_95ci": [
+    3.975,
+    5.6875
+  ],
+  "not_final_strength_evidence": true
+}

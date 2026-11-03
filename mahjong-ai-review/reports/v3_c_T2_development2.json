@@ -1,0 +1,142 @@
+{
+  "status": "completed",
+  "error": null,
+  "scope": "development_seeds_only_NO_final_test_NO_promotion",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "seed_range": [
+    4400000,
+    4400001
+  ],
+  "complete_seed_groups": 2,
+  "seconds": 4.060492700002214,
+  "summary": {
+    "T2": {
+      "games": 8,
+      "mean_net_score": 6.5,
+      "win_rate": 0.75,
+      "self_draw_rate": 0.25,
+      "mean_deal_in_loss": 0,
+      "seat_mean": {
+        "0": 7,
+        "1": 4,
+        "2": 4,
+        "3": 11
+      },
+      "parts_mean": {
+        "gang_refund": 0.0,
+        "cha_jiao_big": 1.5,
+        "self_draw": 3.0,
+        "direct_kong": 1.0,
+        "discard_win": 1.0
+      }
+    },
+    "strong": {
+      "games": 8,
+      "mean_net_score": 6.125,
+      "win_rate": 0.75,
+      "self_draw_rate": 0.25,
+      "mean_deal_in_loss": 0,
+      "seat_mean": {
+        "0": 9,
+        "1": 4,
+        "2": 7,
+        "3": 4.5
+      },
+      "parts_mean": {
+        "gang_refund": 0.0,
+        "cha_jiao_big": 1.5,
+        "self_draw": 3.0,
+        "added_kong": 0.375,
+        "direct_kong": 0.0,
+        "discard_win": 1.25
+      }
+    },
+    "shape": {
+      "games": 8,
+      "mean_net_score": 3.75,
+      "win_rate": 0.125,
+      "self_draw_rate": 0,
+      "mean_deal_in_loss": 0.25,
+      "seat_mean": {
+        "0": 3,
+        "1": 0,
+        "2": 4,
+        "3": 8
+      },
+      "parts_mean": {
+        "gang_refund": 0.5,
+        "cha_jiao_big": 3.25,
+        "direct_kong": 0.0,
+        "discard_win": 0.0
+      }
+    }
+  },
+  "comparisons": {
+    "T2_vs_strong": {
+      "paired_initial_seed_mean": 0.375,
+      "seed_bootstrap95ci": [
+        -2.5,
+        3.25
+      ],
+      "seed_differences": [
+        3.25,
+        -2.5
+      ]
+    },
+    "T2_vs_shape": {
+      "paired_initial_seed_mean": 2.75,
+      "seed_bootstrap95ci": [
+        2.0,
+        3.5
+      ],
+      "seed_differences": [
+        2.0,
+        3.5
+      ]
+    }
+  },
+  "inference_cost": {
+    "T2": {
+      "seconds": 3.2217219999729423,
+      "decisions": 81,
+      "mean_seconds": 0.0397743456786783
+    },
+    "strong": {
+      "seconds": 0.5942692000244278,
+      "decisions": 86,
+      "mean_seconds": 0.006910106977028231
+    },
+    "shape": {
+      "seconds": 0.004828000026463997,
+      "decisions": 114,
+      "mean_seconds": 4.235087742512278e-05
+    }
+  },
+  "model_metadata": {
+    "checkpoint": "outputs\\mahjong_brain\\checkpoints\\v3_T2_teacher100_seed42\\best_epoch_5.pt",
+    "checkpoint_sha256": "aa8418016121f6ea89939750397aa9a0858eb22f3aa811d4120cd4afc1491b1e",
+    "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+    "binding": "35c1c57d80b725dd1cfbe811c924430c347dd7a1ae3ad06f1211a2cc9cb1d68e",
+    "action_semantics": "teacher preference rank NOT terminal action Q",
+    "state_semantics": "one rotating BaselineV3 seat vs three frozen simulator heuristic styles; V3 terminal net score in raw base units",
+    "decision_scope": "discard-only; other stages remain simulator baselines",
+    "training_games": 80,
+    "validation_games": 20,
+    "rl_performed": false
+  },
+  "source_hashes": {
+    "inference\\v3_T2_policy.py": "dcfad263d07fb7434ad1c569529facb0eb9e78664d0abfa95d703b489fa67ffc",
+    "scripts\\v3_model_development_eval.py": "fc87e7da739404c3a65697e30d5c5286346e3479f854ed406fe9ee399dbfda31",
+    "simulator\\v3_selfplay.py": "add902686b874fc4a327b3c85ceb4580210526b5ffac7d8e84bc3e228d1f2bc8",
+    "baselines\\v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules\\core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules\\v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator\\table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21"
+  },
+  "limitations": [
+    "random legal-discard opponents; claims/default other stages shared simulator",
+    "paired initial deal does not imply identical future trajectories",
+    "preference head not counterfactual Q; policy-conditioned V unused for choice",
+    "20seed or smaller development sample; no strength promotion"
+  ]
+}

@@ -29,3 +29,10 @@ runner先请求checkpoint（最多等待30秒），训练在batch/整局边界�
     .\.venv\Scripts\python.exe scheduler\runner.py scheduler\round2_candidate_queue.json
 
 停止文件为experiments/round2_candidate_queue/STOP。默认CPU2、RAM最低1GB、80℃与显存7000MiB、4小时deadline；只执行已配置1000局残差自对弈→100独立seed组greedy对比→报告→审计包。机器休眠时不会继续计算。
+
+## V3当前本地后台入口
+当前独立长期评估：scheduler/v3_frozen_evaluation.json，状态experiments/v3_frozen_evaluation/state.json。恢复：
+
+    .\.venv\Scripts\python.exe scheduler\runner.py scheduler\v3_frozen_evaluation.json
+
+STOP文件experiments/v3_frozen_evaluation/STOP。逐完整seed组恢复，不保证被中断seed内部不重复。100000局最终评估后自动保存报告及审计包；规则/模型/数据hash变化会拒绝继续。不可在该最终集调参。该队列仅评估五个预注册冻结策略，不训练或自动发明算法。新T2小监督由单独已批准任务执行，GPU主训练最多一个。

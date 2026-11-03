@@ -1,0 +1,4 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/v3_model_gpu_probe.py",
+  "exit_code": 0
+}

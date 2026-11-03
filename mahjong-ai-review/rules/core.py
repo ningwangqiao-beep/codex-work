@@ -87,6 +87,9 @@ def exchange(hands,selections,offset):
  return out
 
 def score(hand,missing,melds=(),config=AssumptionConfig()):
+ if getattr(config,"rule_version",None)=="SICHUAN-XUEZHAN-4FAN-V3":
+  from rules.v3 import score_v3
+  return score_v3(hand,missing,melds,config)
  if not winning(hand,missing,len(melds),melds):raise ValueError('not winning')
  c=Counter(hand);fan=config.base_fan;patterns=['basic']
  if not melds and all(n%2==0 for n in c.values()):

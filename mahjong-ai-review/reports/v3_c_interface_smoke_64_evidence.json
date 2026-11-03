@@ -1,0 +1,30 @@
+{
+  "scope": "CPU_interface_fixture_only",
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "schema": "v3-public191-fullseq-v2",
+  "parameters": 20349,
+  "history_encoded_lengths": [
+    64,
+    0
+  ],
+  "not_truncated_to_last11": true,
+  "hidden_future_invariance": true,
+  "draw_tiles_erased": true,
+  "finite_all_head_gradients": true,
+  "per_head_loss": {
+    "action_value_mse": 0.005082546733319759,
+    "equivalent_ranking_ce": 2.4856886863708496,
+    "state_value_mse": 0.4176899194717407,
+    "tenpai_bce": 0.7215836048126221,
+    "conditional_wait_bce": 0.0,
+    "joint_risk_ce": 2.1357955932617188
+  },
+  "formal_V3_training": false,
+  "rl_performed": false,
+  "source_sha256": {
+    "models\\v3_action_value.py": "5ba2fc39cd42a9c5a985f0c656a47745ec9de5fbaf98af9fd10ac7ad0b11f8ab",
+    "inference\\v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+    "training\\v3_losses.py": "ab0104982b57a7a161219f028020903d1c31ab755e0b74ebe15400d51ca65d7c",
+    "scripts\\v3_model_interface_smoke.py": "c6c00ada59d9e5355844e0835d7763fefa59d01d519d4bc8af669a485aa36454"
+  }
+}

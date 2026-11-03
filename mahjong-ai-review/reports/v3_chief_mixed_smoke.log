@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "PROJECT\scripts\v3_data_resumable_compare.py", line 74, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--games',type=int,default=2);p.add_argument('--seed',type=int,default=3400000);p.add_argument('--timeout',type=float,default=90);p.add_argument('--strong',action='store_true');p.add_argument('--opponents',choices=['random','mixed'],default='random');p.add_argument('--resume',action='store_true');a=p.parse_args();run(a.games,a.seed,a.timeout,a.strong,a.opponents,a.resume)
+                                                                                                                                                                                                                                                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\scripts\v3_data_resumable_compare.py", line 28, in run
+    if final.exists():raise ValueError('Final result immutable; use new independent seed')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Final result immutable; use new independent seed

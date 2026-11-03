@@ -1,0 +1,12 @@
+{
+  "data_checks_passed": true,
+  "manifest_sha256": "c403e3ec738496fe8c16200de46159d06bb80c4fe9a2ef564310f2bac37c5f77",
+  "counts": {
+    "train": 955,
+    "validation": 249
+  },
+  "history_max": 134,
+  "rule_version": "SICHUAN-XUEZHAN-4FAN-V3",
+  "training_allowed": false,
+  "rl_allowed": false
+}
