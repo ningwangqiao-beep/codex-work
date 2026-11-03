@@ -151,3 +151,151 @@ V3strong开发20seed400局mean4.525 vs shape4.1125，差+.4125 CI[-1.8875,2.5]�
 强化学习仍关闭；模型不自动覆盖best，不基于最终测试调参。
 
 T2首个V3真实GPU监督已完成：80train games/955状态、20validation games/249状态，6epochs/48 optimizer steps，best epoch5。主审已读取COMPLETE/metrics/weights文件及命令，validation exact/equivalent=.815261、Top3=.943775、teacher preference regret=.071717（非净分Q）。CUDA峰值allocated34328576B、process working set约1.57GB；C记录实际4.764秒。权重checkpoints/v3_T2_teacher100_seed42，各best_epoch独立保留；无RL，不覆盖旧best，不宣称强度晋级。后续新模型开发整局评估使用新seed，绝不插入正在运行的五冻结策略最终评估。
+
+
+## V3冻结独立评估实际结果
+5000组新发牌、四座轮换、五冻结策略。不是新神经网络训练。各款项以ledger互斥对账，原始逐局JSONL保留。
+{
+  "status": "completed",
+  "complete_seed_groups": 5000,
+  "seconds": 9708.6915334,
+  "summary": {
+    "random": {
+      "net": -1.7095,
+      "win": 0.04405,
+      "self_draw": 0.0099,
+      "deal_in_events": 0.1354,
+      "deal_in_loss": 0.351,
+      "mean_winning_fan": 1.318955732122588,
+      "parts_mean": {
+        "added_kong": -0.0309,
+        "self_draw": -0.3912,
+        "direct_kong": -0.10015,
+        "rob_kong_win": -0.0003,
+        "concealed_kong": -0.0354,
+        "gang_refund": -0.03595,
+        "flower_pig": 0.0016,
+        "discard_win": -0.2758,
+        "cha_jiao_big": -0.8414
+      }
+    },
+    "shape": {
+      "net": 1.22665,
+      "win": 0.2716,
+      "self_draw": 0.0638,
+      "deal_in_events": 0.1154,
+      "deal_in_loss": 0.3017,
+      "mean_winning_fan": 1.4477172312223858,
+      "parts_mean": {
+        "added_kong": -0.02475,
+        "self_draw": 0.4072,
+        "direct_kong": -0.13745,
+        "rob_kong_win": 0.0009,
+        "concealed_kong": -0.0642,
+        "gang_refund": 0.29925,
+        "flower_pig": -0.0024,
+        "discard_win": 0.2063,
+        "cha_jiao_big": 0.5418
+      }
+    },
+    "old_candidate": {
+      "net": 1.22665,
+      "win": 0.2716,
+      "self_draw": 0.0638,
+      "deal_in_events": 0.1154,
+      "deal_in_loss": 0.3017,
+      "mean_winning_fan": 1.4477172312223858,
+      "parts_mean": {
+        "added_kong": -0.02475,
+        "self_draw": 0.4072,
+        "direct_kong": -0.13745,
+        "rob_kong_win": 0.0009,
+        "concealed_kong": -0.0642,
+        "gang_refund": 0.29925,
+        "flower_pig": -0.0024,
+        "discard_win": 0.2063,
+        "cha_jiao_big": 0.5418
+      }
+    },
+    "old_residual": {
+      "net": 1.54195,
+      "win": 0.28725,
+      "self_draw": 0.06905,
+      "deal_in_events": 0.10965,
+      "deal_in_loss": 0.2795,
+      "mean_winning_fan": 1.487206266318538,
+      "parts_mean": {
+        "added_kong": -0.01195,
+        "self_draw": 0.4972,
+        "direct_kong": -0.0776,
+        "rob_kong_win": 0.0003,
+        "concealed_kong": -0.0318,
+        "gang_refund": 0.2499,
+        "flower_pig": -0.0016,
+        "discard_win": 0.2722,
+        "cha_jiao_big": 0.6453
+      }
+    },
+    "new_baseline": {
+      "net": 3.6048,
+      "win": 0.64655,
+      "self_draw": 0.16175,
+      "deal_in_events": 0.0743,
+      "deal_in_loss": 0.1815,
+      "mean_winning_fan": 1.2753847343592917,
+      "parts_mean": {
+        "added_kong": -0.0194,
+        "self_draw": 1.5038,
+        "direct_kong": -0.0071,
+        "rob_kong_win": 0.0034,
+        "concealed_kong": -0.0008,
+        "gang_refund": 0.3837,
+        "flower_pig": -0.0048,
+        "discard_win": 0.8095,
+        "cha_jiao_big": 0.9365
+      }
+    }
+  },
+  "comparisons": {
+    "random": {
+      "mean_vs_shape": -2.93615,
+      "paired_seed_ci": [
+        -3.02405,
+        -2.84695
+      ]
+    },
+    "old_candidate": {
+      "mean_vs_shape": 0.0,
+      "paired_seed_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "old_residual": {
+      "mean_vs_shape": 0.3153,
+      "paired_seed_ci": [
+        0.24665,
+        0.3825
+      ]
+    },
+    "new_baseline": {
+      "mean_vs_shape": 2.37815,
+      "paired_seed_ci": [
+        2.2845,
+        2.46815
+      ]
+    }
+  },
+  "limitations": [
+    "opponent discards configured by CLI; meld actions shared simulator",
+    "win events not transfer count",
+    "configured singlemax settlement; not verified room",
+    "paired initial deal not identical future",
+    "promotion_requires_chief_review_of_predeclared_final_evaluation"
+  ],
+  "primary_predeclared": "new_baseline vs shape",
+  "no_training": true,
+  "no_model_weights_replaced": true,
+  "no_expert_claim": true
+}
+区间跨零即证据不足；该配置模拟结果不是现实高手认证。不得用本最终集继续调参。

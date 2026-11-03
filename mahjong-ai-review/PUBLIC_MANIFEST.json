@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T09:09:58.587143+08:00",
+  "updated_at": "2026-11-03T11:39:57.670822+08:00",
   "files": [
     {
       "path": "mahjong-ai-review/BACKGROUND_RUN.md",
@@ -8,8 +8,8 @@
     },
     {
       "path": "mahjong-ai-review/BASELINE_V3_REPORT.md",
-      "public_content_sha256": "f1b4e9ad6033e8721a3204ae0766ad10050cab6d250b0d8f84525f25e190dceb",
-      "local_source_sha256": "abe3cb9980c3cb886a79470e735be7ad03d93dffb1c759ebdec0db01397c5a4d"
+      "public_content_sha256": "460bfd64021fcd46f3a8548c440c7afe9954a23f48ecffde45eb13b44c7f8ff4",
+      "local_source_sha256": "72880f162cf927dfa1f3a8d9b42df3dc10dafe9aa3456871a4c1898eb3d9d401"
     },
     {
       "path": "mahjong-ai-review/baselines/frequency.py",
@@ -88,8 +88,8 @@
     },
     {
       "path": "mahjong-ai-review/FINAL_REPORT.md",
-      "public_content_sha256": "16a230f7347470a21ee2f7919262d4ca0bfa19fd285f0ec8425c30acadc343e8",
-      "local_source_sha256": "58dca910d68ac022f6a80c1072dd6ad147f0fd4a0490f4b13008ea022cb3bcce"
+      "public_content_sha256": "e5b330d9c3e846f6eca1d7df831f1d78860e00aacb2bb99a6a0562d6ee62306f",
+      "local_source_sha256": "1ecbead67d1b04cc2efdb396d41d3204fd1d84e1134f93428de52a45994e7118"
     },
     {
       "path": "mahjong-ai-review/inference/predictor.py",
@@ -133,8 +133,8 @@
     },
     {
       "path": "mahjong-ai-review/MODEL_SCORE_COMPARISON.md",
-      "public_content_sha256": "1b0c307ee54e0af9cb3d5b508d892699dcda9083742a99b1e2fd2f09e2f057bf",
-      "local_source_sha256": "8ecdbc91fe5e4b0992b030583e0eca1b8355892c985a212977c06dc3bc6d079a"
+      "public_content_sha256": "13bbe7eb437c2c0aa271527a76a3851ff44d065c69588dba484c6bc90618545c",
+      "local_source_sha256": "d4d8a8c5ab7c1d2836029f36f5aec9ba397c9fc488263e85919cbae1bf829cb4"
     },
     {
       "path": "mahjong-ai-review/models/networks.py",
@@ -1087,6 +1087,11 @@
       "local_source_sha256": "9bdede5401c6b245c67c3bfbfee1cf8f27d761abad3070cfc0b464ef692ab05a"
     },
     {
+      "path": "mahjong-ai-review/reports/v3_chief_final_evaluation_summary.json",
+      "public_content_sha256": "75c3b9bc02cef2a2e126e9c0fc3d80a16551c0ae7f13c4d61243285883d99487",
+      "local_source_sha256": "dcf9d0b3c39316de813aebca888cc95cdb1dcbfe2894264ffef7e527178468eb"
+    },
+    {
       "path": "mahjong-ai-review/reports/v3_chief_gate_tests.log",
       "public_content_sha256": "dec4d7a4b13bbd5f2b77f7d7da8548759d2fc09ae3dec0dea6e1682eef84dd04",
       "local_source_sha256": "ec6c55437152ee884d4fd7e982bc9710967313e3d1c2a938a595f852b43e13ad"
@@ -1300,6 +1305,11 @@
       "path": "mahjong-ai-review/reports/v3_d_compare_4270000_mixed.partial.json",
       "public_content_sha256": "8033f2c201f295a331f48da4b55fbf16a246690a4e805c8490b70d0ccb9e9b46",
       "local_source_sha256": "10e208003a54826e665a9ca85a85d1c11c8f26ea697c9a354d9ad7952e1fa586"
+    },
+    {
+      "path": "mahjong-ai-review/reports/v3_d_compare_5000000_mixed.json",
+      "public_content_sha256": "f984c90302610e069d4d50b7d45726251a525270fa043368e901b2c881d52bc7",
+      "local_source_sha256": "76023d06878d0f130a0ba9e725e7d459dabba5634e81f983b686b8aea7c4b463"
     },
     {
       "path": "mahjong-ai-review/reports/v3_d_compare_5000000_mixed.meta.json",
@@ -1838,8 +1848,8 @@
     },
     {
       "path": "mahjong-ai-review/STATUS.md",
-      "public_content_sha256": "1eabb7676166b6d88641858945fe7ad1402a39807a6d60c40b99074c86e055c8",
-      "local_source_sha256": "ce32df06774b4b75e868348c88dfb71abfa6c82315250b6176b27d12a64f99bc"
+      "public_content_sha256": "18a42cf0591dd2fbf5f7362a9cdf93967c7c94a02d72899adc4682d995b876cb",
+      "local_source_sha256": "6d1363bbc4ffe569c24dd171aa4c4ee52c22318d5fd6addbb74680642f66dc5d"
     },
     {
       "path": "mahjong-ai-review/tests/test_data_isolation.py",
