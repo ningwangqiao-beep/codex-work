@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "PROJECT\scripts\next_data_holdout200.py", line 51, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--games',type=int,default=2);p.add_argument('--out',default='datasets/next_opponent_holdout_smoke2');p.add_argument('--resume',action='store_true');p.add_argument('--approval');p.add_argument('--checkpoint',action='append',default=[]);run(p.parse_args())
+                                                                                                                                                                                                                                                                                           ^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\scripts\next_data_holdout200.py", line 14, in run
+    if approval.get('approved') is not True or approval.get('source_hashes')!=sources or approval.get('games')!=200 or not candidate or approval.get('candidate_checkpoint_hashes')!=candidate or approval.get('candidates_frozen') is not True:raise ValueError('Chief frozen-candidate approval required for holdout200')
+                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Chief frozen-candidate approval required for holdout200

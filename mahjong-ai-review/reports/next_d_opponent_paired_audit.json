@@ -1,0 +1,387 @@
+{
+  "passed": true,
+  "evidence": {
+    "counts": {
+      "prediction_sha256": "8521861229219b5cae96a373ea9a9dceafeb3ada2ed1671e2ed20b04159789f9",
+      "checkpoint_sha256": "da494046a41c495c0555e1911fff9135bc83b00b4d83e6af04a1667089e559ae"
+    },
+    "progress": {
+      "prediction_sha256": "90f12a9a28136808d5d4634fa75b45f6496a5db82cb369ab5991605c7e96a414",
+      "checkpoint_sha256": "581d2ff175b2bdd836319486c7b57db29c6dace6dc394b3355b30d607040d103"
+    },
+    "history": {
+      "prediction_sha256": "b7426695d16000a51006f3852b04c55930d936fabec2d4a3a4511cb6da1b67d2",
+      "checkpoint_sha256": "929c6434d45b5ff88a03d8b9b72d498eb21a48acf65a455e82f1d2fe4bc27a1a"
+    },
+    "exchange": {
+      "prediction_sha256": "fe8fd6d2534bb9a11dcf1b021b3b74fd1180150c0b41dec97b38d448473177ef",
+      "checkpoint_sha256": "633d4e020852a1d0cfc71f6045ba40ccd482270db51bc75bd8615824b5583d64"
+    },
+    "history_shuffled": {
+      "prediction_sha256": "03f1b6387b936a3d1776c8ea9b9c551f49800fe89d5de114257e6882ca1b1394",
+      "checkpoint_sha256": "e1d1df0ce46e7c9e16291aa25a8453c6a10b947c7651557144b723b0179ac254"
+    }
+  },
+  "comparisons": {
+    "progress_minus_counts": {
+      "structural_tenpai": {
+        "games": 100,
+        "observations": 3494,
+        "positive": 177,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -6.693888573504347e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00016255151860640214,
+              2.810816623666754e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.00036500320651998674,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0009466361313280339,
+              0.0002794124088917913
+            ]
+          }
+        }
+      },
+      "conditional_structural_wait": {
+        "games": 100,
+        "observations": 4779,
+        "positive": 307,
+        "metrics": {
+          "brier": {
+            "new_minus_old": 7.969380996147491e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              2.3237841856985268e-05,
+              0.0001457851831876654
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": 0.0002028311720005369,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00038250375236906854,
+              0.0007555076368524269
+            ]
+          }
+        }
+      },
+      "legal_any_winner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 52,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -3.5611237999900135e-06,
+            "whole_game_cluster_bootstrap95ci": [
+              -1.6310953253089347e-05,
+              1.1818337932522114e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.00014715942250254644,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00041854708021996697,
+              0.00014230149116422076
+            ]
+          }
+        }
+      },
+      "legal_multiwinner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 0,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -1.7101144886088202e-07,
+            "whole_game_cluster_bootstrap95ci": [
+              -3.4659881547046024e-07,
+              -3.3238555541198207e-08
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -3.234397738253314e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              -5.064721127851054e-05,
+              -1.5611732811882143e-05
+            ]
+          }
+        }
+      }
+    },
+    "history_minus_progress": {
+      "structural_tenpai": {
+        "games": 100,
+        "observations": 3494,
+        "positive": 177,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -5.2390238251639546e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0004908328497406288,
+              0.0003565981436707295
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.0007335071199516268,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0024868912184108807,
+              0.0009432430592291466
+            ]
+          }
+        }
+      },
+      "conditional_structural_wait": {
+        "games": 100,
+        "observations": 4779,
+        "positive": 307,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -0.00022371342142334243,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00037159540941647344,
+              -8.652989157510854e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.00151604672480053,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0024570132513919963,
+              -0.0005836336697074329
+            ]
+          }
+        }
+      },
+      "legal_any_winner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 52,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -5.519939364820359e-06,
+            "whole_game_cluster_bootstrap95ci": [
+              -3.00265556441048e-05,
+              2.253082105985595e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -7.295018481516298e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0007808423482929884,
+              0.000654491015867345
+            ]
+          }
+        }
+      },
+      "legal_multiwinner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 0,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -1.200784281815107e-06,
+            "whole_game_cluster_bootstrap95ci": [
+              -1.656047554113068e-06,
+              -8.134506832612136e-07
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.00014596287992647153,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00019792271232733956,
+              -9.52889792177095e-05
+            ]
+          }
+        }
+      }
+    },
+    "exchange_minus_history": {
+      "structural_tenpai": {
+        "games": 100,
+        "observations": 3494,
+        "positive": 177,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -0.0002609959470255814,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0006134726954629268,
+              0.00011750635230830687
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.0017135756554069505,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.003641362771937943,
+              0.00026108428106092266
+            ]
+          }
+        }
+      },
+      "conditional_structural_wait": {
+        "games": 100,
+        "observations": 4779,
+        "positive": 307,
+        "metrics": {
+          "brier": {
+            "new_minus_old": 0.00013062739688118473,
+            "whole_game_cluster_bootstrap95ci": [
+              -7.332372789077302e-06,
+              0.0002598593238008195
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": 0.0007610032976029956,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0003027263412200788,
+              0.0017397613020651394
+            ]
+          }
+        }
+      },
+      "legal_any_winner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 52,
+        "metrics": {
+          "brier": {
+            "new_minus_old": 6.391669061047718e-07,
+            "whole_game_cluster_bootstrap95ci": [
+              -2.176069987909805e-05,
+              2.3352840100531407e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.00036607629355862116,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0009045041698961861,
+              0.00011843516387183128
+            ]
+          }
+        }
+      },
+      "legal_multiwinner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 0,
+        "metrics": {
+          "brier": {
+            "new_minus_old": 6.665575615274836e-07,
+            "whole_game_cluster_bootstrap95ci": [
+              4.0546286035302896e-07,
+              9.852716488486605e-07
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": 8.910012557251273e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              5.366480445923645e-05,
+              0.00012683183621169417
+            ]
+          }
+        }
+      }
+    },
+    "history_minus_history_shuffled": {
+      "structural_tenpai": {
+        "games": 100,
+        "observations": 3494,
+        "positive": 177,
+        "metrics": {
+          "brier": {
+            "new_minus_old": 0.0001292114728035725,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0001552319299696779,
+              0.00039699370750498044
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": 0.0007714229496549346,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00039687344450158567,
+              0.0018780676729007943
+            ]
+          }
+        }
+      },
+      "conditional_structural_wait": {
+        "games": 100,
+        "observations": 4779,
+        "positive": 307,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -0.0002062088031431276,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0003446342115463481,
+              -6.079862960133535e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -0.0018031416037882725,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.0028976501399068295,
+              -0.0006638439909115272
+            ]
+          }
+        }
+      },
+      "legal_any_winner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 52,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -5.961054941488654e-07,
+            "whole_game_cluster_bootstrap95ci": [
+              -1.863867917386274e-05,
+              1.8034811419059246e-05
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": 0.00015478535898827078,
+            "whole_game_cluster_bootstrap95ci": [
+              -0.00029739899340929557,
+              0.0005682591214979148
+            ]
+          }
+        }
+      },
+      "legal_multiwinner_risk": {
+        "games": 100,
+        "observations": 6062,
+        "positive": 0,
+        "metrics": {
+          "brier": {
+            "new_minus_old": -5.504314604650324e-07,
+            "whole_game_cluster_bootstrap95ci": [
+              -7.745898228774921e-07,
+              -3.568343063143846e-07
+            ]
+          },
+          "log_loss": {
+            "new_minus_old": -5.585642394420597e-05,
+            "whole_game_cluster_bootstrap95ci": [
+              -8.662538233737181e-05,
+              -2.726028785887412e-05
+            ]
+          }
+        }
+      }
+    }
+  },
+  "aux_manifest_sha256": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+  "sample_identity_definition": "reconstructed deterministically from frozen auxiliary record order: game_id/public_turn/observer/target_relative/tile/task",
+  "prediction_explicit_sample_id_missing": true,
+  "bootstrap": {
+    "unit": "whole game, all same-game samples resampled together",
+    "replicates": 2000,
+    "seed": 42,
+    "estimand": "pooled observation loss difference new-old; negative improves"
+  },
+  "seconds": 1.1164047999918694,
+  "limitations": [
+    "prediction files contain task/game_id only; row IDs reconstructed and labels/order checked, cannot independently prove no within-game equal-label permutation",
+    "52risk candidates in20games are correlated, not52 independent trials",
+    "multiwinner0positive cannot validate tails",
+    "auxiliary only; no calibration, tuning, policy-strength or promotion claim"
+  ]
+}

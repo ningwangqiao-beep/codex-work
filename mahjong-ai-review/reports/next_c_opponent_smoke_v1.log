@@ -1,0 +1,51 @@
+{
+  "TEST_ONLY": true,
+  "formal_training_started": false,
+  "families": {
+    "counts": {
+      "parameters": 19563,
+      "finite_masked_loss_backward": true,
+      "synthetic_positive_wait_interface_only": true,
+      "excluded_static_poison_invariant": true
+    },
+    "progress": {
+      "parameters": 19563,
+      "finite_masked_loss_backward": true,
+      "synthetic_positive_wait_interface_only": true,
+      "excluded_static_poison_invariant": true
+    },
+    "history": {
+      "parameters": 19563,
+      "finite_masked_loss_backward": true,
+      "synthetic_positive_wait_interface_only": true,
+      "excluded_static_poison_invariant": true
+    },
+    "exchange": {
+      "parameters": 19563,
+      "finite_masked_loss_backward": true,
+      "synthetic_positive_wait_interface_only": true,
+      "excluded_static_poison_invariant": true
+    },
+    "history_shuffled": {
+      "parameters": 19563,
+      "finite_masked_loss_backward": true,
+      "synthetic_positive_wait_interface_only": true,
+      "excluded_static_poison_invariant": true
+    }
+  },
+  "isolated_uncalibrated_evaluation_smoke": {
+    "structural_tenpai": 24,
+    "conditional_structural_wait": 0,
+    "legal_any_winner_risk": 29,
+    "legal_multiwinner_risk": 29
+  },
+  "stop_exitcode": 75,
+  "stop_after_updates": 2,
+  "resumed_updates": 6,
+  "model_max_abs_difference": 0.0,
+  "optimizer_allclose": true,
+  "unsigned_gate_refused": true,
+  "zero_positive_auc_is_NA": true,
+  "auxiliary_records_read_for_training": 0,
+  "passed": true
+}

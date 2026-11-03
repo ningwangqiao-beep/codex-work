@@ -29,3 +29,6 @@
 5. [V3独立最终结果](reports/v3_chief_final_evaluation_summary.json)、[规则待确认](RULES_PENDING.md)。
 
 源码/公开文本哈希见PUBLIC_MANIFEST.json。请按具体Git提交审阅，不能把不同数据或特征版本的指标直接横比。没有现实玩家高手认证，没有真实平台自动操作。
+
+## 读牌五组与失败诊断更新
+五组1000局GPU训练/辅助100局评估真实完成，10任务exit0，约360秒。独立配对与标签审计已执行。具体听口原AUC约.52，flat81未学对手定缺必零；规则后处理和公开计数简单基线明显更好，这些是程序能力而非神经提升。现aux100已用于开发诊断，不能再冒称下一版本独立final。详见next_chief_opponent_results_v1、next_c_opponent_diagnose_v2、next_b_opponent_labels_audit、next_d_opponent_paired_audit。新共享逐牌模型仅准备中，未放行RL/未替换冠军。

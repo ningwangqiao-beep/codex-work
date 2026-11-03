@@ -1,0 +1,13 @@
+# Opponent information-group audit
+
+Executed .venv/Scripts/python.exe -m unittest discover -s tests -p test_next_opponent_information.py . Actual4tests passed0.004s exit0. Source model unchanged. Tests verify exact index masks, unused truth poison ignored, draw token redaction and legacy-summary limitation, historical exchange isolation from current known inventory.
+
+Index map:0:27 own concealed counts;27:54 public physical counts;54:66 four missing suits;66:70 active;70:74 meld counts;74 wall/108;75 turn cap216;76:80 observer identity;80:84 current player;84:128 recent11-event summary;128:155 sent27;155:182 received27;182:186 direction;186:190 source identity;190 public wall known flag. Masks match these ranges. counts includes missing/active/meld and observer (not literally only tile counts); progress adds wall/turn/known flag. history adds GRU sequence. exchange additionally adds own historical transfer counts/direction/source. Both history families exclude current-player static84 boundary and recent summary, preventing order leakage from recent summary into shuffled control.
+
+history_shuffled does not shuffle inside model: loader must implement deterministic per-sample permutation for train/validation/test, preserve each token tuple and mask lengths, avoid reusing unshuffled samples. Same-parameter network comparison alone does not establish shuffle control. C notified.
+
+No use of hidden truth/future score/actual wall order in whitelist encoder. Public counts correctly sum unclaimed discards/meld faces/one shared win tile, ignore -1 hidden kong; wall count is only valid when publicly known. Counts are observable physical counts, not actual remaining wall distribution. Own sent cards appended as past separate features, not counted into public current inventory.
+
+Boundary: token encoder hides any draw tile and opponent concealed-kong tile, but legacy_static_features raw recent summary does NOT mask malformed draw/concealed tile fields. All five OpponentAblation static masks exclude84:128 so current ablation protected; other full191 models rely on trusted observation projection. Do not accept raw simulator events without projector.
+
+Sequence limitations: tokens contain action/player-relative/tile only; context(initial vs replacement draw), missing suit event value and explicit event index not represented. Static missing suits retain final declared choices. No own private draw identity history, winner fan or score ledger encoded; public current active and win events capture exits only. Exchange represented static own setup counts, not event-time likelihood or current opponent holding truth. Thus ablation measures these concrete fields, not full human-style historical inference or posterior reconstruction.

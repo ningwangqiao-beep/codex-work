@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "games": 100,
+  "records": 1219,
+  "manifest_sha256": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+  "source_files_verified": 16,
+  "seed_range": [
+    7110000,
+    7110099
+  ],
+  "structural_tenpai_positive": 177,
+  "active_target_observations": 3494,
+  "structural_tenpai_positive_games": 56,
+  "legal_candidate_count": 6062,
+  "legal_risk_positive": 52,
+  "legal_risk_positive_games": 20,
+  "legal_multiwinner_positive": 0,
+  "multiwinner_positive_games": 0,
+  "max_history": 296,
+  "no_training": true,
+  "no_calibration_yet": true,
+  "seconds": 0.9028452000056859,
+  "limitations": [
+    "correlated within-game labels; not independent Bernoulli trials",
+    "structural/legal-hand tenpai may contain dead waits",
+    "candidate risk is current-state label under configured rules",
+    "poison-key check is not proof of all upstream leakage",
+    "hidden physical states not persisted; independent108 replay unavailable"
+  ]
+}

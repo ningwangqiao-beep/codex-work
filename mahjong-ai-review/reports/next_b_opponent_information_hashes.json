@@ -1,0 +1,6 @@
+{
+  "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+  "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+  "inference/v3_legacy.py": "dfab6bebd0d01cb552422b3280e7f5e64161d2c4390f73ee51682c3c17c632f7",
+  "tests/test_next_opponent_information.py": "2b4d4cbe3b183599bb22d11869ae15f883bc12194884e4ff83a6eb2789584a9d"
+}

@@ -1,0 +1,6 @@
+{
+  "simulator/v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+  "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+  "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+  "tests/test_next_opponent_label_audit.py": "3a1d7d0794dd282e647da9d398c1bd1a042b9f1f57a3873bc313ade6128158a1"
+}

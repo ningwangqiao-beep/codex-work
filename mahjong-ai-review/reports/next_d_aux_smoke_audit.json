@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "games": 2,
+  "records": 31,
+  "independent_seed_range": true,
+  "input_reencoding_and_poison_invariance": true,
+  "manifest_sha256": "cfeba87e1bd67abec4e9f20b5106bf4743d3000579c4d69d56d4bd72f17c656f",
+  "source_hashes": {
+    "rules/core.py": "bdd55942c0a6b250ed358cfcbf55f428540bcce8556eda1d0af7d5dd949646f4",
+    "rules/v3.py": "e506529b6bdf6a2fa7dadd34d7257f174f6a99dbe7e3796b8ddea02975f06b2c",
+    "simulator/table.py": "eef867533f73a6154a58339647058c3eb0a922dc723be225eedb617754174a21",
+    "simulator/v3_history_v2.py": "d1c7350c76f345a25ca5e62938438a5cd10b62826768b1b8cb0e3f2b8261cbaa",
+    "observations/v3_history_v2.py": "fea65417d104f35d3669e29893f5d503710cb85b7fa2f5170834b64c825fb8a3",
+    "observations/public.py": "50851cadc8aa5e44a0d1c926336704cdad9c17f7e3f5cdaf763803397b57879e",
+    "baselines/v3_bot.py": "bea4feb42bd4e35ae9ab8ab7beac85f3aa6087f9764ba141308f3789fc7f983c",
+    "rules/fast_hand_analysis.py": "599cb2ba49e4743ec3d6f0160987e5ac6cf88f8b2f1fff63a3431d509757f240",
+    "models/revision_candidate_schema.py": "709a529fb0f9bcd4271def94488fc4dbb38e69ba6b8e8bef5178e2a1852ae136",
+    "inference/v3_observation.py": "56976667751449fbd29dcfc21faf4fff428616b501c31e4a3585d654861e4578",
+    "scripts/next_data_scale.py": "d686d9f83818e34287fecace19b9391bc7e841bf1ba4b12c94cc037c9f93c842",
+    "scripts/next_aux_validation.py": "210a3c70890943b55bbee9488bf52de17fc90974078da636dc06d517ad55894f",
+    "observations/v3_public.py": "aa1e818f1e02fc173c06d561b776ffbadd8588c280f527cfe40fc1460567cada",
+    "inference/v3_legacy.py": "dfab6bebd0d01cb552422b3280e7f5e64161d2c4390f73ee51682c3c17c632f7",
+    "rules/hand_analysis.py": "0a2bbcb2065139eaf5b7f4b02191deaf6b7c549e7652a1067b21f2359165eb2e",
+    "rules/hand_analysis_reference.py": "face0fc1c45ed2a6ab865e9ebe8dac290be35e9d9cb4b5f2814ea028683adaaf"
+  },
+  "limitations": [
+    "two games only; risk positives zero",
+    "frozen record source_group retained legacy but manifest marks auxiliary only"
+  ]
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "PROJECT\scripts\next_aux_validation.py", line 50, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--games',type=int,default=2);p.add_argument('--out',default='datasets/next_aux_validation_smoke2');p.add_argument('--resume',action='store_true');p.add_argument('--approval');run(p.parse_args())
+                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^
+  File "PROJECT\scripts\next_aux_validation.py", line 14, in run
+    if approval.get('approved') is not True or approval.get('source_hashes')!=sources or approval.get('games')!=100:raise ValueError('Chief approval required for auxiliary100')
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Chief approval required for auxiliary100

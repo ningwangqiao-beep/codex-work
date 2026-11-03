@@ -1,0 +1,98 @@
+{
+  "audit": {
+    "encoder_rows_exact": 1219,
+    "conditional_wait_elements": 4779,
+    "conditional_wait_positive": 307,
+    "forbidden_wait_elements": 1593,
+    "positive_at_four_known_physical_copies": 11,
+    "relative_joint_masks_exact": 1219
+  },
+  "baseline_metrics": {
+    "train_global": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.5,
+      "average_precision": 0.06423938274383545,
+      "brier": 0.060114022344350815,
+      "log_loss": 0.23848766088485718,
+      "ece": 0.0011578276753425598
+    },
+    "train_tile_prior": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.5595628023147583,
+      "average_precision": 0.07385864108800888,
+      "brier": 0.06006105989217758,
+      "log_loss": 0.23774456977844238,
+      "ece": 0.0006204172968864441
+    },
+    "public_missing_uniform": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.6781082153320312,
+      "average_precision": 0.09635907411575317,
+      "brier": 0.058051347732543945,
+      "log_loss": 0.21135075390338898,
+      "ece": 0.0011578276753425598
+    },
+    "train_tile_prior_plus_missing_zero": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.7157102823257446,
+      "average_precision": 0.10964740812778473,
+      "brier": 0.05861108750104904,
+      "log_loss": 0.21590059995651245,
+      "ece": 0.021701648831367493
+    },
+    "train_missing_tile_known_prior": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.7609705328941345,
+      "average_precision": 0.1536226123571396,
+      "brier": 0.05739768221974373,
+      "log_loss": 0.20643430948257446,
+      "ece": 0.019719247880857438
+    },
+    "public_missing_unknown_copy_weight": {
+      "n": 4779,
+      "positive": 307,
+      "roc_auc": 0.8162970542907715,
+      "average_precision": 0.19745874404907227,
+      "brier": 0.05507751554250717,
+      "log_loss": 0.21988089382648468,
+      "ece": 0.0075017996423412114
+    }
+  },
+  "model_wait": {
+    "counts": {
+      "auc": 0.5213168859481812,
+      "projected_auc": 0.6910810470581055,
+      "forbidden_mean": 0.06496593080981643,
+      "forbidden_mass": 0.3318452106559188
+    },
+    "progress": {
+      "auc": 0.5176429152488708,
+      "projected_auc": 0.6884530782699585,
+      "forbidden_mean": 0.0650120323867498,
+      "forbidden_mass": 0.3313059749890604
+    },
+    "history": {
+      "auc": 0.5237955451011658,
+      "projected_auc": 0.6923134922981262,
+      "forbidden_mean": 0.06439661230539409,
+      "forbidden_mass": 0.32985026453637056
+    },
+    "exchange": {
+      "auc": 0.5219308137893677,
+      "projected_auc": 0.6916449069976807,
+      "forbidden_mean": 0.06369061098202808,
+      "forbidden_mass": 0.3307476402774344
+    },
+    "history_shuffled": {
+      "auc": 0.5182467103004456,
+      "projected_auc": 0.6887327432632446,
+      "forbidden_mean": 0.06381915138107161,
+      "forbidden_mass": 0.3302386107547678
+    }
+  }
+}

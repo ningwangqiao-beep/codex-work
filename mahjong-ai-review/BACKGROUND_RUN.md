@@ -47,3 +47,9 @@ STOP文件experiments/v3_frozen_evaluation/STOP。逐完整seed组恢复，不�
 
 ## 1000局版本实际训练及新开发评估完成
 GPU(cuda)6epoch/582steps/60.05秒exit0，best_epoch5已冻结。12372训练状态，固定235验证。验证自由等价动作86.24% vs100局88.07%，rank regret .03759 vs .03114，扩充未显示收益。新7200400..419共240对局exit0：1000net3.7625，100net3.775，strong3.675；1000-strong +.0875 CI[-.9875,1.125]；1000-100 -.0125 CI[-1.1125,1.0875]，均无显著优势。点炮损失1000/strong均0（小样本），自摸净收益1.05/1.15，查叫净收益1.025/.875，不能只挑正指标。冠军不覆盖，5000/RL不放行，继续覆盖/标签诊断。完整101项测试exit0。
+
+## 独立高级读牌验证集
+100局auxiliary验证7110000..7110099生成及独立审计exit0，1219状态；177结构听牌阳性来自56局，52合法候选风险阳性来自20局，多人风险阳性0。与train/固定val/dev/final隔离，16依赖指纹绑定，禁止混入训练与擅自校准。C继续准备公开计数/进度/完整历史/换三张/打乱历史等参数对照入口；尚未启动该组训练，不能声称读牌效果提升。
+
+## 五组高级读牌消融正式启动
+主控已检查实际gate、训练/评估实现、CPU STOP恢复证据及B四项信息屏蔽测试，签next_chief_opponent_admission_v1.json。独立本地队列scheduler/next_opponent1000_v1.json按顺序执行counts/progress/history/exchange/history_shuffled五组GPU训练及aux100评估；每组固定6epoch/seed42/batch128/19563 allocated参数，无并行重GPU。只训练1000train，不读取固定20val或aux记录训练，不挑epoch，不校准、不晋级。失败即停/保存断点，实际状态见experiments/next_opponent1000_v1/state.json；全部完成后REPORT.md自动保存各命令退出码。注意history仅现有token编码，非完整上下文；有效模型容量并不完全相同，风险仅52阳性、多响0，结论须保留限制。

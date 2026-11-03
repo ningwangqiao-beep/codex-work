@@ -1,0 +1,366 @@
+{
+  "run_dir": "experiments/next_opponent1000_v1",
+  "limits": {
+    "cpu_threads": 2,
+    "min_free_ram_gb": 1.5,
+    "max_gpu_memory_mib": 7000,
+    "max_gpu_temperature": 80,
+    "max_hours": 2,
+    "poll_seconds": 5,
+    "checkpoint_grace_seconds": 30
+  },
+  "jobs": [
+    {
+      "id": "train_counts",
+      "script": "scripts/next_model_opponent_train_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--family",
+        "counts",
+        "--output",
+        "checkpoints/next_opponent1000_v1_counts",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      }
+    },
+    {
+      "id": "eval_counts",
+      "script": "scripts/next_model_opponent_eval_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_v1_counts/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent1000_v1_counts_aux100.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "train_counts"
+      ]
+    },
+    {
+      "id": "train_progress",
+      "script": "scripts/next_model_opponent_train_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--family",
+        "progress",
+        "--output",
+        "checkpoints/next_opponent1000_v1_progress",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "eval_counts"
+      ]
+    },
+    {
+      "id": "eval_progress",
+      "script": "scripts/next_model_opponent_eval_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_v1_progress/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent1000_v1_progress_aux100.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "train_progress"
+      ]
+    },
+    {
+      "id": "train_history",
+      "script": "scripts/next_model_opponent_train_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--family",
+        "history",
+        "--output",
+        "checkpoints/next_opponent1000_v1_history",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "eval_progress"
+      ]
+    },
+    {
+      "id": "eval_history",
+      "script": "scripts/next_model_opponent_eval_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_v1_history/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent1000_v1_history_aux100.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "train_history"
+      ]
+    },
+    {
+      "id": "train_exchange",
+      "script": "scripts/next_model_opponent_train_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--family",
+        "exchange",
+        "--output",
+        "checkpoints/next_opponent1000_v1_exchange",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "eval_history"
+      ]
+    },
+    {
+      "id": "eval_exchange",
+      "script": "scripts/next_model_opponent_eval_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_v1_exchange/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent1000_v1_exchange_aux100.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "train_exchange"
+      ]
+    },
+    {
+      "id": "train_history_shuffled",
+      "script": "scripts/next_model_opponent_train_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--family",
+        "history_shuffled",
+        "--output",
+        "checkpoints/next_opponent1000_v1_history_shuffled",
+        "--device",
+        "cuda",
+        "--resume"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "eval_exchange"
+      ]
+    },
+    {
+      "id": "eval_history_shuffled",
+      "script": "scripts/next_model_opponent_eval_v1.py",
+      "args": [
+        "--manifest",
+        "datasets/next_history1000/manifest.json",
+        "--auxiliary",
+        "datasets/next_aux_validation100/manifest.json",
+        "--admission",
+        "reports/next_chief_opponent_admission_v1.json",
+        "--checkpoint",
+        "checkpoints/next_opponent1000_v1_history_shuffled/epoch_5.pt",
+        "--output",
+        "reports/next_c_opponent1000_v1_history_shuffled_aux100.json"
+      ],
+      "timeout_seconds": 480,
+      "fingerprints": {
+        "models/next_opponent.py": "71193f2aae7c226b147a845d5ff6c0d74b3d2842e0a0832120c6ecd6485a4500",
+        "training/next_opponent_pipeline.py": "da8931c048853fec48d8e48d8cbef5966307a85e5944d6181230e29c8eeef174",
+        "training/next_opponent_gate.py": "d126c5955645dfe704fc265f15fc75d670f4e0512029d927aaaf5b6637c7797b",
+        "training/next_opponent_fit.py": "16f1508ccd6844674c87b75da2697f9dfc22991fad8f46f5eb2b8630052272bc",
+        "training/next_opponent_eval.py": "4af4afc4b60633c37f771abefb625a495b1b187e74956f7f0e46f0143831f448",
+        "evaluation/next_opponent_control.py": "43921093aba28840fb9f8e63a2ff73fd615062184c395b616f84dd12cb8e249f",
+        "evaluation/metrics.py": "8952efee09c22ae0ba76f4f1582e27ff7b92caa6b2c284e0def7c1ada78d6bbb",
+        "scripts/next_model_opponent_train_v1.py": "479a3d66d87ed79dfd54783b505b51ce8a31217d2956ff6c2a80d0a0a2861b8f",
+        "scripts/next_model_opponent_eval_v1.py": "9267b859dfd477b7a2eb33a048ff9655ad4d4c0eb8e7ca7e558e33565a8ec297",
+        "datasets/next_history1000/manifest.json": "f57b6f6f06c7747ca1081e556112039f7b5e79fc707352d5ee1262fe5ab44937",
+        "datasets/next_aux_validation100/manifest.json": "9de194c2069e4120a03ce71b36721f7597bd1d9bbccde9c3669ffb805cc96094",
+        "reports/next_chief_opponent_admission_v1.json": "40159078695d03f77f68004e77eccc2f6b662d6ebf3151b12a5b235b97f97b24"
+      },
+      "depends": [
+        "train_history_shuffled"
+      ]
+    }
+  ]
+}

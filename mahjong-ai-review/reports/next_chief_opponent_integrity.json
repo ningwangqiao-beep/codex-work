@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "distinct_checkpoints": 5,
+  "source_and_prediction_hashes_current": true,
+  "checks": [
+    {
+      "family": "counts",
+      "checkpoint_sha256": "da494046a41c495c0555e1911fff9135bc83b00b4d83e6af04a1667089e559ae",
+      "prediction_sha256": "8521861229219b5cae96a373ea9a9dceafeb3ada2ed1671e2ed20b04159789f9"
+    },
+    {
+      "family": "exchange",
+      "checkpoint_sha256": "633d4e020852a1d0cfc71f6045ba40ccd482270db51bc75bd8615824b5583d64",
+      "prediction_sha256": "fe8fd6d2534bb9a11dcf1b021b3b74fd1180150c0b41dec97b38d448473177ef"
+    },
+    {
+      "family": "history",
+      "checkpoint_sha256": "929c6434d45b5ff88a03d8b9b72d498eb21a48acf65a455e82f1d2fe4bc27a1a",
+      "prediction_sha256": "b7426695d16000a51006f3852b04c55930d936fabec2d4a3a4511cb6da1b67d2"
+    },
+    {
+      "family": "history_shuffled",
+      "checkpoint_sha256": "e1d1df0ce46e7c9e16291aa25a8453c6a10b947c7651557144b723b0179ac254",
+      "prediction_sha256": "03f1b6387b936a3d1776c8ea9b9c551f49800fe89d5de114257e6882ca1b1394"
+    },
+    {
+      "family": "progress",
+      "checkpoint_sha256": "581d2ff175b2bdd836319486c7b57db29c6dace6dc394b3355b30d607040d103",
+      "prediction_sha256": "90f12a9a28136808d5d4634fa75b45f6496a5db82cb369ab5991605c7e96a414"
+    }
+  ]
+}
